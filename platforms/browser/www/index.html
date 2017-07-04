@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'img-src'"> -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="google-signin-client_id" content="145837743537-fnt8lbmm155gq7fp8o76ci087iqm3fu1.apps.googleusercontent.com">
+	<meta name="google-signin-cookiepolicy" content="single_host_origin">
+	<meta name="google-signin-scope" content="profile email">
+
+	<!-- Your app title -->
+	<title>My App</title>
+
+	<link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+	<link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+	<link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+	<link rel="stylesheet" href="lib/framework7-feeds/framework7.feeds.min.css">
+	<link rel="stylesheet" href="lib/framework7-welcomescreen/welcomescreen.css">
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="layout-dark">
+	<!-- Status bar overlay for full screen mode (PhoneGap) -->
+	<div class="statusbar-overlay"></div>
+
+	<!-- Panels overlay-->
+	<div class="panel-overlay"></div>
+
+	<!-- Search Bar overlay-->
+	<div class="searchbar-overlay"></div>
+
+	<!-- Search popover for tab view -->
+	<div class="popover popover-search">
+		<div class="popover-angle"></div>
+		<div class="popover-inner">
+
+		</div>
+	</div>
+
+	<!-- Left panel with reveal effect-->
+	<div class="panel panel-left panel-cover">
+		<div class="left-panel-pic">
+		</div>
+		<div class="list-block">
+			<a href="#" class="item-link item-content">
+				<div class="item-media">
+					<i class="material-icons">bookmark_border</i>
+				</div>
+				<div class="item-inner">
+					<div class="item-title">Saved</div>
+				</div>
+			</a>
+			<a href="#" class="item-link item-content">
+				<div class="item-media">
+					<i class="material-icons">settings</i>
+				</div>
+				<div class="item-inner">
+					<div class="item-title">Settings</div>
+				</div>
+			</a>
+			<a href="#" class="item-link item-content">
+				<div class="item-media">
+					<i class="material-icons">contacts</i>
+				</div>
+				<div class="item-inner">
+					<div class="item-title">About us</div>
+				</div>
+			</a>
+
+			<a href="#" id="panel-signout" class="item-link item-content">
+				<div class="item-media">
+					<i class="material-icons">contacts</i>
+				</div>
+				<div class="item-inner">
+					<div class="item-title">Sign out</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!-- Views -->
+	<div class="views">
+		<div class="view view-main">
+			<div class="pages">
+				<div class="page" data-page="home">
+					<div class="page-content login-screen-content login-background">
+						<div class="login-screen-title color-white">Sign in to discover the Hollywood goodness</div>
+						<div class="content-block">
+							<p class="item-content">
+								<a href="#" id="google-auth-button" class="button button-big button-raised button-fill color-white no-caps color-black-custom">
+									Sign in with Google
+								</a>
+							</p>
+							<p class="item-content">
+								<a href="#" id="facebook-auth-button" class="button button-big button-raised button-fill color-white no-caps color-black-custom">Sign in with Facebook</a>
+							</p>
+							<p class="item-content margin-top-25">
+								<a href="loginWithEmail.html" class="button button-big no-caps color-white-custom">Sign in or sign up with Email</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/template7" id="wizardResultTitleTemplate">
+	   Movies are sorted by {{selectedValue}}
+	</script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+	<script type="text/javascript" src="lib/framework7-feeds/framework7.feeds.min.js"></script>
+	<script type="text/javascript" src="lib/framework7-welcomescreen/welcomescreen.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+
+	<!-- For debugging, remove when you build for production -->
+	<!-- <script src="http://192.168.0.103:1515/target/target-script-min.js#anonymous"></script> -->
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-messaging.js"></script>
+
+	<script>
+	var config = {
+		apiKey: "AIzaSyCZwDwW2NBlv1mV_NVE_WOpJ-bFNUv-u9w",
+		authDomain: "whattowatch-d5653.firebaseapp.com",
+		databaseURL: "https://whattowatch-d5653.firebaseio.com",
+		projectId: "whattowatch-d5653",
+		storageBucket: "whattowatch-d5653.appspot.com",
+		messagingSenderId: "145837743537"
+	};
+	firebase.initializeApp(config);
+	</script>
+</body>
+
+</html>
