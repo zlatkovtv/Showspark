@@ -32,6 +32,13 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="LaunchMyApp">
+        <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
+    </feature>
     <name>WhatToWatch_PG7</name>
     <description>
         A basic Framework7 template for PhoneGap.
@@ -56,7 +63,17 @@
         </host>
     </universal-links>
     <allow-intent href="market:*" />
+    <splash density="port-hdpi" src="www\img\res\drawable-xxxhdpi\logo.9.png" />
+    <splash density="port-ldpi" src="www\img\res\drawable-xxxhdpi\logo.9.png" />
+    <splash density="port-mdpi" src="www\img\res\drawable-xxxhdpi\logo.9.png" />
+    <splash density="port-xhdpi" src="www\img\res\drawable-xxxhdpi\logo.9.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenBackgroundColor" value="green" />
     <preference name="android-minSdkVersion" value="14" />
 </widget>

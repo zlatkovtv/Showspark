@@ -50,6 +50,13 @@
         },
         "net.ekuwang.cordova.plugin.statusbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "com.firebase.cordova",
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
@@ -136,6 +143,20 @@
             "clobbers": [
                 "window.statusbarTransparent"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js",
+            "id": "cordova-plugin-splashscreen.SplashScreenProxy",
+            "pluginId": "cordova-plugin-splashscreen",
+            "runs": true
         }
     ],
     "plugin_metadata": {
@@ -149,6 +170,8 @@
         "cordova-plugin-buildinfo": "1.1.0",
         "cordova-plugin-googleplus": "5.1.1",
         "cordova-plugin-device": "1.1.6",
-        "net.ekuwang.cordova.plugin.statusbar": "1.0.0"
+        "net.ekuwang.cordova.plugin.statusbar": "1.0.0",
+        "cordova-plugin-splashscreen": "4.0.3",
+        "cordova-plugin-customurlscheme": "4.3.0"
     }
 }

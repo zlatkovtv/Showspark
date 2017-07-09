@@ -59,6 +59,12 @@
           <string>145837743537-fnt8lbmm155gq7fp8o76ci087iqm3fu1</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.firebase.cordova</string>
+        </array>
+      </dict>
     </array>
     <key>NSAppTransportSecurity</key>
     <dict>

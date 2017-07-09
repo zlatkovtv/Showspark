@@ -7,34 +7,41 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-universal-links-plugin": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "cordova-plugin-browsertab": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-buildinfo": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-googleplus": {
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "net.ekuwang.cordova.plugin.statusbar": {
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-universal-links-plugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "net.ekuwang.cordova.plugin.statusbar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "com.firebase.cordova",
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },

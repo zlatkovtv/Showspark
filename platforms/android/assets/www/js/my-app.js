@@ -11,20 +11,20 @@ var welcomescreen_slides = [
   {
     id: 'slide0',
     picture: '<div class="tutorialicon"></div>',
-    text: 'Welcome to What To Watch!</br> We think you are going to love it.'
+    text: 'Welcome to What To Watch!</br> We think you are going to love it. </br> <i class="material-icons md-36">chevron_right</i>'
   },
   {
     id: 'slide1',
     picture: '<div class="tutorialicon"></div>',
-    text: 'This is a movie newsfeed app with a wizard that lets you find and sort movies and tv series easily!'
+    text: 'This is a movie newsfeed app with a wizard that lets you find and sort movies and tv series easily! </br> <i class="material-icons md-36">chevron_right</i>'
   },
   {
     id: 'slide2',
     picture: '<a href="#" class="floating-button color-white custom-floating-button-tutorial">' +
-      '<i class="material-icons color-deeppurple-custom">movie' +
-      '</i>' +
+    '<i class="material-icons color-deeppurple-custom">movie' +
+    '</i>' +
     '</a>',
-    text: 'Just press this button when you are in the newsfeed to fire up the wizard!'
+    text: 'Just press this button when you are in the newsfeed to fire up the wizard! </br> <i class="material-icons md-36">chevron_right</i>'
   },
   {
     id: 'slide3',
@@ -39,15 +39,25 @@ var options = {
   'pagination': false,
   'parallax': true,
   'parallaxBackgroundImage': 'img/tutorial-back-cut.png',
-  'parallaxSlideElements':  {title: -100, subtitle: -300, text: 0}
+  'parallaxSlideElements':  {title: -100, subtitle: -300, text: 0},
+  'open': false
 }
+
 var welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
+
+if(window.localStorage.getItem('has_run') == '') {
+    window.localStorage.setItem('has_run', 'true');
+    welcomescreen.open();
+}
 
 $$('.tutorial-close-btn').on('click', function () {
   welcomescreen.close();
 });
 
-// var provider;
+$$('.tutorial-open').on('click', function () {
+  myApp.closePanel('left');
+  welcomescreen.open();
+});
 
 // Add view
 var mainView = myApp.addView('.view-main', {
@@ -59,51 +69,56 @@ var selectedOrderByCategory;
 var selectedGenres;
 var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
 
-// function onSignIn(googleUser) {
-//   console.log('Google Auth Response', googleUser);
-//   // We need to register an Observer on Firebase Auth to make sure auth is initialized.
-//   var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
-//     unsubscribe();
-//     // Check if we are already signed-in Firebase with the correct user.
-//     if (!isUserEqual(googleUser, firebaseUser)) {
-//       // Build Firebase credential with the Google ID token.
-//       var credential = firebase.auth.GoogleAuthProvider.credential(
-//           googleUser.getAuthResponse().id_token);
-//       // Sign in with credential from the Google user.
-//       firebase.auth().signInWithCredential(credential).catch(function(error) {
-//         // Handle Errors here.
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-//         // The email of the user's account used.
-//         var email = error.email;
-//         // The firebase.auth.AuthCredential type that was used.
-//         var credential = error.credential;
-//         // ...
-//       });
-//     } else {
-//       console.log('User already signed-in Firebase.');
-//     }
-//   });
-// }
-//
-// function isUserEqual(googleUser, firebaseUser) {
-//   if (firebaseUser) {
-//     var providerData = firebaseUser.providerData;
-//     for (var i = 0; i < providerData.length; i++) {
-//       if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
-//           providerData[i].uid === googleUser.getBasicProfile().getId()) {
-//         // We don't need to reauth the Firebase connection.
-//         return true;
-//       }
-//     }
-//   }
-//   return false;
-// }
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
   StatusBar.backgroundColorByHexString("#000000");
+  // statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log("There is a logged user");
+
+      welcomescreen.close();
+      goToTabs();
+    } else {
+      console.log("No user is logged in");
+    }
+  });
+
+  var provider = new firebase.auth.GoogleAuthProvider();
+  var fbProvider = new firebase.auth.FacebookAuthProvider();
+
+  $$('.google-auth-button').on('click', function () {
+    console.log("!!!! google button event");
+    firebase.auth().signInWithRedirect(provider).then(function() {
+      firebase.auth().getRedirectResult().then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+        console.log(user);
+        goToTabs();
+      }).catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      });
+    });
+  });
+
+  $$('.facebook-auth-button').on('click', function () {
+    console.log("!!!! facebook button event");
+    firebase.auth().signInWithRedirect(fbProvider).then(function() {
+      firebase.auth().getRedirectResult().then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+        console.log(user);
+        goToTabs();
+      }).catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      });
+    });
+  });
 
   console.log("Device is ready!");
 });
@@ -135,6 +150,12 @@ function exitPrompt(){
   });
 }
 
+function closeSignUpPopup() {
+  myApp.closeModal('.popup-sign-up');
+  document.removeEventListener("backbutton", closeSignUpPopup, false);
+  document.addEventListener("backbutton", goToIndex, false);
+}
+
 myApp.onPageBeforeInit('home', function () {
   StatusBar.backgroundColorByHexString("#000000");
   document.removeEventListener("backbutton", goToWizard, false);
@@ -145,33 +166,38 @@ myApp.onPageBeforeInit('home', function () {
 
 myApp.onPageInit('home', function () {
   console.log("index onPageInit");
-  // if (!firebase.apps.length) {
-  //   provider = new firebase.auth.GoogleAuthProvider();
-  //   console.log("inside if");
-  // }
-  // $$('.google-auth-button').on('click', function () {
-  //   console.log("!!!! google button event");
-  //   firebase.auth().signInWithRedirect(provider).then(function() {
-  //     firebase.auth().getRedirectResult().then(function(result) {
-  //       var token = result.credential.accessToken;
-  //       var user = result.user;
-  //       goToTabs();
-  //     }).catch(function(error) {
-  //       console.log(error.code);
-  //       console.log(error.message);
-  //     });
-  //   });
-  // });
-  //
-  // $$('#panel-signout').on('click', function () {
-  //   firebase.auth().signOut().then(function() {
-  //     myApp.closePanel('left');
-  //     goToIndex();
-  //   }).catch(function(error) {
-  //     console.log("Cant sign out from google from some reason.");
-  //   });
-  // });
+  var provider = new firebase.auth.GoogleAuthProvider();
+  var fbProvider = new firebase.auth.FacebookAuthProvider();
 
+  $$('.google-auth-button').on('click', function () {
+    console.log("!!!! google button event");
+    firebase.auth().signInWithRedirect(provider).then(function() {
+      firebase.auth().getRedirectResult().then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+        console.log(user);
+        goToTabs();
+      }).catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      });
+    });
+  });
+
+  $$('.facebook-auth-button').on('click', function () {
+    console.log("!!!! facebook button event");
+    firebase.auth().signInWithRedirect(fbProvider).then(function() {
+      firebase.auth().getRedirectResult().then(function(result) {
+        var token = result.credential.accessToken;
+        var user = result.user;
+        console.log(user);
+        goToTabs();
+      }).catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+      });
+    });
+  });
 });
 
 myApp.onPageBeforeInit('login-with-email', function () {
@@ -233,11 +259,72 @@ myApp.onPageInit('login-with-email', function () {
     myApp.closeModal('.login-screen');
   });
 
+  $$('.open-sign-up-popup').on('click', function () {
+    myApp.popup('.popup-sign-up');
+    document.removeEventListener("backbutton", goToIndex, false);
+    document.addEventListener("backbutton", closeSignUpPopup, false);
+  });
+
   //sign in with email button click method
-  $$('.login-to-main-view').on('click', function () {
-    var mainView = myApp.addView('.view-main');
-    mainView.router.loadPage('homeTabView.html');
-    myApp.closeModal('.login-screen');
+  $$('.validate-signin').on('click', function () {
+    var formData = myApp.formToJSON('#email-signin-form');
+    if(formData.password === '' || formData.email === '') {
+      myApp.alert('Please fill in everything before you submit', 'Fields missing');
+      return;
+    }
+
+    if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
+      myApp.alert('Please enter a valid email', 'Email invalid');
+      return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
+  });
+
+  $$('.validate-signup').on('click', function () {
+    var formData = myApp.formToJSON('#email-signup-form');
+    if(formData.password === '' || formData.confirm_password === '' || formData.email === '') {
+      myApp.alert('Please fill in everything before you submit', 'Fields missing');
+      return;
+    }
+
+    if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
+      myApp.alert('Please enter a valid email', 'Email invalid');
+      return;
+    }
+
+    if(formData.password != '' && (formData.password != formData.confirm_password)) {
+      myApp.alert('Please make sure that your passwords match', 'Password missmatch');
+      return;
+    }
+
+    firebase.auth().createUserWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
+  });
+
+  $$('.pop-forgotten-password').on('click', function () {
+    var emailAddress;
+    myApp.prompt('Please enter your email', 'Resetting password', function (value) {
+      emailAddress = value;
+      if(emailAddress.indexOf('@') === -1 || emailAddress.indexOf('.') === -1) {
+        myApp.alert('Please enter a valid email', 'Email invalid');
+      } else {
+        firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
+          myApp.alert('An email has been sent to you with steps to reset your password');
+        }, function(error) {
+          myApp.alert('An error occured');
+        });
+      }
+    });
   });
 })
 
@@ -255,30 +342,30 @@ myApp.onPageInit('tabs-main', function () {
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
     itemPopupTemplate: '<div class="popup">' +
-        '<div class="view navbar-fixed">' +
-            '<div class="navbar theme-deeppurple">' +
-                '<div class="navbar-inner">' +
-                    '<div class="left sliding">' +
-                        '<a href="homeTabView.html" class="close-popup link">' +
-                            '<i class="icon icon-back"></i>' +
-                            '<span>Back</span>' +
-                        '</a>' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-            '<div class="pages">' +
-                '<div class="page feeds-page-movie" data-page="feeds-page-{{index}}">' +
-                    '<div class="page-content">' +
-                    '<img src="{{enclosure}}" class="full-width">' +
-                        '<div class="content-block">' +
-                            '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
-                            '<small>{{formattedDate}}</small>' +
-                        '</div>' +
-                        '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-        '</div>' +
+    '<div class="view navbar-fixed">' +
+    '<div class="navbar theme-deeppurple">' +
+    '<div class="navbar-inner">' +
+    '<div class="left sliding">' +
+    '<a href="homeTabView.html" class="close-popup link">' +
+    '<i class="icon icon-back"></i>' +
+    '<span>Back</span>' +
+    '</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '<div class="pages">' +
+    '<div class="page feeds-page-movie" data-page="feeds-page-{{index}}">' +
+    '<div class="page-content">' +
+    '<img src="{{enclosure}}" class="full-width">' +
+    '<div class="content-block">' +
+    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
+    '<small>{{formattedDate}}</small>' +
+    '</div>' +
+    '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
     '</div>'
   });
 
@@ -287,35 +374,45 @@ myApp.onPageInit('tabs-main', function () {
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
     itemPopupTemplate: '<div class="popup">' +
-        '<div class="view navbar-fixed">' +
-            '<div class="navbar theme-deeppurple">' +
-                '<div class="navbar-inner">' +
-                    '<div class="left sliding">' +
-                        '<a href="homeTabView.html" class="close-popup link">' +
-                            '<i class="icon icon-back"></i>' +
-                            '<span>Back</span>' +
-                        '</a>' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-            '<div class="pages">' +
-                '<div class="page feeds-page-tv" data-page="feeds-page-{{index}}">' +
-                    '<div class="page-content">' +
-                    '<img src="{{enclosure}}" class="full-width">' +
-                        '<div class="content-block">' +
-                            '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
-                            '<small>{{formattedDate}}</small>' +
-                        '</div>' +
-                        '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
-                    '</div>' +
-                '</div>' +
-            '</div>' +
-        '</div>' +
+    '<div class="view navbar-fixed">' +
+    '<div class="navbar theme-deeppurple">' +
+    '<div class="navbar-inner">' +
+    '<div class="left sliding">' +
+    '<a href="homeTabView.html" class="close-popup link">' +
+    '<i class="icon icon-back"></i>' +
+    '<span>Back</span>' +
+    '</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '<div class="pages">' +
+    '<div class="page feeds-page-tv" data-page="feeds-page-{{index}}">' +
+    '<div class="page-content">' +
+    '<img src="{{enclosure}}" class="full-width">' +
+    '<div class="content-block">' +
+    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
+    '<small>{{formattedDate}}</small>' +
+    '</div>' +
+    '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
     '</div>'
   });
 
   $$('.open-left-panel').on('click', function (e) {
     myApp.openPanel('left');
+  });
+
+  $$('.panel-signout').on('click', function () {
+    console.log("inside logout");
+    firebase.auth().signOut().then(function() {
+      myApp.closePanel('left');
+      goToIndex();
+    }).catch(function(error) {
+      console.log("Cant sign out from google from some reason.");
+    });
   });
 
   var ptrContent = $$('.pull-to-refresh-content');

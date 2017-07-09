@@ -82,6 +82,20 @@ module.exports = [
         "clobbers": [
             "window.statusbarTransparent"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js",
+        "id": "cordova-plugin-splashscreen.SplashScreenProxy",
+        "pluginId": "cordova-plugin-splashscreen",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -89,6 +103,7 @@ module.exports.metadata =
 {
     "cordova-plugin-console": "1.0.7",
     "cordova-plugin-statusbar": "2.2.4-dev",
+    "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-universal-links-plugin": "1.2.1",
     "cordova-plugin-compat": "1.0.0",
@@ -97,7 +112,8 @@ module.exports.metadata =
     "cordova-plugin-googleplus": "5.1.1",
     "cordova-plugin-device": "1.1.6",
     "net.ekuwang.cordova.plugin.statusbar": "1.0.0",
-    "cordova-plugin-whitelist": "1.3.2"
+    "cordova-plugin-splashscreen": "4.0.3",
+    "cordova-plugin-customurlscheme": "4.3.0"
 }
 // BOTTOM OF METADATA
 });

@@ -155,6 +155,10 @@ See https://github.com/apache/cordova-plugin-statusbar
   background-image: url("../img/google-logo.jpg");
 }
 
+.custom-layout-dark {
+  background-color: #222;
+}
+
 i.material-icons.color-deeppurple-custom {
   color: #551f70;
 }
@@ -165,6 +169,14 @@ i.material-icons.color-deeppurple-custom {
 
 .button-float-right {
   width: 200px;
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
   float: right;
 }
 

@@ -46,6 +46,8 @@
 		7EDAC4B419A94D908BD53F49 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2895DC97FE24EBD8AC056A1 /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9255D549399B43F98EEC4314 /* WhatToWatch_PG7.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F2ACFD1FBB324EE4B286CA1B /* WhatToWatch_PG7.entitlements */; };
 		3E16D526CFF8458D9CDA2AA3 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C9C944B7EE490FAF234AB9 /* CDVDevice.m */; };
+		2AAC52F441C9415E9DA4BA05 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDB19D84AA144C2B82B7563 /* CDVSplashScreen.m */; };
+		08D71B7F26B342A786DC4D9A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B290CDD518924CD08E9666C0 /* CDVViewController+SplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,10 @@
 		F2ACFD1FBB324EE4B286CA1B /* WhatToWatch_PG7.entitlements */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "WhatToWatch_PG7.entitlements"; path = "WhatToWatch_PG7.entitlements"; sourceTree = "<group>"; fileEncoding = 4; };
 		F5C9C944B7EE490FAF234AB9 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		3A890C31164E4829B19BB4C8 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EFDB19D84AA144C2B82B7563 /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B290CDD518924CD08E9666C0 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0EE4A7FDC9274322BBC7EA36 /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1E960F3FC3D8441A811282C1 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +300,10 @@
 				20889B938BC04B96AD18F213 /* GooglePlus.h */,
 				F5C9C944B7EE490FAF234AB9 /* CDVDevice.m */,
 				3A890C31164E4829B19BB4C8 /* CDVDevice.h */,
+				EFDB19D84AA144C2B82B7563 /* CDVSplashScreen.m */,
+				B290CDD518924CD08E9666C0 /* CDVViewController+SplashScreen.m */,
+				0EE4A7FDC9274322BBC7EA36 /* CDVSplashScreen.h */,
+				1E960F3FC3D8441A811282C1 /* CDVViewController+SplashScreen.h */,
 			);
 			name = Plugins;
 			path = "WhatToWatch_PG7/Plugins";
@@ -423,6 +433,8 @@
 				27F7A319973A4213B1A1B957 /* CDVBuildInfo.m in Sources */,
 				BF5BE7F030B74C1D966F4C28 /* GooglePlus.m in Sources */,
 				3E16D526CFF8458D9CDA2AA3 /* CDVDevice.m in Sources */,
+				2AAC52F441C9415E9DA4BA05 /* CDVSplashScreen.m in Sources */,
+				08D71B7F26B342A786DC4D9A /* CDVViewController+SplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +540,7 @@
 				SKIP_INSTALL = NO;
 				CODE_SIGN_ENTITLEMENTS = "WhatToWatch_PG7\Resources\WhatToWatch_PG7.entitlements";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 			};
 			name = Debug;
 		};
@@ -555,6 +568,7 @@
 				SKIP_INSTALL = NO;
 				CODE_SIGN_ENTITLEMENTS = "WhatToWatch_PG7\Resources\WhatToWatch_PG7.entitlements";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 			};
 			name = Release;
 		};

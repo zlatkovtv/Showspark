@@ -16,14 +16,14 @@
                         </div>
                     </div>
                     <div class="page-content login-screen-content">
-                        <form>
+                        <form id="email-signin-form">
                             <div class="list-block">
                                 <ul>
                                     <li class="item-content">
                                         <div class="item-inner">
                                             <div class="item-title label">Email</div>
                                             <div class="item-input">
-                                                <input type="text" name="username" placeholder="Your email">
+                                                <input type="text" name="email" placeholder="Enter email">
                                             </div>
                                         </div>
                                     </li>
@@ -31,7 +31,7 @@
                                         <div class="item-inner">
                                             <div class="item-title label">Password</div>
                                             <div class="item-input">
-                                                <input type="password" name="password" placeholder="Your password">
+                                                <input type="password" name="password" placeholder="Enter password">
                                             </div>
                                         </div>
                                     </li>
@@ -39,10 +39,11 @@
                             </div>
                             <div class="content-block">
                                 <p class="item-content">
-                                    <a href="#" class="button button-big button-fill button-raised login-to-main-view">Sign In</a>
+                                    <a href="#" class="button button-big button-fill button-raised validate-signin">Sign In</a>
                                 </p>
-                                <p class="item-content button-float-right">
-                									<a href="loginWithEmail.html" class="button button-big no-caps color-white-custom">Sign up here</a>
+                                <p class="item-content float-right">
+                									<a href="#" class="button button-big no-caps color-white-custom float-left open-sign-up-popup">Sign up</a>
+                                  <a href="#" class="button button-big no-caps color-white-custom float-right pop-forgotten-password">Forgot password?</a>
                 								</p>
                             </div>
                         </form>

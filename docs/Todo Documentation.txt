@@ -14,3 +14,9 @@ FIXED 8. Input values and object build for query
 
 1. .swiper-slide .preloader edited in material.min.css
 2. .deeppurple edited in material.min.css
+
+goals
+
+1. Fix startup e.g. splashscreen
+2. Side panel clear and favourites + fb db
+3. tab view search functionality for finding a movie or tv series
