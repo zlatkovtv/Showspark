@@ -238,3 +238,21 @@ i.material-icons.color-deeppurple-custom {
 .item-media.custom-item-media-width {
   width: 15%;
 }
+
+.modal.modal-in {
+  background-color: #222;
+  color: rgba(255,255,255,.87);
+}
+
+ .modal-title {
+   color: rgba(255,255,255,.87);
+ }
+
+ input.modal-text-input {
+   background-color: #222;
+   color: white;
+ }
+
+ span.modal-button {
+   color: #551f70;
+ }
