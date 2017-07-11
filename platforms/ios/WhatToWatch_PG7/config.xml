@@ -47,6 +47,9 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SpinnerPlugin">
+        <param name="ios-package" value="SpinnerPlugin" />
+    </feature>
     <name>WhatToWatch_PG7</name>
     <description>
         A basic Framework7 template for PhoneGap.
@@ -91,6 +94,6 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="ShowSplashScreenSpinner" value="false" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="2250" />
     <preference name="SplashScreenBackgroundColor" value="green" />
 </widget>

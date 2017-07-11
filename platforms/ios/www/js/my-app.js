@@ -45,7 +45,7 @@ var options = {
 
 var welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
 
-if(window.localStorage.getItem('has_run') == '') {
+if(window.localStorage.getItem('has_run') === '') {
     window.localStorage.setItem('has_run', 'true');
     welcomescreen.open();
 }
@@ -267,6 +267,8 @@ myApp.onPageInit('login-with-email', function () {
 
   //sign in with email button click method
   $$('.validate-signin').on('click', function () {
+    //auto login
+    //goToTabs();
     var formData = myApp.formToJSON('#email-signin-form');
     if(formData.password === '' || formData.email === '') {
       myApp.alert('Please fill in everything before you submit', 'Fields missing');
@@ -341,6 +343,14 @@ myApp.onPageInit('tabs-main', function () {
     url: 'http://www.cinemablend.com/rss.php',
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
+    onAjaxStart: function () {
+      console.log("ajaxstart");
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
+    },
+    onAjaxComplete: function () {
+      console.log("ajaxcomplete");
+      SpinnerPlugin.activityStop();
+    },
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
     '<div class="navbar theme-deeppurple">' +
@@ -373,6 +383,14 @@ myApp.onPageInit('tabs-main', function () {
     url: 'http://www.cinemablend.com/rss_television.xml',
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
+    onAjaxStart: function () {
+      console.log("ajaxstart");
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
+    },
+    onAjaxComplete: function () {
+      console.log("ajaxcomplete");
+      SpinnerPlugin.activityStop();
+    },
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
     '<div class="navbar theme-deeppurple">' +
@@ -612,8 +630,16 @@ myApp.onPageInit('wizard-result', function (page) {
 
   console.log(genreString);
 
+
+  SpinnerPlugin.activityStart(null, {dimBackground: false});
+  console.log("ajaxstart");
+
   //make api call, make object and assign it to items below
   $$.ajax({
+    complete: function () {
+      console.log("ajaxcomplete");
+      SpinnerPlugin.activityStop();
+    },
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
       404: function (xhr) {

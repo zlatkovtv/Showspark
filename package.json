@@ -27,7 +27,8 @@
                 "ANDROID_SCHEME": " ",
                 "ANDROID_HOST": " ",
                 "ANDROID_PATHPREFIX": "/"
-            }
+            },
+            "cordova-plugin-spinner": {}
         }
     },
     "dependencies": {
@@ -42,6 +43,7 @@
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-googleplus": "git+https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
         "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-spinner": "^1.1.0",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "~1.0.1",
         "cordova-plugin-statusbar-transparent": "file:plugins\\cordova-plugin-statusbar-transparent",

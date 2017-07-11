@@ -26,6 +26,10 @@ See https://github.com/apache/cordova-plugin-statusbar
   url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

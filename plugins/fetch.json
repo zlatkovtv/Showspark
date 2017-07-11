@@ -106,5 +106,13 @@
         "variables": {
             "URL_SCHEME": "com.firebase.cordova"
         }
+    },
+    "cordova-plugin-spinner": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-spinner"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

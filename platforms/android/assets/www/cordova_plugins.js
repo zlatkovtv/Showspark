@@ -80,6 +80,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.launchmyapp"
         ]
+    },
+    {
+        "id": "cordova-plugin-spinner.SpinnerPlugin",
+        "file": "plugins/cordova-plugin-spinner/www/spinner-plugin.js",
+        "pluginId": "cordova-plugin-spinner",
+        "clobbers": [
+            "SpinnerPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -97,7 +105,8 @@ module.exports.metadata =
     "net.ekuwang.cordova.plugin.statusbar": "1.0.0",
     "cordova-plugin-whitelist": "1.3.2",
     "cordova-plugin-splashscreen": "4.0.3",
-    "cordova-plugin-customurlscheme": "4.3.0"
+    "cordova-plugin-customurlscheme": "4.3.0",
+    "cordova-plugin-spinner": "1.1.0"
 };
 // BOTTOM OF METADATA
 });
