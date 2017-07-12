@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-mdpi\\ic_action_remove.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-mdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-mdpi\\ic_action_previous_item.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-mdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-mdpi\\ic_action_next_item.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-mdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-mdpi\\icon.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-mdpi\\icon.png"
+    }
+]

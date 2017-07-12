@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxxhdpi\\icon.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xxxhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxxhdpi\\ic_search.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxxhdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxxhdpi\\verify_checkmark.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxxhdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxxhdpi\\ic_warning.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxxhdpi\\ic_warning.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxxhdpi\\ic_menu_share_holo_light.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxxhdpi\\ic_menu_share_holo_light.png"
+    }
+]

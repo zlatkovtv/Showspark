@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\color\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\color\\common_google_signin_btn_tint.xml",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\color\\common_google_signin_btn_tint.xml"
+    }
+]

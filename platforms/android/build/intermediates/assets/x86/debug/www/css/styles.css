@@ -1,0 +1,264 @@
+/*
+statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+statusbar plugin is added, it also adds default setting to make the content white via:
+
+<preference name="StatusBarStyle" value="lightcontent"/>
+
+Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+in the config.xml file and will be added by the CLI when you build locally.
+
+See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+  background: #000000;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.card-header-pic .card-header {
+  height: 40vw !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.infinite-scroll-preloader {
+  margin-top:-7px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.infinite-scroll-preloader .preloader {
+  width:34px;
+  height:34px;
+}
+
+.toolbar.toolbar-bottom.tabbar {
+  position: absolute;
+}
+
+.page-content.infinite-scroll {
+  padding-bottom: 30px;
+}
+
+.page-content.raised-page {
+  padding-bottom: 25px;
+}
+
+.panel {
+  width: 300px;
+}
+
+.no-text-decor {
+  text-decoration:none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.custom-floating-button {
+  bottom: 10px;
+  left: calc(50% - 26px);
+}
+
+.custom-floating-button-tutorial {
+  pointer-events: none;
+  position: absolute;
+  top: calc(80% - 26px);
+  left: calc(50% - 26px);
+}
+
+.align-left {
+  text-align: left;
+}
+
+.navbar-bottom {
+  top: auto;
+  bottom: 0px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.login-background {
+  background-image: url("../img/login-background-2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left bottom;
+}
+
+.no-caps {
+  text-transform: none;
+}
+
+.color-black-custom {
+  color: black !important;
+}
+
+.color-white-custom {
+  color: white !important;
+}
+
+.login-button-logo-absolute {
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/google-logo.jpg");
+}
+
+.custom-layout-dark {
+  background-color: #222;
+}
+
+i.material-icons.color-deeppurple-custom {
+  color: #551f70;
+}
+
+.toolbar-inner {
+  background-color: #551f70;
+}
+
+.button-float-right {
+  width: 200px;
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.left-panel-pic {
+  background-image: url("../img/rocks.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 100%;
+  height: 30%;
+}
+
+.toolbar.toolbar-bottom.tabbar.tabbar-labels.toolbar-hidden {
+  transform: translate3d(0,128px,0);
+}
+
+.wizard-background {
+  background-image: url("../img/rocks.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.facebook-card .card-header {
+  display: block;
+  padding: 10px;
+}
+.facebook-card .facebook-avatar {
+  float: left;
+}
+.facebook-card .facebook-name {
+  margin-left: 44px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.facebook-card .facebook-date {
+  margin-left: 44px;
+  font-size: 13px;
+  color: #8e8e93;
+}
+.facebook-card .card-footer {
+  background: #551f70;
+}
+.facebook-card .card-footer a {
+  color: #8e8e93;
+  font-weight: 500;
+}
+.facebook-card .card-content img {
+  display: block;
+}
+.facebook-card .card-content-inner {
+  padding: 15px 10px;
+}
+
+.item-media.custom-item-media-width {
+  width: 15%;
+}
+
+.modal.modal-in {
+  background-color: #222;
+  color: rgba(255,255,255,.87);
+}
+
+ .modal-title {
+   color: rgba(255,255,255,.87);
+ }
+
+ input.modal-text-input {
+   background-color: #222;
+   color: white;
+ }
+
+ span.modal-button {
+   color: #551f70;
+ }
+
+ .demo-card-header-pic .card-header {
+    height: 49vw;
+    background-size: cover;
+    background-position: center;
+  }

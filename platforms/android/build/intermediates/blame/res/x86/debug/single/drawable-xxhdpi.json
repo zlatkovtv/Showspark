@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_warning.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxhdpi\\ic_warning.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_action_remove.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xxhdpi\\ic_action_remove.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_action_previous_item.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xxhdpi\\ic_action_previous_item.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\verify_checkmark.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxhdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\icon.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xxhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_menu_share_holo_light.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxhdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_action_next_item.png",
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xxhdpi\\ic_action_next_item.png"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xxhdpi\\ic_search.png",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xxhdpi\\ic_search.png"
+    }
+]

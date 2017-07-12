@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\xwalk_100_percent.pak",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\xwalk_100_percent.pak"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\xwalk.pak",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\xwalk.pak"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\wifidirect_api.js",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\wifidirect_api.js"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\launch_screen_api.js",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\launch_screen_api.js"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\empty.wav",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\empty.wav"
+    },
+    {
+        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\raw\\icudtl.dat",
+        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\raw\\icudtl.dat"
+    }
+]
