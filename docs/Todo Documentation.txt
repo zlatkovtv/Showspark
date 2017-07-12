@@ -21,7 +21,7 @@ FIXED 1. Fix startup e.g. splashscreen
 2. Side panel clear and favourites + fb db
 3. tab view search functionality for finding a movie or tv series
 FIXED 4. Roboto
-FIXED 5. Loaders on callback ajax methods
+ 5. Loaders on callback ajax methods FIX POSITION ON RESULTVIEW
 6. Template for movie detail view
 7. black bar when tutorial is opened from sidepanel
 8. resultview bug changing movies

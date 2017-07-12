@@ -67,7 +67,7 @@ var mainView = myApp.addView('.view-main', {
 
 var selectedOrderByCategory;
 var selectedGenres;
-// var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
+var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
 
 
 // Handle Cordova Device Ready Event
@@ -268,24 +268,24 @@ myApp.onPageInit('login-with-email', function () {
   //sign in with email button click method
   $$('.validate-signin').on('click', function () {
     //auto login
-    // goToTabs();
-    var formData = myApp.formToJSON('#email-signin-form');
-    if(formData.password === '' || formData.email === '') {
-      myApp.alert('Please fill in everything before you submit', 'Fields missing');
-      return;
-    }
-
-    if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
-      myApp.alert('Please enter a valid email', 'Email invalid');
-      return;
-    }
-
-    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorMessage);
-    });
+    goToTabs();
+    // var formData = myApp.formToJSON('#email-signin-form');
+    // if(formData.password === '' || formData.email === '') {
+    //   myApp.alert('Please fill in everything before you submit', 'Fields missing');
+    //   return;
+    // }
+    //
+    // if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
+    //   myApp.alert('Please enter a valid email', 'Email invalid');
+    //   return;
+    // }
+    //
+    // firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   console.log(errorMessage);
+    // });
   });
 
   $$('.validate-signup').on('click', function () {
@@ -345,11 +345,11 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      SpinnerPlugin.activityStart(null, {dimBackground: false});
+      // SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      SpinnerPlugin.activityStop();
+      // SpinnerPlugin.activityStop();
     },
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
@@ -385,11 +385,11 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      SpinnerPlugin.activityStart(null, {dimBackground: false});
+      // SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      SpinnerPlugin.activityStop();
+      // SpinnerPlugin.activityStop();
     },
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
@@ -631,14 +631,14 @@ myApp.onPageInit('wizard-result', function (page) {
   console.log(genreString);
 
 
-  SpinnerPlugin.activityStart(null, {dimBackground: false});
+  // SpinnerPlugin.activityStart(null, {dimBackground: false});
   console.log("ajaxstart");
 
   //make api call, make object and assign it to items below
   $$.ajax({
     complete: function () {
       console.log("ajaxcomplete");
-      SpinnerPlugin.activityStop();
+      // SpinnerPlugin.activityStop();
     },
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
