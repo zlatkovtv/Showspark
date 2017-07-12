@@ -256,3 +256,9 @@ i.material-icons.color-deeppurple-custom {
  span.modal-button {
    color: #551f70;
  }
+
+ .demo-card-header-pic .card-header {
+    height: 49vw;
+    background-size: cover;
+    background-position: center;
+  }

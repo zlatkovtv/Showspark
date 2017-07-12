@@ -46,8 +46,8 @@ var options = {
 var welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
 
 if(window.localStorage.getItem('has_run') === '') {
-    window.localStorage.setItem('has_run', 'true');
-    welcomescreen.open();
+  window.localStorage.setItem('has_run', 'true');
+  welcomescreen.open();
 }
 
 $$('.tutorial-close-btn').on('click', function () {
@@ -156,6 +156,11 @@ function closeSignUpPopup() {
   document.addEventListener("backbutton", goToIndex, false);
 }
 
+function goToWizardOrderby() {
+  var mainView = myApp.addView('.view-main');
+  mainView.router.loadPage('wizardOrderBy.html');
+}
+
 myApp.onPageBeforeInit('home', function () {
   StatusBar.backgroundColorByHexString("#000000");
   document.removeEventListener("backbutton", goToWizard, false);
@@ -227,6 +232,7 @@ myApp.onPageBeforeInit('wizard', function () {
 myApp.onPageBeforeInit('wizard-order-by', function () {
   StatusBar.backgroundColorByHexString("#222");
   document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToWizardOrderby, false);
   document.removeEventListener("backbutton", goToIndex, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.addEventListener("backbutton", goToWizard, false);
@@ -245,7 +251,7 @@ myApp.onPageBeforeInit('wizard-result', function () {
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", exitPrompt, false);
   document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", goToWizardOrderby, false);
 })
 
 //Login screen methods inside this
@@ -267,25 +273,25 @@ myApp.onPageInit('login-with-email', function () {
 
   //sign in with email button click method
   $$('.validate-signin').on('click', function () {
-    //auto login
-    goToTabs();
-    // var formData = myApp.formToJSON('#email-signin-form');
-    // if(formData.password === '' || formData.email === '') {
-    //   myApp.alert('Please fill in everything before you submit', 'Fields missing');
-    //   return;
-    // }
-    //
-    // if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
-    //   myApp.alert('Please enter a valid email', 'Email invalid');
-    //   return;
-    // }
-    //
-    // firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   console.log(errorMessage);
-    // });
+    //auto login below (disabled when commented)
+    // goToTabs();
+    var formData = myApp.formToJSON('#email-signin-form');
+    if(formData.password === '' || formData.email === '') {
+      myApp.alert('Please fill in everything before you submit', 'Fields missing');
+      return;
+    }
+
+    if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
+      myApp.alert('Please enter a valid email', 'Email invalid');
+      return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
   });
 
   $$('.validate-signup').on('click', function () {
@@ -345,12 +351,29 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      // SpinnerPlugin.activityStart(null, {dimBackground: false});
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
+    listTemplate: '<ul>' +
+    '{{#each items}}' +
+    '<li>' +
+    '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
+    '<div class="card demo-card-header-pic">' +
+    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border">{{title}}</div>' +
+    '<div class="card-content">' +
+    '<div class="card-content-inner">' +
+    '<p class="color-gray">{{formattedDate}}</p>' +
+    '<p>{{description}}</p>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</a>' +
+    '</li>' +
+    '{{/each}}' +
+    '</ul>',
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
     '<div class="navbar theme-deeppurple">' +
@@ -385,12 +408,29 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      // SpinnerPlugin.activityStart(null, {dimBackground: false});
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
+    listTemplate: '<ul>' +
+    '{{#each items}}' +
+    '<li>' +
+    '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
+    '<div class="card demo-card-header-pic">' +
+    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border">{{title}}</div>' +
+    '<div class="card-content">' +
+    '<div class="card-content-inner">' +
+    '<p class="color-gray">{{formattedDate}}</p>' +
+    '<p>{{description}}</p>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</a>' +
+    '</li>' +
+    '{{/each}}' +
+    '</ul>',
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
     '<div class="navbar theme-deeppurple">' +
@@ -630,15 +670,14 @@ myApp.onPageInit('wizard-result', function (page) {
 
   console.log(genreString);
 
-
-  // SpinnerPlugin.activityStart(null, {dimBackground: false});
+  SpinnerPlugin.activityStart(null, {dimBackground: false});
   console.log("ajaxstart");
 
   //make api call, make object and assign it to items below
   $$.ajax({
     complete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
