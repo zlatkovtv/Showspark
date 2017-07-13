@@ -134,6 +134,11 @@ html {
   margin-top: 25px;
 }
 
+.login-buttons-div {
+  position: relative;
+  top: 30px;
+}
+
 .login-background {
   background-image: url("../img/login-background-2.jpg");
   background-repeat: no-repeat;

@@ -29,7 +29,7 @@ var welcomescreen_slides = [
   {
     id: 'slide3',
     picture: '<div class="tutorialicon"></div>',
-    text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-deeppurple tutorial-close-btn" href="#">End Tutorial</a>'
+    text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-white color-black-custom  tutorial-close-btn" href="#">End Tutorial</a>'
   }
 ];
 

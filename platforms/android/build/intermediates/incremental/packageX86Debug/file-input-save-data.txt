@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jul 13 10:24:29 EEST 2017
+#Thu Jul 13 10:56:48 EEST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\assets\\x86\\debug\\www\\cordova.js

@@ -134,9 +134,15 @@ html {
   margin-top: 25px;
 }
 
+.login-buttons-div {
+  position: relative;
+  top: 30px;
+}
+
 .login-background {
   background-image: url("../img/login-background-2.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 }
@@ -151,6 +157,10 @@ html {
 
 .color-white-custom {
   color: white !important;
+}
+
+.color-black-custom {
+  color: #111112 !important;
 }
 
 .login-button-logo-absolute {
