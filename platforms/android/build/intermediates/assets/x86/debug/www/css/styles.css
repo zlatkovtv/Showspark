@@ -138,7 +138,7 @@ html {
   background-image: url("../img/login-background-2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: left bottom;
+  background-position: center center;
 }
 
 .no-caps {
@@ -244,36 +244,58 @@ i.material-icons.color-deeppurple-custom {
   color: rgba(255,255,255,.87);
 }
 
- .modal-title {
-   color: rgba(255,255,255,.87);
- }
+.modal-title {
+  color: rgba(255,255,255,.87);
+}
 
- input.modal-text-input {
-   background-color: #222;
-   color: white;
- }
+input.modal-text-input {
+  background-color: #222;
+  color: white;
+}
 
- span.modal-button {
-   color: #111112;
- }
+span.modal-button {
+  color: rgba(255,255,255,.87);
+}
 
- .demo-card-header-pic .card-header {
-    height: 49vw;
-    background-size: cover;
-    background-position: center;
-  }
+.demo-card-header-pic .card-header {
+  height: 49vw;
+  background-size: cover;
+  background-position: center;
+}
 
 .logo-center {
-    height: 60px;
-    width: 60px;
-    background-image: url("../img/fire-logo.png");
-    background-size:     cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-    margin: 0 auto;
+  height: 60px;
+  width: 60px;
+  background-image: url(../img/fire-logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+}
+
+.showspark-center {
+  height: 45px;
+  width: 135px;
+  background-image: url(../img/showspark.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 11px;
+  background-position: top left;
+  float: left;
 }
 
 .center.center-in-tabs {
   width: 100%;
-    text-align: center;
+  text-align: center;
+}
+
+.logo-center-canvas {
+  width: 195px;
+  height: 61px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  left: calc(50% - 97px);
+  background-color: white;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }

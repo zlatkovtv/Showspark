@@ -1,15 +1,15 @@
 /**
  * Framework7 Feeds 1.0.1
  * Framework7 Feeds plugin brings easy RSS feeds integration into Framework7 app
- * 
+ *
  * http://www.idangero.us/framework7/plugins/
- * 
+ *
  * Copyright 2015, Vladimir Kharlampidi
  * The iDangero.us
  * http://www.idangero.us/
- * 
+ *
  * Licensed under MIT
- * 
+ *
  * Released on: August 22, 2015
  */
 Framework7.prototype.plugins.feeds = function (app) {
@@ -38,7 +38,7 @@ Framework7.prototype.plugins.feeds = function (app) {
         f.container = $(container);
 
         // Templates
-        var listTemplate = 
+        var listTemplate =
             '<ul>' +
                 '{{#each items}}' +
                     '<li>' +
@@ -51,7 +51,7 @@ Framework7.prototype.plugins.feeds = function (app) {
                     '</li>' +
                 '{{/each}}' +
             '</ul>';
-        var virtualListItemTemplate = 
+        var virtualListItemTemplate =
             '<li>' +
                 '<a href="#" class="item-link item-content feeds-item-link" data-index="{{@index}}">' +
                     '<div class="item-inner">' +
@@ -60,7 +60,7 @@ Framework7.prototype.plugins.feeds = function (app) {
                     '</div>' +
                 '</a>' +
             '</li>';
-        var itemPageNavbarTemplate = 
+        var itemPageNavbarTemplate =
             '<div class="navbar">' +
                 '<div class="navbar-inner">' +
                     '<div class="left sliding">' +
@@ -76,7 +76,7 @@ Framework7.prototype.plugins.feeds = function (app) {
         var navbarLayout = 'static';
         if (f.container.parents('.navbar-fixed').length > 0) navbarLayout = 'fixed';
         if (f.container.parents('.navbar-through').length > 0) navbarLayout = 'through';
-        var itemPageTemplate = 
+        var itemPageTemplate =
         (navbarLayout === 'through' ? itemPageNavbarTemplate : '') +
         '<div class="page feeds-page ' + (navbarLayout === 'fixed' ? 'navbar-fixed' : '') + '" data-page="feeds-page-{{index}}">' +
             (navbarLayout === 'fixed' ? itemPageNavbarTemplate : '') +
@@ -89,7 +89,7 @@ Framework7.prototype.plugins.feeds = function (app) {
                 '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
             '</div>' +
         '</div>';
-        var itemPopupTemplate = 
+        var itemPopupTemplate =
         '<div class="popup">' +
             '<div class="view navbar-fixed">' +
                 '<div class="navbar">' +
@@ -174,7 +174,8 @@ Framework7.prototype.plugins.feeds = function (app) {
                         pubDate: item.children('pubDate').text(),
                         formattedDate: f.params.formatDate(item.children('pubDate').text()),
                         guid: item.children('guid').text(),
-                        index: f.data.items.length
+                        index: f.data.items.length,
+                        indexPlusOne: f.data.items.length + 1
                     };
                     if (f.params.customItemFields && f.params.customItemFields.length > 0) {
                         item.children().each(function () {
@@ -200,13 +201,13 @@ Framework7.prototype.plugins.feeds = function (app) {
                         }
                         f.params.virtualList.items = f.data.items;
                         f.params.virtualList.template = f.params.virtualList.template || virtualListItemTemplate;
-                        f.virtualList = app.virtualList(f.container, f.params.virtualList);    
+                        f.virtualList = app.virtualList(f.container, f.params.virtualList);
                     }
                 }
                 else {
                     f.container.html(f.listTemplate(f.data));
                 }
-                    
+
                 // Reset PTR
                 if (refresh) app.pullToRefreshDone(f.container.parents('.pull-to-refresh-content'));
             });
@@ -264,7 +265,7 @@ Framework7.prototype.plugins.feeds = function (app) {
             });
         });
     }
-    
+
     return {
         hooks : {
             pageInit: pageInit,

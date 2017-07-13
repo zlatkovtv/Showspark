@@ -171,8 +171,10 @@ myApp.onPageBeforeInit('home', function () {
 myApp.onPageInit('home', function () {
   console.log("index onPageInit");
 
-  if(user.displayName) {
-    $$('.user-name-label').text("Signed in as " + user.displayName);
+  var currUser = firebase.auth().currentUser;
+  console.log(currUser);
+  if(currUser) {
+    $$('.user-name-label').text("Signed in as " + currUser.displayName);
   }
 
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -697,19 +699,20 @@ myApp.onPageInit('wizard-result', function (page) {
         var myList = myApp.virtualList('.list-block.virtual-list', {
           // Array with items data
           items: apiObject,
-          // Template 7 template to render each item
-          template:  '<li>' +
-          ' <a href="#" class="item-link item-content">' +
-          '<div class="item-media"><img src="{{poster_path}}" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
-          '<div class="item-inner">' +
-          '<div class="item-title-row">' +
-          '<div class="item-title">{{title}}</div>' +
-          '</div>' +
-          '<div class="item-subtitle">Average vote: {{vote_average}}</div>' +
-          '<div class="item-text">{{overview}}</div>' +
-          '</div>' +
-          '</a>' +
-          '</li>',
+          renderItem: function (index, item) {
+              return '<li>' +
+              ' <a href="#" class="item-link item-content">' +
+              '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+              '<div class="item-inner">' +
+              '<div class="item-title-row">' +
+              '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
+              '</div>' +
+              '<div class="item-subtitle">Average vote: ' + item.vote_average + '</div>' +
+              '<div class="item-text">' + item.overview + '</div>' +
+              '</div>' +
+              '</a>' +
+              '</li>';
+          },
           height: 176
         });
       }

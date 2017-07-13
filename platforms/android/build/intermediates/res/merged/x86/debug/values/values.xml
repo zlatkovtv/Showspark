@@ -74,7 +74,7 @@
     <string name="actionbar_textselection_title">"Text selection"</string>
     <string name="actionbar_web_search">"Web search"</string>
     <string name="activity_name">@string/launcher_name</string>
-    <string name="app_name">WhatToWatch_PG7</string>
+    <string name="app_name">Showspark</string>
     <string name="autofill_keyboard_accessory_content_description">"Suggestions available"</string>
     <string name="autofill_popup_content_description">"Showing autofill popup"</string>
     <string name="color_picker_button_black">"Black"</string>

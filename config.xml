@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>WhatToWatch_PG7</name>
+    <name>Showspark</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        A newsfeed app.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="konstantinzlatkov@gmail.com" href="http://cordova.io">
         Apache Cordova Team
     </author>
     <icon src="www\img\fire-logo.png" />

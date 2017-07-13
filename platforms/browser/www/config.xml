@@ -3,11 +3,11 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>WhatToWatch_PG7</name>
+    <name>Showspark</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        A newsfeed app.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="konstantinzlatkov@gmail.com" href="http://cordova.io">
         Apache Cordova Team
     </author>
     <icon src="www\img\fire-logo.png" />
