@@ -164,11 +164,11 @@ html {
 }
 
 i.material-icons.color-deeppurple-custom {
-  color: #551f70;
+  color: #000000;
 }
 
 .toolbar-inner {
-  background-color: #551f70;
+  background-color: #111112;
 }
 
 .button-float-right {
@@ -222,7 +222,7 @@ i.material-icons.color-deeppurple-custom {
   color: #8e8e93;
 }
 .facebook-card .card-footer {
-  background: #551f70;
+  background: #000000;
 }
 .facebook-card .card-footer a {
   color: #8e8e93;
@@ -254,7 +254,7 @@ i.material-icons.color-deeppurple-custom {
  }
 
  span.modal-button {
-   color: #551f70;
+   color: #111112;
  }
 
  .demo-card-header-pic .card-header {
@@ -262,3 +262,18 @@ i.material-icons.color-deeppurple-custom {
     background-size: cover;
     background-position: center;
   }
+
+.logo-center {
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/fire-logo.png");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin: 0 auto;
+}
+
+.center.center-in-tabs {
+  width: 100%;
+    text-align: center;
+}

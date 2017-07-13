@@ -72,7 +72,7 @@ var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  StatusBar.backgroundColorByHexString("#000000");
+  StatusBar.backgroundColorByHexString("#111112");
   // statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
@@ -162,7 +162,6 @@ function goToWizardOrderby() {
 }
 
 myApp.onPageBeforeInit('home', function () {
-  StatusBar.backgroundColorByHexString("#000000");
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", goToIndex, false);
@@ -171,6 +170,11 @@ myApp.onPageBeforeInit('home', function () {
 
 myApp.onPageInit('home', function () {
   console.log("index onPageInit");
+
+  if(user.displayName) {
+    $$('.user-name-label').text("Signed in as " + user.displayName);
+  }
+
   var provider = new firebase.auth.GoogleAuthProvider();
   var fbProvider = new firebase.auth.FacebookAuthProvider();
 
@@ -206,7 +210,6 @@ myApp.onPageInit('home', function () {
 });
 
 myApp.onPageBeforeInit('login-with-email', function () {
-  StatusBar.backgroundColorByHexString("#551f70");
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", exitPrompt, false);
@@ -214,7 +217,6 @@ myApp.onPageBeforeInit('login-with-email', function () {
 })
 
 myApp.onPageBeforeInit('tabs-main', function () {
-  StatusBar.backgroundColorByHexString("#551f70");
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", goToIndex, false);
@@ -222,7 +224,6 @@ myApp.onPageBeforeInit('tabs-main', function () {
 })
 
 myApp.onPageBeforeInit('wizard', function () {
-  StatusBar.backgroundColorByHexString("#222");
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", exitPrompt, false);
   document.removeEventListener("backbutton", goToIndex, false);
@@ -230,7 +231,6 @@ myApp.onPageBeforeInit('wizard', function () {
 })
 
 myApp.onPageBeforeInit('wizard-order-by', function () {
-  StatusBar.backgroundColorByHexString("#222");
   document.removeEventListener("backbutton", exitPrompt, false);
   document.removeEventListener("backbutton", goToWizardOrderby, false);
   document.removeEventListener("backbutton", goToIndex, false);
@@ -247,7 +247,6 @@ myApp.onPageInit('wizard-order-by', function () {
 })
 
 myApp.onPageBeforeInit('wizard-result', function () {
-  StatusBar.backgroundColorByHexString("#551f70");
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", exitPrompt, false);
   document.removeEventListener("backbutton", goToIndex, false);
