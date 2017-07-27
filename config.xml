@@ -36,6 +36,7 @@
         <preference name="BackupWebStorage" value="none" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyBeCdNgyqERu2cpCy6zNuqo8AJe_f0y6xg" />
     <universal-links>
         <host name="m2mf5.app.goo.gl" scheme="https" />
         <host name="whattowatch-d5653.firebaseapp.com" scheme="https">
@@ -51,6 +52,7 @@
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="~4.3.1" />
+    <plugin name="com.bunkerpalace.cordova.YoutubeVideoPlayer" spec="git+https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git" />
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-buildinfo" spec="^1.1.0" />
     <plugin name="cordova-plugin-console" spec="~1.0.1" />

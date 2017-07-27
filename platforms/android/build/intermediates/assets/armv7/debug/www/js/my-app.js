@@ -68,7 +68,7 @@ var mainView = myApp.addView('.view-main', {
 var selectedOrderByCategory;
 var selectedGenres;
 var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
-
+var mostPopMovieObject = [];
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
@@ -143,11 +143,23 @@ function goToWizard(){
   mainView.router.loadPage('wizard.html');
 }
 
+var pressed = false;
+
 function exitPrompt(){
-  myApp.confirm('Are you sure you want to exit?', "", function () {
+  if(pressed) {
+    pressed = false;
     navigator.app.clearHistory();
     navigator.app.exitApp();
-  });
+  } else {
+    pressed = true;
+    myApp.addNotification({
+        message: 'Press back button again to exit',
+        hold: 2500,
+        onClose: function () {
+            pressed = false;
+        }
+    });
+  }
 }
 
 function closeSignUpPopup() {
@@ -342,9 +354,79 @@ myApp.onPageInit('tabs-main', function () {
     swipePanel: 'left',
     swipePanelActiveArea: 20,
     cache:true,
-    hideTabbarOnPageScroll:true,
     showBarsOnPageScrollEnd:false
   });
+
+  var pressed = window.localStorage.getItem("isFloatingBPressed");
+  if(!pressed) {
+    var d = document.getElementById("main-fl-button");
+    d.className += " pulse-btn";
+  }
+
+  $$('#main-fl-button').on('click', function () {
+    window.localStorage.setItem("isFloatingBPressed", false);
+  });
+
+  // var mySwiper1 = myApp.swiper('.swiper-1', {
+  //   pagination:'.swiper-1 .swiper-pagination',
+  //   spaceBetween: 50
+  // });
+  // console.log("printing");
+  // console.log(mySwiper1);
+
+  var html = "";
+  var colorArr = ["#e74c3c", "#f1c40f", "#9b59b6", "#4CAF50", "#3F51B5", "#7f8c8d", "#2c3e50", "#f39c12"];
+
+  SpinnerPlugin.activityStart("Loading trailers...", {dimBackground: false});
+
+  $$.ajax({
+    complete: function () {
+      console.log("ajaxcomplete");
+      SpinnerPlugin.activityStop();
+    },
+    url: 'https://api.themoviedb.org/3/discover/movie?api_key=17bad8fd5ecafe775377303226579c19&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=1',
+    statusCode: {
+      404: function (xhr) {
+        console.log('page not found');
+      },
+      200: function (xhr) {
+        mostPopMovieObject = JSON.parse(xhr.response).results;
+        for (var i = 0; i < mostPopMovieObject.length; i++) {
+          html += Template7.templates.showcaseCardTemplate({
+            inputName: mostPopMovieObject[i].title,
+            inputBackground: mostPopMovieObject[i].backdrop_path,
+            inputId: mostPopMovieObject[i].id
+          });
+        }
+        $$('.showcase-container').append(html);
+
+
+        $$('.video-link').on('click', function () {
+          console.log("video");
+          var clickedObjId = $$(this).prop('id');
+
+          $$.ajax({
+            complete: function () {
+              console.log("ajaxcomplete");
+            },
+            url: 'https://api.themoviedb.org/3/movie/' + clickedObjId + '/videos?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+            statusCode: {
+              404: function (xhr) {
+                console.log('page not found');
+              },
+              200: function (xhr) {
+                  var movieObj = JSON.parse(xhr.response).results[0];
+                  console.log();
+                  YoutubeVideoPlayer.openVideo(movieObj.key, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+              }
+            }
+          })
+
+
+        });
+      }
+    }
+  })
 
   var myFeed = myApp.feeds('.movie-feed', {
     url: 'http://www.cinemablend.com/rss.php',
@@ -363,15 +445,13 @@ myApp.onPageInit('tabs-main', function () {
     '<li>' +
     '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
     '<div class="card demo-card-header-pic">' +
-    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border">{{title}}</div>' +
-    '<div class="card-content">' +
-    '<div class="card-content-inner">' +
-    '<p class="color-gray">{{formattedDate}}</p>' +
-    '<p>{{description}}</p>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
+    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
     '</a>' +
+    '<div class="card-footer">' +
+    '<i class="material-icons link">bookmark_border</i>' +
+    '<i class="material-icons link">share</i>' +
+    '</div>' +
+    '</div>' +
     '</li>' +
     '{{/each}}' +
     '</ul>',
@@ -420,15 +500,13 @@ myApp.onPageInit('tabs-main', function () {
     '<li>' +
     '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
     '<div class="card demo-card-header-pic">' +
-    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border">{{title}}</div>' +
-    '<div class="card-content">' +
-    '<div class="card-content-inner">' +
-    '<p class="color-gray">{{formattedDate}}</p>' +
-    '<p>{{description}}</p>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
+    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
     '</a>' +
+    '<div class="card-footer">' +
+    '<i class="material-icons link">bookmark_border</i>' +
+    '<i class="material-icons link">share</i>' +
+    '</div>' +
+    '</div>' +
     '</li>' +
     '{{/each}}' +
     '</ul>',

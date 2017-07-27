@@ -1,15 +1,11 @@
 [
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_warning.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\ic_warning.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\ic_warning.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\dropdown_popup_background_down.9.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\dropdown_popup_background_down.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\icon.png",
-        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\drawable-xhdpi\\icon.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\dropdown_popup_background_down.9.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_action_previous_item.png",
@@ -17,27 +13,27 @@
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_search.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\ic_search.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\ic_search.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\bubble_arrow_up.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\bubble_arrow_up.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\bubble_arrow_up.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_menu_share_holo_light.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\ic_menu_share_holo_light.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\ic_menu_share_holo_light.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ondemand_overlay.9.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\ondemand_overlay.9.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\ondemand_overlay.9.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\bubble.9.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\bubble.9.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\bubble.9.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\verify_checkmark.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\verify_checkmark.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\verify_checkmark.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_action_next_item.png",
@@ -45,11 +41,11 @@
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\dropdown_popup_background_up.9.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\dropdown_popup_background_up.9.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\dropdown_popup_background_up.9.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\color_picker_advanced_select_handle.png",
-        "source": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\drawable-xhdpi\\color_picker_advanced_select_handle.png"
+        "source": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\drawable-xhdpi\\color_picker_advanced_select_handle.png"
     },
     {
         "merged": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\res\\merged\\x86\\debug\\drawable-xhdpi\\ic_action_remove.png",

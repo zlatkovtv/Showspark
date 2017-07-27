@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="lib/framework7-feeds/framework7.feeds.min.css">
 	<link rel="stylesheet" href="lib/framework7-welcomescreen/welcomescreen.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="lib/proxima-nova/fonts/fonts.min.css" />
 
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -89,8 +90,14 @@
 
 	<!-- Left panel with reveal effect-->
 	<div class="panel panel-left panel-cover">
-		<div class="left-panel-pic card-header color-white no-border user-name-label" valign="bottom">
+		<div class="left-panel-pic card-header"v>
+			<div class="profile-container color-white">
 
+	        <i class="material-icons">account_circle</i>
+					<div class=" no-border user-name-label">
+					</div>
+
+	    </div>
 		</div>
 		<div class="list-block">
 			<a href="#" class="item-link item-content">
@@ -164,6 +171,17 @@
 
 	<script type="text/template7" id="wizardResultTitleTemplate">
 	   Movies are sorted by {{selectedValue}}
+	</script>
+
+	<script type="text/template7" id="showcaseCardTemplate">
+		<div id="{{inputId}}" class="card col-50 video-link" style="background-image:url(http://image.tmdb.org/t/p/w185/{{inputBackground}});">
+			<div class="card-content">
+				<svg class="play-icon" viewBox="0 0 24 24">
+						<path fill="white" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+				</svg>
+				<!-- <div class="card-content-inner">{{inputName}}</div> -->
+			</div>
+		</div>
 	</script>
 
 	<script type="text/javascript" src="cordova.js"></script>

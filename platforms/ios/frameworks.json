@@ -5,5 +5,8 @@
     "Security.framework": 1,
     "SystemConfiguration.framework": 1,
     "libz.tbd": 2,
-    "libz.dylib": 1
+    "libz.dylib": 1,
+    "MediaPlayer.framework": 1,
+    "AVFoundation.framework": 1,
+    "JavaScriptCore.framework": 1
 }

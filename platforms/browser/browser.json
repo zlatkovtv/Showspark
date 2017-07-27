@@ -63,6 +63,9 @@
         },
         "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
@@ -171,6 +174,14 @@
             "clobbers": [
                 "SpinnerPlugin"
             ]
+        },
+        {
+            "file": "plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
+            "id": "com.bunkerpalace.cordova.YoutubeVideoPlayer.YoutubeVideoPlayer",
+            "pluginId": "com.bunkerpalace.cordova.YoutubeVideoPlayer",
+            "clobbers": [
+                "YoutubeVideoPlayer"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -188,6 +199,7 @@
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-customurlscheme": "4.3.0",
         "cordova-plugin-spinner": "1.1.0",
-        "cordova-plugin-crosswalk-webview": "2.3.0"
+        "cordova-plugin-crosswalk-webview": "2.3.0",
+        "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5"
     }
 }

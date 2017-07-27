@@ -1,4 +1,0 @@
-#Wed Jul 12 19:47:18 EEST 2017
-base.0=C\:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\transforms\\dex\\armv7\\debug\\folders\\1000\\5\\slice_0
-renamed.0=classes.dex
-file.0=C\:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\transforms\\dex\\armv7\\debug\\folders\\1000\\5\\slice_0\\classes.dex

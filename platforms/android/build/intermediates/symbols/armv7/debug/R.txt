@@ -80,10 +80,9 @@ int drawable ic_action_remove 0x7f020024
 int drawable ic_menu_share_holo_light 0x7f020025
 int drawable ic_search 0x7f020026
 int drawable ic_warning 0x7f020027
-int drawable icon 0x7f020028
-int drawable ondemand_overlay 0x7f020029
-int drawable screen 0x7f02002a
-int drawable verify_checkmark 0x7f02002b
+int drawable ondemand_overlay 0x7f020028
+int drawable screen 0x7f020029
+int drawable verify_checkmark 0x7f02002a
 int id adjust_height 0x7f0c0002
 int id adjust_width 0x7f0c0003
 int id ampm 0x7f0c0027

@@ -3,57 +3,84 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\jars\classes.jar"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_77cb3868c3c1911c9d1e82026320954b42697195.jar" />
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-core-ui-26.0.0-alpha1_18140a06e271c1de7e3d67fbc6ed2f7aa54ba2a0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\809826960fa3d7e13cffd7e6e270550406c0d730\output\jars\classes.jar"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\debug\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cd2af1a7180eb6427b58d868cd841d8212aca77e">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\CordovaLib-6.2.3-debug_80b0459ccd27235747cdd33c5d6815a25c0565a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\customtabs\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1d3964db19259a503a8c9467e52c344c0372ebf8">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-customtabs-23.3.0_66c41f69e6b9a5a3434eb847edfc1a6f2871a732.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\libs\openyoutubeactivity.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5ae2d44e1b17147e0c9f8dcdedb94520238408cb">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\openyoutubeactivity_4aa07df17f9b9035ca779367437bfa4389e777e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="86baa7d1051901fc1b8e7f596732f71f32175bde">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-tasks-11.0.2_7efba4fc746ea73a20a817fe7d112441ce37a424.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2a2d9cd43adbe7599a78f2293273a77881c1909a">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-base-11.0.2_73d4520a24790a4c926d7ead2ef4e5db9193d9fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a71be5f29a1c1e3fd3e84472742668f101a5b936">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-basement-11.0.2_bad11a5a6074f421bfa14c8f0195358c2ca509a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\YouTubeAndroidPlayerApi_4c70eb5c8fb084c364137d83e1a1277b7e5409a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\org.xwalk\xwalk_core_library\23.53.589.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="834071525d6d2707eb4c7f76b728d8cd14b17ae1">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_4a3d7ccef8e5e1ca11a6bb2343c2adccf4d5b537.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\15a7c8ed8bb8bc9069e86d06361f478170305eb7\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_af564b315b6a48b9fbd939157f6d5c59dbcee4c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\0b94cbca316b2d96fc0b01b93b6b705b8c795ec3\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_01567052a371edd1db4da735891561d3af2666a1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\fb27bad9a940193a1761f1f05494b5138793abde\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_7e5042d191cecac4a09f0e72aa38c628e90a4f1d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\e908f9b0615fb214561b2c7e5828459574b6b53d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_aba495c987c7917434beb92fffaa56922db2f7b1.jar" />
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\org.xwalk-xwalk_core_library-23.53.589.4_0e06ef186a125f7da5844d97c4e7e0d02cd4deaa.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,21 +93,75 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Memphis\.android\build-cache\3d6156cb42b47905f41a935fe8c319d92de6d3d3\output\jars\classes.jar"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_99ce330d5274f49d19f09c6202cba0b89afde2bc.jar" />
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-core-utils-26.0.0-alpha1_8b9013388401da951cfc2c79270f66a2bf5aa2a8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\CordovaLib\build\intermediates\bundles\debug\classes.jar"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="cd2af1a7180eb6427b58d868cd841d8212aca77e">
-        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\classes_423430a1c322ef9b5addf3046f17769e552edcd1.jar" />
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-fragment-26.0.0-alpha1_ed7d2777944dc633f8ab2362132f7390a6bfdb65.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a3d07dfddc7c3c7547fb953847589d586f1e2077">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-auth-base-11.0.2_79fabdbb546ea87dc86ef83872a25b5ab875facc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3560fc891bbecd8982acbace15ccead59c3fedd1">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-auth-11.0.2_e58c6ea09d48291c69297b57357fb27828b21af2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\11.0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="885bcb023a9b57ed31c305e2e94e31af909e21c5">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.google.android.gms-play-services-identity-11.0.2_44aac9814e3f2de1c21d455bb7eb4f6c34c060b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-compat-26.0.0-alpha1_c0484a68d44a5151ef74b678bfe337b59dc31940.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-v4-26.0.0-alpha1_87070b80b1f52e94fd3e6d018f8953752d845cfa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\pre-dexed\armv7\debug\com.android.support-support-media-compat-26.0.0-alpha1_19fd3f4aa0c68b6e5d6dc06abdfd4440fb8544a8.jar" />
     </item>
 
 </items>

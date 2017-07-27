@@ -28,6 +28,7 @@
         </host>
     </universal-links>
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyBeCdNgyqERu2cpCy6zNuqo8AJe_f0y6xg" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />

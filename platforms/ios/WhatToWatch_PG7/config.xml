@@ -50,6 +50,9 @@
     <feature name="SpinnerPlugin">
         <param name="ios-package" value="SpinnerPlugin" />
     </feature>
+    <feature name="YoutubeVideoPlayer">
+        <param name="ios-package" value="YoutubeVideoPlayer" />
+    </feature>
     <name>Showspark</name>
     <description>
         A newsfeed app.
@@ -91,6 +94,7 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyBeCdNgyqERu2cpCy6zNuqo8AJe_f0y6xg" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />

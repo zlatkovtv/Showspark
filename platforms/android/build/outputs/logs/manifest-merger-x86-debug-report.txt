@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:2:1-38:12
 	package
 		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:2:102-135
 		INJECTED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml
@@ -35,36 +35,36 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:4:3-64
 	android:name
 		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:4:20-62
-uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:5:3-68
-	android:name
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:5:20-66
-uses-permission#android.permission.USE_CREDENTIALS
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:6:3-71
-	android:name
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:6:20-69
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:7:3-76
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:5:3-76
 	android:name
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:7:20-74
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:5:20-74
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:8:3-73
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:6:3-73
 	android:name
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:8:20-71
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:6:20-71
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:7:3-68
+	android:name
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:7:20-66
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:8:3-71
+	android:name
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:8:20-69
 application
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:9:3-34:17
-MERGED from [com.android.support:customtabs:23.3.0] C:\Users\Memphis\.android\build-cache\598ce357bfe831648b5f213b3b8ba2dc8ff045cf\output\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:19:5-25:19
-MERGED from [com.google.android.gms:play-services-identity:11.0.2] C:\Users\Memphis\.android\build-cache\997e00d5e6655edde0e32664d0bc9428797c5d87\output\AndroidManifest.xml:18:5-19
-MERGED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] C:\Users\Memphis\.android\build-cache\7eb17b71f6e48fbe4500515aa7f19f0c1b37387e\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\.android\build-cache\8e4477574eece6563d7336c38af16a878ac8ade2\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\fb27bad9a940193a1761f1f05494b5138793abde\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\0b94cbca316b2d96fc0b01b93b6b705b8c795ec3\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\3d6156cb42b47905f41a935fe8c319d92de6d3d3\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\15a7c8ed8bb8bc9069e86d06361f478170305eb7\output\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\e908f9b0615fb214561b2c7e5828459574b6b53d\output\AndroidManifest.xml:29:5-20
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:9:3-36:17
+MERGED from [com.android.support:customtabs:23.3.0] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\customtabs\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-identity:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\11.0.2\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.0.2\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:9:79-111
 	android:supportsRtl
@@ -117,71 +117,91 @@ data
 ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:19:9-54
 	android:scheme
 		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:19:15-52
+activity#com.keyes.youtube.OpenYouTubePlayerActivity
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:34:5-113
+	android:screenOrientation
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:34:74-111
+	android:name
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:34:15-73
+activity#com.bunkerpalace.cordova.YouTubeActivity
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:5-316
+	android:label
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:93-130
+	android:launchMode
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:131-161
+	android:windowSoftInputMode
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:272-314
+	android:configChanges
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:15-92
+	android:theme
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:218-271
+	android:name
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:162-217
 uses-sdk
-ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:3-71
-MERGED from [com.android.support:customtabs:23.3.0] C:\Users\Memphis\.android\build-cache\598ce357bfe831648b5f213b3b8ba2dc8ff045cf\output\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-auth-base:11.0.2] C:\Users\Memphis\.android\build-cache\ac849bc970840d09e414607e78c73314c172f0dc\output\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-identity:11.0.2] C:\Users\Memphis\.android\build-cache\997e00d5e6655edde0e32664d0bc9428797c5d87\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] C:\Users\Memphis\.android\build-cache\7eb17b71f6e48fbe4500515aa7f19f0c1b37387e\output\AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\.android\build-cache\8e4477574eece6563d7336c38af16a878ac8ade2\output\AndroidManifest.xml:17:5-43
-MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Memphis\.android\build-cache\809826960fa3d7e13cffd7e6e270550406c0d730\output\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\fb27bad9a940193a1761f1f05494b5138793abde\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\0b94cbca316b2d96fc0b01b93b6b705b8c795ec3\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\3d6156cb42b47905f41a935fe8c319d92de6d3d3\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\15a7c8ed8bb8bc9069e86d06361f478170305eb7\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\e908f9b0615fb214561b2c7e5828459574b6b53d\output\AndroidManifest.xml:21:5-23:58
-MERGED from [org.apache.cordova:CordovaLib:6.2.3:debug] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\CordovaLib\build\intermediates\bundles\debug\AndroidManifest.xml:25:5-44
+ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:37:3-71
+MERGED from [com.android.support:customtabs:23.3.0] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\customtabs\23.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\11.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\11.0.2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.0.2\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\AndroidManifest.xml:17:5-43
+MERGED from [org.xwalk:xwalk_core_library:23.53.589.4] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\org.xwalk\xwalk_core_library\23.53.589.4\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\AndroidManifest.xml:21:5-23:58
+MERGED from [org.apache.cordova:CordovaLib:6.2.3:debug] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\org.apache.cordova\CordovaLib\6.2.3\debug\AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:40-69
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:37:40-69
 	android:minSdkVersion
-		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:35:13-39
+		ADDED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml:37:13-39
 		INJECTED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml
 		INJECTED from C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\AndroidManifest.xml
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:20:9-189
+ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:20:9-189
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:20:129-162
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:20:129-162
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:20:163-187
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:20:163-187
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:20:69-128
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:20:69-128
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:20:19-68
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:20:19-68
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:24:9-184
+ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:24:9-184
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:24:64-87
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:24:64-87
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:24:88-182
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:24:88-182
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\.android\build-cache\5bbf6c8ce8b014e0e88023a03c5dfecb42cf3ec6\output\AndroidManifest.xml:24:18-63
+		ADDED from [com.google.android.gms:play-services-auth:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.0.2\AndroidManifest.xml:24:18-63
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\.android\build-cache\2f32769a537b7d011582c74685574e4d2ead897d\output\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.2\AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\.android\build-cache\8e4477574eece6563d7336c38af16a878ac8ade2\output\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\.android\build-cache\8e4477574eece6563d7336c38af16a878ac8ade2\output\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\.android\build-cache\8e4477574eece6563d7336c38af16a878ac8ade2\output\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:11.0.2] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.2\AndroidManifest.xml:20:20-65
 meta-data#android.support.VERSION
-ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\fb27bad9a940193a1761f1f05494b5138793abde\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\0b94cbca316b2d96fc0b01b93b6b705b8c795ec3\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\3d6156cb42b47905f41a935fe8c319d92de6d3d3\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\15a7c8ed8bb8bc9069e86d06361f478170305eb7\output\AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\e908f9b0615fb214561b2c7e5828459574b6b53d\output\AndroidManifest.xml:25:5-27:41
+ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\AndroidManifest.xml:25:5-27:41
 	android:value
-		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:27:9-38
 	android:name
-		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\.android\build-cache\92dd8b147da7571e02cc60597eb99182c73ccf4f\output\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Memphis\Desktop\ImdbUI\WhatToWatch_PG7\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\AndroidManifest.xml:26:9-47

@@ -189,10 +189,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_menu_share_holo_light=0x7f020025;
         public static final int ic_search=0x7f020026;
         public static final int ic_warning=0x7f020027;
-        public static final int icon=0x7f020028;
-        public static final int ondemand_overlay=0x7f020029;
-        public static final int screen=0x7f02002a;
-        public static final int verify_checkmark=0x7f02002b;
+        public static final int ondemand_overlay=0x7f020028;
+        public static final int screen=0x7f020029;
+        public static final int verify_checkmark=0x7f02002a;
     }
     public static final class id {
         public static final int adjust_height=0x7f0c0002;

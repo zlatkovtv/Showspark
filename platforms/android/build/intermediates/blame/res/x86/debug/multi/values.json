@@ -12,7 +12,15 @@
                     "endOffset": 245
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_resources_list.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_resources_list.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 0,
+                        "startOffset": 51,
+                        "endLine": 6,
+                        "endColumn": 15,
+                        "endOffset": 191
+                    }
                 }
             },
             {
@@ -24,7 +32,14 @@
                     "endOffset": 309
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\attrs.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\attrs.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 64,
+                        "endOffset": 292
+                    }
                 }
             },
             {
@@ -36,7 +51,14 @@
                     "endOffset": 374
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\attrs.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\attrs.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endColumn": 65,
+                        "endOffset": 358
+                    }
                 }
             },
             {
@@ -48,7 +70,14 @@
                     "endOffset": 438
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\colors.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 291,
+                        "endColumn": 63,
+                        "endOffset": 350
+                    }
                 }
             },
             {
@@ -60,7 +89,14 @@
                     "endOffset": 498
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\colors.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 231,
+                        "endColumn": 59,
+                        "endOffset": 286
+                    }
                 }
             },
             {
@@ -72,7 +108,14 @@
                     "endOffset": 588
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 215,
+                        "endColumn": 85,
+                        "endOffset": 300
+                    }
                 }
             },
             {
@@ -84,7 +127,14 @@
                     "endOffset": 668
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 301,
+                        "endColumn": 75,
+                        "endOffset": 376
+                    }
                 }
             },
             {
@@ -96,7 +146,14 @@
                     "endOffset": 758
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 377,
+                        "endColumn": 85,
+                        "endOffset": 462
+                    }
                 }
             },
             {
@@ -108,7 +165,14 @@
                     "endOffset": 848
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 463,
+                        "endColumn": 85,
+                        "endOffset": 548
+                    }
                 }
             },
             {
@@ -120,7 +184,14 @@
                     "endOffset": 928
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 549,
+                        "endColumn": 75,
+                        "endOffset": 624
+                    }
                 }
             },
             {
@@ -132,7 +203,14 @@
                     "endOffset": 1009
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 625,
+                        "endColumn": 76,
+                        "endOffset": 701
+                    }
                 }
             },
             {
@@ -144,7 +222,14 @@
                     "endOffset": 1089
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 702,
+                        "endColumn": 75,
+                        "endOffset": 777
+                    }
                 }
             },
             {
@@ -156,7 +241,14 @@
                     "endOffset": 1169
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 778,
+                        "endColumn": 75,
+                        "endOffset": 853
+                    }
                 }
             },
             {
@@ -168,7 +260,14 @@
                     "endOffset": 1231
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\colors.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 412,
+                        "endColumn": 61,
+                        "endOffset": 469
+                    }
                 }
             },
             {
@@ -180,7 +279,14 @@
                     "endOffset": 1288
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\colors.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 355,
+                        "endColumn": 56,
+                        "endOffset": 407
+                    }
                 }
             },
             {
@@ -192,7 +298,14 @@
                     "endOffset": 1336
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1306,
+                        "endColumn": 47,
+                        "endOffset": 1349
+                    }
                 }
             },
             {
@@ -204,7 +317,14 @@
                     "endOffset": 2625
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 422,
+                        "endColumn": 50,
+                        "endOffset": 468
+                    }
                 }
             },
             {
@@ -216,7 +336,14 @@
                     "endOffset": 2687
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 360,
+                        "endColumn": 61,
+                        "endOffset": 417
+                    }
                 }
             },
             {
@@ -228,7 +355,14 @@
                     "endOffset": 2744
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 803,
+                        "endColumn": 56,
+                        "endOffset": 855
+                    }
                 }
             },
             {
@@ -240,7 +374,14 @@
                     "endOffset": 2803
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 525,
+                        "endColumn": 58,
+                        "endOffset": 579
+                    }
                 }
             },
             {
@@ -252,7 +393,14 @@
                     "endOffset": 2855
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 473,
+                        "endColumn": 51,
+                        "endOffset": 520
+                    }
                 }
             },
             {
@@ -264,7 +412,14 @@
                     "endOffset": 2917
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 860,
+                        "endColumn": 61,
+                        "endOffset": 917
+                    }
                 }
             },
             {
@@ -276,7 +431,14 @@
                     "endOffset": 2979
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 922,
+                        "endColumn": 61,
+                        "endOffset": 979
+                    }
                 }
             },
             {
@@ -288,7 +450,14 @@
                     "endOffset": 3036
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 984,
+                        "endColumn": 56,
+                        "endOffset": 1036
+                    }
                 }
             },
             {
@@ -300,7 +469,14 @@
                     "endOffset": 3093
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1041,
+                        "endColumn": 56,
+                        "endOffset": 1093
+                    }
                 }
             },
             {
@@ -312,7 +488,14 @@
                     "endOffset": 3153
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens_03.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1098,
+                        "endColumn": 59,
+                        "endOffset": 1153
+                    }
                 }
             },
             {
@@ -324,7 +507,14 @@
                     "endOffset": 3211
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\dimens.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 273,
+                        "endColumn": 57,
+                        "endOffset": 326
+                    }
                 }
             },
             {
@@ -336,7 +526,14 @@
                     "endOffset": 3270
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\ids.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\ids.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 276,
+                        "endColumn": 59,
+                        "endOffset": 331
+                    }
                 }
             },
             {
@@ -348,7 +545,14 @@
                     "endOffset": 3321
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 291,
+                        "endColumn": 51,
+                        "endOffset": 338
+                    }
                 }
             },
             {
@@ -360,7 +564,14 @@
                     "endOffset": 3389
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\8e4477574eece6563d7336c38af16a878ac8ade2\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 276,
+                        "endColumn": 63,
+                        "endOffset": 339
+                    }
                 }
             },
             {
@@ -372,7 +583,14 @@
                     "endOffset": 3457
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 1231,
+                        "endColumn": 63,
+                        "endOffset": 1294
+                    }
                 }
             },
             {
@@ -384,7 +602,14 @@
                     "endOffset": 3523
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 0,
+                        "startOffset": 1472,
+                        "endColumn": 61,
+                        "endOffset": 1533
+                    }
                 }
             },
             {
@@ -396,7 +621,14 @@
                     "endOffset": 3589
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 0,
+                        "startOffset": 1295,
+                        "endColumn": 61,
+                        "endOffset": 1356
+                    }
                 }
             },
             {
@@ -408,7 +640,14 @@
                     "endOffset": 3659
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 0,
+                        "startOffset": 2371,
+                        "endColumn": 65,
+                        "endOffset": 2436
+                    }
                 }
             },
             {
@@ -420,7 +659,14 @@
                     "endOffset": 3729
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 0,
+                        "startOffset": 2437,
+                        "endColumn": 65,
+                        "endOffset": 2502
+                    }
                 }
             },
             {
@@ -432,7 +678,14 @@
                     "endOffset": 3796
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 0,
+                        "startOffset": 2020,
+                        "endColumn": 62,
+                        "endOffset": 2082
+                    }
                 }
             },
             {
@@ -444,7 +697,14 @@
                     "endOffset": 3862
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 0,
+                        "startOffset": 1756,
+                        "endColumn": 61,
+                        "endOffset": 1817
+                    }
                 }
             },
             {
@@ -456,7 +716,14 @@
                     "endOffset": 3936
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 0,
+                        "startOffset": 1950,
+                        "endColumn": 69,
+                        "endOffset": 2019
+                    }
                 }
             },
             {
@@ -468,7 +735,14 @@
                     "endOffset": 4006
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 0,
+                        "startOffset": 1818,
+                        "endColumn": 65,
+                        "endOffset": 1883
+                    }
                 }
             },
             {
@@ -480,7 +754,14 @@
                     "endOffset": 4076
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 0,
+                        "startOffset": 1884,
+                        "endColumn": 65,
+                        "endOffset": 1949
+                    }
                 }
             },
             {
@@ -492,7 +773,14 @@
                     "endOffset": 4128
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 0,
+                        "startOffset": 110,
+                        "endColumn": 47,
+                        "endOffset": 157
+                    }
                 }
             },
             {
@@ -504,7 +792,14 @@
                     "endOffset": 4203
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 216,
+                        "endColumn": 70,
+                        "endOffset": 286
+                    }
                 }
             },
             {
@@ -516,7 +811,14 @@
                     "endOffset": 4265
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 0,
+                        "startOffset": 158,
+                        "endColumn": 57,
+                        "endOffset": 215
+                    }
                 }
             },
             {
@@ -528,7 +830,14 @@
                     "endOffset": 4329
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 63,
+                        "endOffset": 220
+                    }
                 }
             },
             {
@@ -559,7 +868,14 @@
                     "endOffset": 4476
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 0,
+                        "startOffset": 2880,
+                        "endColumn": 95,
+                        "endOffset": 2975
+                    }
                 }
             },
             {
@@ -571,7 +887,14 @@
                     "endOffset": 4564
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 0,
+                        "startOffset": 2690,
+                        "endColumn": 83,
+                        "endOffset": 2773
+                    }
                 }
             },
             {
@@ -583,7 +906,14 @@
                     "endOffset": 4626
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 1023,
+                        "endColumn": 57,
+                        "endOffset": 1080
+                    }
                 }
             },
             {
@@ -595,7 +925,14 @@
                     "endOffset": 4686
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 787,
+                        "endColumn": 55,
+                        "endOffset": 842
+                    }
                 }
             },
             {
@@ -607,7 +944,14 @@
                     "endOffset": 4750
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 552,
+                        "endColumn": 59,
+                        "endOffset": 611
+                    }
                 }
             },
             {
@@ -619,7 +963,14 @@
                     "endOffset": 4810
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 731,
+                        "endColumn": 55,
+                        "endOffset": 786
+                    }
                 }
             },
             {
@@ -631,7 +982,14 @@
                     "endOffset": 4872
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 843,
+                        "endColumn": 57,
+                        "endOffset": 900
+                    }
                 }
             },
             {
@@ -643,7 +1001,14 @@
                     "endOffset": 4938
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 901,
+                        "endColumn": 61,
+                        "endOffset": 962
+                    }
                 }
             },
             {
@@ -655,7 +1020,14 @@
                     "endOffset": 4998
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 55,
+                        "endOffset": 338
+                    }
                 }
             },
             {
@@ -667,7 +1039,14 @@
                     "endOffset": 5056
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 677,
+                        "endColumn": 53,
+                        "endOffset": 730
+                    }
                 }
             },
             {
@@ -679,7 +1058,14 @@
                     "endOffset": 5114
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 498,
+                        "endColumn": 53,
+                        "endOffset": 551
+                    }
                 }
             },
             {
@@ -691,7 +1077,14 @@
                     "endOffset": 5176
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 1081,
+                        "endColumn": 57,
+                        "endOffset": 1138
+                    }
                 }
             },
             {
@@ -703,7 +1096,14 @@
                     "endOffset": 5240
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 963,
+                        "endColumn": 59,
+                        "endOffset": 1022
+                    }
                 }
             },
             {
@@ -715,7 +1115,14 @@
                     "endOffset": 5309
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 612,
+                        "endColumn": 64,
+                        "endOffset": 676
+                    }
                 }
             },
             {
@@ -727,7 +1134,14 @@
                     "endOffset": 5360
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 339,
+                        "endColumn": 46,
+                        "endOffset": 385
+                    }
                 }
             },
             {
@@ -739,7 +1153,14 @@
                     "endOffset": 5425
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 386,
+                        "endColumn": 60,
+                        "endOffset": 446
+                    }
                 }
             },
             {
@@ -751,7 +1172,14 @@
                     "endOffset": 5480
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 447,
+                        "endColumn": 50,
+                        "endOffset": 497
+                    }
                 }
             },
             {
@@ -763,7 +1191,14 @@
                     "endOffset": 5585
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 951,
+                        "endColumn": 100,
+                        "endOffset": 1051
+                    }
                 }
             },
             {
@@ -775,7 +1210,14 @@
                     "endOffset": 5766
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1052,
+                        "endColumn": 180,
+                        "endOffset": 1232
+                    }
                 }
             },
             {
@@ -787,7 +1229,14 @@
                     "endOffset": 5891
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 1233,
+                        "endColumn": 120,
+                        "endOffset": 1353
+                    }
                 }
             },
             {
@@ -799,7 +1248,14 @@
                     "endOffset": 5998
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 1354,
+                        "endColumn": 102,
+                        "endOffset": 1456
+                    }
                 }
             },
             {
@@ -811,7 +1267,14 @@
                     "endOffset": 6178
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 1457,
+                        "endColumn": 179,
+                        "endOffset": 1636
+                    }
                 }
             },
             {
@@ -823,7 +1286,14 @@
                     "endOffset": 6301
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 1637,
+                        "endColumn": 118,
+                        "endOffset": 1755
+                    }
                 }
             },
             {
@@ -835,7 +1305,14 @@
                     "endOffset": 6404
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 1756,
+                        "endColumn": 98,
+                        "endOffset": 1854
+                    }
                 }
             },
             {
@@ -847,7 +1324,14 @@
                     "endOffset": 6571
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\8e4477574eece6563d7336c38af16a878ac8ade2\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 439,
+                        "endColumn": 166,
+                        "endOffset": 605
+                    }
                 }
             },
             {
@@ -859,7 +1343,14 @@
                     "endOffset": 6759
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 0,
+                        "startOffset": 1855,
+                        "endColumn": 187,
+                        "endOffset": 2042
+                    }
                 }
             },
             {
@@ -871,7 +1362,14 @@
                     "endOffset": 6864
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 0,
+                        "startOffset": 2043,
+                        "endColumn": 100,
+                        "endOffset": 2143
+                    }
                 }
             },
             {
@@ -883,7 +1381,14 @@
                     "endOffset": 7045
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 0,
+                        "startOffset": 2144,
+                        "endColumn": 180,
+                        "endOffset": 2324
+                    }
                 }
             },
             {
@@ -895,7 +1400,14 @@
                     "endOffset": 7170
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 0,
+                        "startOffset": 2325,
+                        "endColumn": 120,
+                        "endOffset": 2445
+                    }
                 }
             },
             {
@@ -907,7 +1419,14 @@
                     "endOffset": 7345
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 0,
+                        "startOffset": 2446,
+                        "endColumn": 174,
+                        "endOffset": 2620
+                    }
                 }
             },
             {
@@ -919,7 +1438,14 @@
                     "endOffset": 7493
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 0,
+                        "startOffset": 2621,
+                        "endColumn": 143,
+                        "endOffset": 2764
+                    }
                 }
             },
             {
@@ -931,7 +1457,14 @@
                     "endOffset": 7556
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 0,
+                        "startOffset": 2765,
+                        "endColumn": 58,
+                        "endOffset": 2823
+                    }
                 }
             },
             {
@@ -943,7 +1476,14 @@
                     "endOffset": 7618
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 0,
+                        "startOffset": 2824,
+                        "endColumn": 57,
+                        "endOffset": 2881
+                    }
                 }
             },
             {
@@ -955,7 +1495,14 @@
                     "endOffset": 7697
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\2f32769a537b7d011582c74685574e4d2ead897d\\output\\res\\values\\values.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\11.0.2\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 0,
+                        "startOffset": 2882,
+                        "endColumn": 74,
+                        "endOffset": 2956
+                    }
                 }
             },
             {
@@ -967,7 +1514,14 @@
                     "endOffset": 7793
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 1139,
+                        "endColumn": 91,
+                        "endOffset": 1230
+                    }
                 }
             },
             {
@@ -979,7 +1533,14 @@
                     "endOffset": 7873
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1484,
+                        "endColumn": 75,
+                        "endOffset": 1559
+                    }
                 }
             },
             {
@@ -991,7 +1552,14 @@
                     "endOffset": 7934
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 0,
+                        "startOffset": 2633,
+                        "endColumn": 56,
+                        "endOffset": 2689
+                    }
                 }
             },
             {
@@ -1003,7 +1571,14 @@
                     "endOffset": 8008
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 0,
+                        "startOffset": 2503,
+                        "endColumn": 69,
+                        "endOffset": 2572
+                    }
                 }
             },
             {
@@ -1015,7 +1590,14 @@
                     "endOffset": 8065
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 0,
+                        "startOffset": 1357,
+                        "endColumn": 52,
+                        "endOffset": 1409
+                    }
                 }
             },
             {
@@ -1027,7 +1609,14 @@
                     "endOffset": 8129
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 0,
+                        "startOffset": 2573,
+                        "endColumn": 59,
+                        "endOffset": 2632
+                    }
                 }
             },
             {
@@ -1039,7 +1628,14 @@
                     "endOffset": 8207
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 0,
+                        "startOffset": 2297,
+                        "endColumn": 73,
+                        "endOffset": 2370
+                    }
                 }
             },
             {
@@ -1051,7 +1647,14 @@
                     "endOffset": 8315
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1627,
+                        "endColumn": 103,
+                        "endOffset": 1730
+                    }
                 }
             },
             {
@@ -1063,7 +1666,14 @@
                     "endOffset": 8415
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 441,
+                        "endColumn": 95,
+                        "endOffset": 536
+                    }
                 }
             },
             {
@@ -1075,7 +1685,14 @@
                     "endOffset": 8486
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1560,
+                        "endColumn": 66,
+                        "endOffset": 1626
+                    }
                 }
             },
             {
@@ -1087,7 +1704,14 @@
                     "endOffset": 8563
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 537,
+                        "endColumn": 72,
+                        "endOffset": 609
+                    }
                 }
             },
             {
@@ -1099,7 +1723,14 @@
                     "endOffset": 8644
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 610,
+                        "endColumn": 76,
+                        "endOffset": 686
+                    }
                 }
             },
             {
@@ -1111,7 +1742,14 @@
                     "endOffset": 8734
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 355,
+                        "endColumn": 85,
+                        "endOffset": 440
+                    }
                 }
             },
             {
@@ -1123,7 +1761,14 @@
                     "endOffset": 8852
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1731,
+                        "endColumn": 113,
+                        "endOffset": 1844
+                    }
                 }
             },
             {
@@ -1135,7 +1780,14 @@
                     "endOffset": 8921
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 290,
+                        "endColumn": 64,
+                        "endOffset": 354
+                    }
                 }
             },
             {
@@ -1147,7 +1799,14 @@
                     "endOffset": 8987
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2203,
+                        "endColumn": 61,
+                        "endOffset": 2264
+                    }
                 }
             },
             {
@@ -1159,7 +1818,14 @@
                     "endOffset": 9041
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 932,
+                        "endColumn": 49,
+                        "endOffset": 981
+                    }
                 }
             },
             {
@@ -1171,7 +1837,14 @@
                     "endOffset": 9099
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 878,
+                        "endColumn": 53,
+                        "endOffset": 931
+                    }
                 }
             },
             {
@@ -1183,7 +1856,14 @@
                     "endOffset": 9169
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 757,
+                        "endColumn": 65,
+                        "endOffset": 822
+                    }
                 }
             },
             {
@@ -1195,7 +1875,14 @@
                     "endOffset": 9228
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 823,
+                        "endColumn": 54,
+                        "endOffset": 877
+                    }
                 }
             },
             {
@@ -1207,7 +1894,14 @@
                     "endOffset": 9290
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 0,
+                        "startOffset": 110,
+                        "endColumn": 57,
+                        "endOffset": 167
+                    }
                 }
             },
             {
@@ -1219,7 +1913,14 @@
                     "endOffset": 9356
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 0,
+                        "startOffset": 168,
+                        "endColumn": 61,
+                        "endOffset": 229
+                    }
                 }
             },
             {
@@ -1231,7 +1932,14 @@
                     "endOffset": 9420
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 230,
+                        "endColumn": 59,
+                        "endOffset": 289
+                    }
                 }
             },
             {
@@ -1243,7 +1951,14 @@
                     "endOffset": 9479
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 102,
+                        "endColumn": 58,
+                        "endOffset": 156
+                    }
                 }
             },
             {
@@ -1255,7 +1970,14 @@
                     "endOffset": 9582
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 0,
+                        "startOffset": 110,
+                        "endColumn": 98,
+                        "endOffset": 208
+                    }
                 }
             },
             {
@@ -1267,7 +1989,14 @@
                     "endOffset": 9641
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 590,
+                        "endColumn": 54,
+                        "endOffset": 644
+                    }
                 }
             },
             {
@@ -1279,7 +2008,14 @@
                     "endOffset": 9785
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 356,
+                        "endColumn": 139,
+                        "endOffset": 495
+                    }
                 }
             },
             {
@@ -1291,7 +2027,14 @@
                     "endOffset": 9883
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 496,
+                        "endColumn": 93,
+                        "endOffset": 589
+                    }
                 }
             },
             {
@@ -1303,7 +2046,14 @@
                     "endOffset": 9956
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 287,
+                        "endColumn": 68,
+                        "endOffset": 355
+                    }
                 }
             },
             {
@@ -1315,7 +2065,14 @@
                     "endOffset": 10027
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 645,
+                        "endColumn": 66,
+                        "endOffset": 711
+                    }
                 }
             },
             {
@@ -1327,7 +2084,14 @@
                     "endOffset": 10093
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 0,
+                        "startOffset": 1410,
+                        "endColumn": 61,
+                        "endOffset": 1471
+                    }
                 }
             },
             {
@@ -1339,7 +2103,14 @@
                     "endOffset": 10171
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 0,
+                        "startOffset": 209,
+                        "endColumn": 73,
+                        "endOffset": 282
+                    }
                 }
             },
             {
@@ -1351,7 +2122,14 @@
                     "endOffset": 10281
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 0,
+                        "startOffset": 2774,
+                        "endColumn": 105,
+                        "endOffset": 2879
+                    }
                 }
             },
             {
@@ -1363,7 +2141,14 @@
                     "endOffset": 10357
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 979,
+                        "endColumn": 71,
+                        "endOffset": 1050
+                    }
                 }
             },
             {
@@ -1375,7 +2160,14 @@
                     "endOffset": 10473
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 867,
+                        "endColumn": 111,
+                        "endOffset": 978
+                    }
                 }
             },
             {
@@ -1387,7 +2179,14 @@
                     "endOffset": 10543
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 712,
+                        "endColumn": 65,
+                        "endOffset": 777
+                    }
                 }
             },
             {
@@ -1399,7 +2198,14 @@
                     "endOffset": 10636
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_content_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_content_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 778,
+                        "endColumn": 88,
+                        "endOffset": 866
+                    }
                 }
             },
             {
@@ -1411,7 +2217,14 @@
                     "endOffset": 10755
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 1845,
+                        "endColumn": 114,
+                        "endOffset": 1959
+                    }
                 }
             },
             {
@@ -1423,7 +2236,14 @@
                     "endOffset": 10829
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 687,
+                        "endColumn": 69,
+                        "endOffset": 756
+                    }
                 }
             },
             {
@@ -1435,7 +2255,14 @@
                     "endOffset": 10915
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_xwalk_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_xwalk_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 982,
+                        "endColumn": 81,
+                        "endOffset": 1063
+                    }
                 }
             },
             {
@@ -1447,7 +2274,14 @@
                     "endOffset": 11135
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 981,
+                        "endColumn": 215,
+                        "endOffset": 1196
+                    }
                 }
             },
             {
@@ -1459,7 +2293,14 @@
                     "endOffset": 11230
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 890,
+                        "endColumn": 90,
+                        "endOffset": 980
+                    }
                 }
             },
             {
@@ -1471,7 +2312,14 @@
                     "endOffset": 11378
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 746,
+                        "endColumn": 143,
+                        "endOffset": 889
+                    }
                 }
             },
             {
@@ -1483,7 +2331,14 @@
                     "endOffset": 11475
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 653,
+                        "endColumn": 92,
+                        "endOffset": 745
+                    }
                 }
             },
             {
@@ -1495,7 +2350,14 @@
                     "endOffset": 11649
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 0,
+                        "startOffset": 196,
+                        "endColumn": 169,
+                        "endOffset": 365
+                    }
                 }
             },
             {
@@ -1507,7 +2369,14 @@
                     "endOffset": 11739
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 0,
+                        "startOffset": 110,
+                        "endColumn": 85,
+                        "endOffset": 195
+                    }
                 }
             },
             {
@@ -1519,7 +2388,14 @@
                     "endOffset": 11937
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 459,
+                        "endColumn": 193,
+                        "endOffset": 652
+                    }
                 }
             },
             {
@@ -1531,7 +2407,14 @@
                     "endOffset": 12034
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 366,
+                        "endColumn": 92,
+                        "endOffset": 458
+                    }
                 }
             },
             {
@@ -1543,7 +2426,14 @@
                     "endOffset": 12211
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1311,
+                        "endColumn": 172,
+                        "endOffset": 1483
+                    }
                 }
             },
             {
@@ -1555,7 +2445,14 @@
                     "endOffset": 12329
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1197,
+                        "endColumn": 113,
+                        "endOffset": 1310
+                    }
                 }
             },
             {
@@ -1567,7 +2464,14 @@
                     "endOffset": 12384
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 0,
+                        "startOffset": 1594,
+                        "endColumn": 50,
+                        "endOffset": 1644
+                    }
                 }
             },
             {
@@ -1579,7 +2483,14 @@
                     "endOffset": 12457
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 0,
+                        "startOffset": 2083,
+                        "endColumn": 68,
+                        "endOffset": 2151
+                    }
                 }
             },
             {
@@ -1591,7 +2502,14 @@
                     "endOffset": 12532
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 0,
+                        "startOffset": 2152,
+                        "endColumn": 70,
+                        "endOffset": 2222
+                    }
                 }
             },
             {
@@ -1603,7 +2521,14 @@
                     "endOffset": 12587
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 0,
+                        "startOffset": 1645,
+                        "endColumn": 50,
+                        "endOffset": 1695
+                    }
                 }
             },
             {
@@ -1615,7 +2540,14 @@
                     "endOffset": 12665
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 0,
+                        "startOffset": 2223,
+                        "endColumn": 73,
+                        "endOffset": 2296
+                    }
                 }
             },
             {
@@ -1627,7 +2559,14 @@
                     "endOffset": 12729
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 0,
+                        "startOffset": 1696,
+                        "endColumn": 59,
+                        "endOffset": 1755
+                    }
                 }
             },
             {
@@ -1639,7 +2578,14 @@
                     "endOffset": 12976
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 1960,
+                        "endColumn": 242,
+                        "endOffset": 2202
+                    }
                 }
             },
             {
@@ -1651,7 +2597,14 @@
                     "endOffset": 13041
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 0,
+                        "startOffset": 2976,
+                        "endColumn": 60,
+                        "endOffset": 3036
+                    }
                 }
             },
             {
@@ -1663,7 +2616,14 @@
                     "endOffset": 13105
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\android_ui_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\android_ui_strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 0,
+                        "startOffset": 1534,
+                        "endColumn": 59,
+                        "endOffset": 1593
+                    }
                 }
             },
             {
@@ -1675,7 +2635,14 @@
                     "endOffset": 13155
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 2325,
+                        "endColumn": 45,
+                        "endOffset": 2370
+                    }
                 }
             },
             {
@@ -1687,7 +2654,14 @@
                     "endOffset": 13203
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 0,
+                        "startOffset": 2421,
+                        "endColumn": 43,
+                        "endOffset": 2464
+                    }
                 }
             },
             {
@@ -1699,7 +2673,14 @@
                     "endOffset": 13257
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 0,
+                        "startOffset": 2371,
+                        "endColumn": 49,
+                        "endOffset": 2420
+                    }
                 }
             },
             {
@@ -1711,7 +2692,14 @@
                     "endOffset": 13321
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2265,
+                        "endColumn": 59,
+                        "endOffset": 2324
+                    }
                 }
             },
             {
@@ -1723,7 +2711,14 @@
                     "endOffset": 13369
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\xwalk_app_strings.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\xwalk_app_strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 0,
+                        "startOffset": 2465,
+                        "endColumn": 43,
+                        "endOffset": 2508
+                    }
                 }
             },
             {
@@ -1736,7 +2731,15 @@
                     "endOffset": 13596
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 2,
+                        "startOffset": 1553,
+                        "endLine": 88,
+                        "endColumn": 10,
+                        "endOffset": 1775
+                    }
                 }
             },
             {
@@ -1749,7 +2752,15 @@
                     "endOffset": 14359
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 2,
+                        "startOffset": 784,
+                        "endLine": 76,
+                        "endColumn": 10,
+                        "endOffset": 1542
+                    }
                 }
             },
             {
@@ -1762,7 +2773,15 @@
                     "endOffset": 14540
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 91,
+                        "startColumn": 2,
+                        "startOffset": 1786,
+                        "endLine": 97,
+                        "endColumn": 10,
+                        "endOffset": 1962
+                    }
                 }
             },
             {
@@ -1775,7 +2794,15 @@
                     "endOffset": 14698
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 2,
+                        "startOffset": 620,
+                        "endLine": 37,
+                        "endColumn": 10,
+                        "endOffset": 773
+                    }
                 }
             },
             {
@@ -1788,7 +2815,15 @@
                     "endOffset": 14836
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 2,
+                        "startOffset": 476,
+                        "endLine": 28,
+                        "endColumn": 10,
+                        "endOffset": 609
+                    }
                 }
             },
             {
@@ -1801,7 +2836,15 @@
                     "endOffset": 15553
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 589,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 1301
+                    }
                 }
             },
             {
@@ -1814,7 +2857,15 @@
                     "endOffset": 15758
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles_03.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles_03.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 2,
+                        "startOffset": 237,
+                        "endLine": 15,
+                        "endColumn": 10,
+                        "endOffset": 437
+                    }
                 }
             },
             {
@@ -1827,7 +2878,15 @@
                     "endOffset": 15906
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 2,
+                        "startOffset": 515,
+                        "endLine": 27,
+                        "endColumn": 10,
+                        "endOffset": 658
+                    }
                 }
             },
             {
@@ -1840,7 +2899,15 @@
                     "endOffset": 16043
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 2,
+                        "startOffset": 669,
+                        "endLine": 36,
+                        "endColumn": 10,
+                        "endOffset": 801
+                    }
                 }
             },
             {
@@ -1853,7 +2920,15 @@
                     "endOffset": 16315
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\.android\\build-cache\\809826960fa3d7e13cffd7e6e270550406c0d730\\output\\res\\values\\styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\exploded-aar\\org.xwalk\\xwalk_core_library\\23.53.589.4\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 2,
+                        "startOffset": 237,
+                        "endLine": 18,
+                        "endColumn": 10,
+                        "endOffset": 504
+                    }
                 }
             },
             {
@@ -1866,7 +2941,15 @@
                     "endOffset": 16849
                 },
                 "from": {
-                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml"
+                    "file": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\res\\values\\spinner_plugin_styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 584
+                    }
                 }
             }
         ]
