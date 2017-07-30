@@ -30,16 +30,19 @@
     </div>
 
   </div>
-  <div class="subnavbar toolbar tabbar">
+  <div class="subnavbar toolbar tabbar tabbar-scrollable">
     <div class="toolbar-inner">
+      <a href="#tab-sc" class="tab-link">
+        <i class="material-icons">local_movies</i>
+      </a>
       <a href="#tab-movies" class="tab-link active">
         Movies
       </a>
       <a href="#tab-tv" class="tab-link">
         TV Series
       </a>
-      <a href="#tab-sc" class="tab-link">
-        Showcase
+      <a href="#tab-rv" class="tab-link">
+        Reviews
       </a>
     </div>
   </div>
@@ -49,30 +52,20 @@
 <div class="tabs-animated-wrap">
   <!-- Tabs, tabs wrapper -->
   <div class="tabs">
-    <div id="tab-movies" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab active">
+    <!-- Tab 4 -->
+    <div id="tab-sc" class="page-content tab hide-navbar-on-scroll">
+      <div class="content-block no-margin">
+        <div class="row margin-bottom-15 showcase-container">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="tab-movies" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
       <div class="pull-to-refresh-layer">
         <div class="preloader"></div>
         <div class="pull-to-refresh-arrow"></div>
-      </div>
-
-      <div class="content-block horizontal-scroll">
-        <div class="inner-horizontal-scroll">
-          <div class="chip">
-            <div class="chip-label">Example Chip</div>
-          </div>
-          <div class="chip">
-            <div class="chip-label">Another Chip</div>
-          </div>
-          <div class="chip">
-            <div class="chip-label">One More Chip</div>
-          </div>
-          <div class="chip">
-            <div class="chip-label">Fourth Chip</div>
-          </div>
-          <div class="chip">
-            <div class="chip-label">Last One</div>
-          </div>
-        </div>
       </div>
 
       <div class="content-block-title">THE LATEST IN THE MOVIE INDUSTRY</div>
@@ -94,33 +87,39 @@
     <div class="content-block-title">OR MAYBE SOME TV NEWS</div>
     <div class="list-block tv-feed"></div>
   </div>
+
   <!-- Tab 3 -->
-  <div id="tab-sc" class="page-content tab hide-navbar-on-scroll">
-    <!-- <div class="pull-to-refresh-layer">
-    <div class="preloader"></div>
-    <div class="pull-to-refresh-arrow"></div>
-  </div> -->
+  <div id="tab-rv" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
+    <div class="pull-to-refresh-layer">
+      <div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
 
-  <!-- <div class="swiper-container swiper-1">
-  <div class="swiper-pagination"></div>
-  <div class="swiper-wrapper">
-  <div class="swiper-slide"><span>Slide 1</span></div>
-  <div class="swiper-slide"><span>Slide 2</span></div>
-  <div class="swiper-slide"><span>Slide 3</span></div>
-  <div class="swiper-slide"><span>Slide 4</span></div>
-  <div class="swiper-slide"><span>Slide 5</span></div>
-  <div class="swiper-slide"><span>Slide 6</span></div>
-  <div class="swiper-slide"><span>Slide 10</span></div>
-</div>
-</div> -->
+    <div class="content-block horizontal-scroll">
+       <div class="inner-horizontal-scroll">
+         <div class="chip">
+           <div class="chip-label">Example Chip</div>
+         </div>
+         <div class="chip">
+           <div class="chip-label">Another Chip</div>
+         </div>
+         <div class="chip">
+           <div class="chip-label">One More Chip</div>
+         </div>
+         <div class="chip">
+           <div class="chip-label">Fourth Chip</div>
+         </div>
+         <div class="chip">
+           <div class="chip-label">Last One</div>
+         </div>
+       </div>
+     </div>
 
-<div class="content-block no-margin">
-  <div class="row showcase-container">
+     <div class="content-block-title">REVIEWS</div>
+     <div class="list-block accordion-list rv-feed"></div>
 
   </div>
-</div>
 
-</div>
 </div>
 </div>
 

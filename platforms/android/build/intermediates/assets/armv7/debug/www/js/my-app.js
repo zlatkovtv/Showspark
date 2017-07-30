@@ -5,6 +5,8 @@ var myApp = new Framework7({
   precompileTemplates: true
 });
 
+screen.orientation.lock('portrait');
+
 var $$ = Dom7;
 
 var welcomescreen_slides = [
@@ -153,11 +155,11 @@ function exitPrompt(){
   } else {
     pressed = true;
     myApp.addNotification({
-        message: 'Press back button again to exit',
-        hold: 2500,
-        onClose: function () {
-            pressed = false;
-        }
+      message: 'Press back button again to exit',
+      hold: 2500,
+      onClose: function () {
+        pressed = false;
+      }
     });
   }
 }
@@ -350,12 +352,11 @@ myApp.onPageInit('login-with-email', function () {
 })
 
 myApp.onPageInit('tabs-main', function () {
-  var myApp = new Framework7({
-    swipePanel: 'left',
-    swipePanelActiveArea: 20,
-    cache:true,
-    showBarsOnPageScrollEnd:false
-  });
+  myApp.swipePanel = 'left';
+  myApp.swipePanelActiveArea = 20;
+  myApp.showBarsOnPageScrollEnd = false;
+
+  myApp.showTab("#tab-movies");
 
   var pressed = window.localStorage.getItem("isFloatingBPressed");
   if(!pressed) {
@@ -415,14 +416,12 @@ myApp.onPageInit('tabs-main', function () {
                 console.log('page not found');
               },
               200: function (xhr) {
-                  var movieObj = JSON.parse(xhr.response).results[0];
-                  console.log();
-                  YoutubeVideoPlayer.openVideo(movieObj.key, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+                var movieObj = JSON.parse(xhr.response).results[0];
+                console.log();
+                YoutubeVideoPlayer.openVideo(movieObj.key, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
               }
             }
           })
-
-
         });
       }
     }
@@ -483,7 +482,7 @@ myApp.onPageInit('tabs-main', function () {
     '</div>'
   });
 
-  var myFeed = myApp.feeds('.tv-feed', {
+  var myFeed2 = myApp.feeds('.tv-feed', {
     url: 'http://www.cinemablend.com/rss_television.xml',
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
@@ -505,6 +504,60 @@ myApp.onPageInit('tabs-main', function () {
     '<div class="card-footer">' +
     '<i class="material-icons link">bookmark_border</i>' +
     '<i class="material-icons link">share</i>' +
+    '</div>' +
+    '</div>' +
+    '</li>' +
+    '{{/each}}' +
+    '</ul>',
+    itemPopupTemplate: '<div class="popup">' +
+    '<div class="view navbar-fixed">' +
+    '<div class="navbar theme-deeppurple">' +
+    '<div class="navbar-inner">' +
+    '<div class="left sliding">' +
+    '<a href="homeTabView.html" class="close-popup link">' +
+    '<i class="icon icon-back"></i>' +
+    '<span>Back</span>' +
+    '</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '<div class="pages">' +
+    '<div class="page feeds-page-tv" data-page="feeds-page-{{index}}">' +
+    '<div class="page-content">' +
+    '<img src="{{enclosure}}" class="full-width">' +
+    '<div class="content-block">' +
+    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
+    '<small>{{formattedDate}}</small>' +
+    '</div>' +
+    '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>'
+  });
+
+  var myFeed3 = myApp.feeds('.rv-feed', {
+    url: 'http://www.cinemablend.com/rss_review.php',
+    openIn: 'popup',
+    customItemFields: ["enclosure||url"],
+    onAjaxStart: function () {
+      console.log("ajaxstart");
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
+    },
+    onAjaxComplete: function () {
+      console.log("ajaxcomplete");
+      SpinnerPlugin.activityStop();
+    },
+    listTemplate: '<ul>' +
+    '{{#each items}}' +
+    '<li class="accordion-item"><a href="#" class="item-content item-link">' +
+    '<div class="item-inner">' +
+    '<div class="item-title">{{title}}</div>' +
+    '  </div></a>' +
+    '<div class="accordion-item-content">' +
+    '<div class="content-block">' +
+    '<p>{{description}}</p>' +
     '</div>' +
     '</div>' +
     '</li>' +
@@ -764,36 +817,82 @@ myApp.onPageInit('wizard-result', function (page) {
         console.log('page not found');
       },
       200: function (xhr) {
+        buildMovieDetailPopup(xhr);
 
-        apiObject = JSON.parse(xhr.response).results;
-        for (var i = 0; i < apiObject.length; i++) {
-          apiObject[i].poster_path = "http://image.tmdb.org/t/p/w185/" + apiObject[i].poster_path;
-          if(apiObject[i].vote_average === 0) {
-            apiObject[i].vote_average = "Unknown";
-          }
-        }
-        console.log(apiObject);
-
-        var myList = myApp.virtualList('.list-block.virtual-list', {
-          // Array with items data
-          items: apiObject,
-          renderItem: function (index, item) {
-              return '<li>' +
-              ' <a href="#" class="item-link item-content">' +
-              '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
-              '<div class="item-inner">' +
-              '<div class="item-title-row">' +
-              '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
-              '</div>' +
-              '<div class="item-subtitle">Average vote: ' + item.vote_average + '</div>' +
-              '<div class="item-text">' + item.overview + '</div>' +
-              '</div>' +
-              '</a>' +
-              '</li>';
-          },
-          height: 176
-        });
       }
     }
   })
 })
+
+function normalizeApiObj(obj) {
+  if (obj instanceof Array) {
+    for (var i = 0; i < obj.length; i++) {
+      obj[i].poster_path = "http://image.tmdb.org/t/p/w342/" + obj[i].poster_path;
+      obj[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + obj[i].backdrop_path;
+      if(obj[i].vote_average === 0) {
+        obj[i].vote_average = "Unknown";
+      }
+    }
+  } else {
+    obj.poster_path = "http://image.tmdb.org/t/p/w342" + obj.poster_path;
+    obj.backdrop_path = "http://image.tmdb.org/t/p/w1920" + obj.backdrop_path;
+    if(obj.vote_average === 0) {
+      obj.vote_average = "Unknown";
+    }
+  }
+
+
+
+  return obj;
+}
+
+function buildMovieDetailPopup(xhr) {
+  apiObject = JSON.parse(xhr.response).results;
+  apiObject = normalizeApiObj(apiObject);
+
+  var myList = myApp.virtualList('.list-block.virtual-list', {
+    // Array with items data
+    items: apiObject,
+    renderItem: function (index, item) {
+      return '<li>' +
+      '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
+      '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<div class="item-inner">' +
+      '<div class="item-title-row">' +
+      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
+      '</div>' +
+      '<div class="item-subtitle">Average vote: ' + item.vote_average + '</div>' +
+      '<div class="item-text">' + item.overview + '</div>' +
+      '</div>' +
+      '</a>' +
+      '</li>';
+    },
+    height: 176
+  });
+
+  $$('.detail-link').on('click', function () {
+    var clickedObjId = $$(this).prop('id');
+
+    $$.ajax({
+      complete: function () {
+        console.log("ajaxcomplete");
+      },
+      url: 'https://api.themoviedb.org/3/movie/' + clickedObjId + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+      statusCode: {
+        404: function (xhr) {
+          console.log('page not found');
+        },
+        200: function (xhr) {
+          var movieObj = JSON.parse(xhr.response);
+          console.log(movieObj);
+          movieObj = normalizeApiObj(movieObj);
+          console.log(movieObj);
+          var popupHTML = Template7.templates.movieDetailTemplate({
+            obj: movieObj
+          });
+          myApp.popup(popupHTML);
+        }
+      }
+    })
+  });
+}

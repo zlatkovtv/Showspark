@@ -1,4 +1,4 @@
-#Thu Jul 27 17:15:41 EEST 2017
+#Sun Jul 30 18:54:11 EEST 2017
 base.0=C\:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\transforms\\dex\\armv7\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\platforms\\android\\build\\intermediates\\transforms\\dex\\armv7\\debug\\folders\\1000\\1f\\main\\classes.dex

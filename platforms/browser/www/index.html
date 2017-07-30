@@ -38,53 +38,53 @@
 		</div>
 	</div>
 
-<!-- Sign up with email popup -->
+	<!-- Sign up with email popup -->
 	<div class="popup popup-sign-up custom-layout-dark">
 		<div class="navbar theme-deeppurple">
-				<div class="navbar-inner">
-						<div class="left">
-								<a href="#" class="link icon-only close-popup">
-									<i class="material-icons">keyboard_backspace
-									</i>
-								</a>
-						</div>
-						<div class="center">Sign up with Email</div>
-						<div class="right"> </div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link icon-only close-popup">
+						<i class="material-icons">keyboard_backspace
+						</i>
+					</a>
 				</div>
+				<div class="center">Sign up with Email</div>
+				<div class="right"> </div>
+			</div>
 		</div>
 		<div class="page-content login-screen-content">
-				<form id="email-signup-form">
-						<div class="list-block">
-								<ul>
-										<li class="item-content">
-												<div class="item-inner">
-														<div class="item-input">
-																<input type="text" name="email" placeholder="Enter email">
-														</div>
-												</div>
-										</li>
-										<li class="item-content">
-												<div class="item-inner">
-														<div class="item-input">
-																<input type="password" name="password" placeholder="Enter password">
-														</div>
-												</div>
-										</li>
-										<li class="item-content">
-												<div class="item-inner">
-														<div class="item-input">
-																<input type="password" name="confirm_password" placeholder="Confirm password">
-														</div>
-												</div>
-										</li>
-								</ul>
-						</div>
-						<div class="content-block">
-								<p class="item-content">
-										<a href="#" class="button button-big button-fill button-raised validate-signup color-deeppurple">Sign up</a>
-								</p>
-						</div>
-				</form>
+			<form id="email-signup-form">
+				<div class="list-block">
+					<ul>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-input">
+									<input type="text" name="email" placeholder="Enter email">
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-input">
+									<input type="password" name="password" placeholder="Enter password">
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-input">
+									<input type="password" name="confirm_password" placeholder="Confirm password">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-block">
+					<p class="item-content">
+						<a href="#" class="button button-big button-fill button-raised validate-signup color-deeppurple">Sign up</a>
+					</p>
+				</div>
+			</form>
 		</div>
 	</div>
 
@@ -93,11 +93,11 @@
 		<div class="left-panel-pic card-header"v>
 			<div class="profile-container color-white">
 
-	        <i class="material-icons">account_circle</i>
-					<div class=" no-border user-name-label">
-					</div>
+				<i class="material-icons">account_circle</i>
+				<div class=" no-border user-name-label">
+				</div>
 
-	    </div>
+			</div>
 		</div>
 		<div class="list-block">
 			<a href="#" class="item-link item-content">
@@ -170,18 +170,53 @@
 	</div>
 
 	<script type="text/template7" id="wizardResultTitleTemplate">
-	   Movies are sorted by {{selectedValue}}
+		Movies are sorted by {{selectedValue}}
 	</script>
 
 	<script type="text/template7" id="showcaseCardTemplate">
-		<div id="{{inputId}}" class="card col-50 video-link" style="background-image:url(http://image.tmdb.org/t/p/w185/{{inputBackground}});">
+		<div id="{{inputId}}" class="card col-50 video-link" style="background:url(http://image.tmdb.org/t/p/w1920/{{inputBackground}})  50% / 100%;">
+			<img class="innerImgResizer" src="http://image.tmdb.org/t/p/w1920/{{inputBackground}}">
 			<div class="card-content">
 				<svg class="play-icon" viewBox="0 0 24 24">
-						<path fill="white" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+					<path fill="white" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
 				</svg>
 				<!-- <div class="card-content-inner">{{inputName}}</div> -->
 			</div>
 		</div>
+	</script>
+
+	<script type="text/template7" id="movieDetailTemplate">
+		<div class="popup custom-grey-background ">
+			<div class="navbar navbar-fixed theme-deeppurple">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link icon-only close-popup">
+							<i class="material-icons">keyboard_backspace
+							</i>
+						</a>
+					</div>
+					<div class="center">{{obj.title}}</div>
+					<div class="right"> </div>
+				</div>
+			</div>
+	      <div class="row no-gutter main-movie-detail custom-grey-background" style="background-image:url({{obj.backdrop_path}})">
+					<div id="ratingAndPoster" class="col-33 main-movie-detail-half">
+						<div id="movieDetailRating" class="card">
+							{{obj.vote_average}}
+						</div>
+						<div class="movie-detail-poster card" style="background:url({{obj.poster_path}})  50% / 100%">
+							<img class="innerImgResizer" src="{{obj.poster_path}}">
+						</div>
+					</div>
+			</div>
+			<div class="row">
+				<div id="movieDescriptionDiv" class="card">
+					<div class="card-content">
+    				<div class="card-content-inner">
+							{{obj.overview}}
+						</div>
+				</div>
+			</div>
 	</script>
 
 	<script type="text/javascript" src="cordova.js"></script>

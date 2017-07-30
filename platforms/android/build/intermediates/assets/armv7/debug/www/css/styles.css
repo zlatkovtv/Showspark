@@ -374,6 +374,10 @@ div#tab-sc {
     padding-top: 103px;
 }
 
+div#tab-rv {
+    padding-top: 103px;
+}
+
 .profile-container {
   position: absolute;
   left: 10px;
@@ -408,14 +412,17 @@ span.swiper-pagination-bullet {
 
 div[class*="col-"] {
   background: #fff;
-  text-align: center;
+  text-align: left;
   color: #000;
   border: 1px solid #ddd;
-  padding: 5px;
   margin: 8px 0px 0px 0px;
 }
 
 .row {
+  /*margin-bottom: 15px;*/
+}
+
+.margin-bottom-15 {
   margin-bottom: 15px;
 }
 
@@ -425,12 +432,7 @@ div[class*="col-"] {
 }
 
 .card.col-50 {
-  width: calc((100% - 9px*1)/ 2);
-  height: 0;
-  padding-top: calc(104 / 185 * calc((100% - 26.7px*1)/ 2));
   border: none;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .play-icon {
@@ -482,4 +484,55 @@ div[class*="col-"] {
   to {
     box-shadow: 0 0 0 12px transparent, 0 0 0 24px rgba(227, 115, 14, 0);
   }
+}
+
+.accordion-item-content {
+  transition-duration: 0.15s !important;
+}
+
+.row.no-gutter.main-movie-detail {
+  /*display: table;*/
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.movie-detail-poster {
+  border: none;
+  margin: 0px;
+}
+
+.main-movie-detail-half {
+  /*display: table-cell;*/
+  border: none !important;
+  background: transparent !important;
+}
+
+#ratingAndPoster {
+  margin: 25px 5px 5px 8px;
+  width: 40%;
+}
+
+#movieDetailRating {
+  margin: 0px 0px 4px 0px;
+  padding: 0px 2px 0px 2px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  min-width: 21px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#movieDescriptionDiv {
+  /*max-height: 250px;*/
+  /*overflow: scroll;*/
+  text-align: justify;
+}
+
+.innerImgResizer {
+  vertical-align: top;
+  width: 100%;
+  opacity: 0;
 }
