@@ -387,7 +387,9 @@ div#tab-rv {
 .swiper-slide {
   background: #fff;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: none;
+  border-radius: 4px 4px 2px 2px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 .swiper-slide span {
   text-align:center;
@@ -395,19 +397,19 @@ div#tab-rv {
   margin: 20px;
   font-size:21px;
 }
-.swiper-container {
-  height: 450px;
-  margin: 35px 0;
-}
 
 .swiper-pagination {
-  bottom: 10px;
+  top: 10px;
   left: 0;
   width: 100%;
 }
 
 span.swiper-pagination-bullet {
     margin: 0 5px;
+}
+
+.swiper-container.swiper-1.swiper-container-horizontal {
+  padding: 0px 8px 8px 8px;
 }
 
 div[class*="col-"] {
@@ -510,13 +512,13 @@ div[class*="col-"] {
 }
 
 #ratingAndPoster {
-  margin: 25px 5px 5px 8px;
+  margin: 8px 5px 5px 8px;
   width: 40%;
 }
 
 #movieDetailRating {
   margin: 0px 0px 4px 0px;
-  padding: 0px 2px 0px 2px;
+  padding: 0px 5px 0px 5px;
   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
   background: rgba(255, 255, 255, 0.7);
   display: inline-block;
@@ -535,4 +537,38 @@ div[class*="col-"] {
   vertical-align: top;
   width: 100%;
   opacity: 0;
+}
+
+#similarMovies {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.similar-movie-rating {
+  padding: 0px 5px 0px 5px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  min-width: 21px;
+  text-align: center;
+  font-size: 1.5em;
+  top: 0px;
+  left: 0px;
+}
+
+.similar-movie-title {
+  padding: 0px 5px 0px 5px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  min-width: 21px;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+}
+
+.item-text.item-text-5-rows {
+  max-height: 100px;
+  -webkit-line-clamp: 4;
 }

@@ -195,28 +195,47 @@
 							</i>
 						</a>
 					</div>
-					<div class="center">{{obj.title}}</div>
+					<div class="center">{{obj.original_title}}</div>
 					<div class="right"> </div>
 				</div>
 			</div>
-	      <div class="row no-gutter main-movie-detail custom-grey-background" style="background-image:url({{obj.backdrop_path}})">
-					<div id="ratingAndPoster" class="col-33 main-movie-detail-half">
-						<div id="movieDetailRating" class="card">
-							{{obj.vote_average}}
-						</div>
-						<div class="movie-detail-poster card" style="background:url({{obj.poster_path}})  50% / 100%">
-							<img class="innerImgResizer" src="{{obj.poster_path}}">
-						</div>
+			<div id="movieDetailFirstDiv" class="row no-gutter main-movie-detail custom-grey-background" style="background-image:url({{obj.backdrop_path}})">
+				<div id="ratingAndPoster" class="col-33 main-movie-detail-half">
+					<div id="movieDetailRating" class="card">
+						{{obj.vote_average}}
 					</div>
+					<div class="movie-detail-poster card" style="background:url({{obj.poster_path}})  50% / 100%">
+						<img class="innerImgResizer" src="{{obj.poster_path}}">
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div id="movieDescriptionDiv" class="card">
 					<div class="card-content">
-    				<div class="card-content-inner">
+						<div class="card-content-inner">
 							{{obj.overview}}
 						</div>
+					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div id="similarMovies">
+
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template7" id="similarMovieTemplate">
+		<div class="swiper-slide" style="background:url({{obj.backdrop_path}})  50% / 100%;width: 100%; background-repeat: no-repeat;">
+			<img class="innerImgResizer" src="{{obj.backdrop_path}}">
+			<div class="absolute card similar-movie-rating">
+				{{obj.vote_average}}
+			</div>
+			<div class="absolute card similar-movie-title">
+				{{obj.original_title}} ({{obj.release_year}})
+			</div>
+		</div>
 	</script>
 
 	<script type="text/javascript" src="cordova.js"></script>

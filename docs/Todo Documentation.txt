@@ -21,6 +21,8 @@ FIXED 1. Fix startup e.g. splashscreen
 7. black bar when tutorial is opened from sidepanel
 8. resultview bug changing movies
 9. Fixed signed in as not visible, logic is there
+10. When setting fourth tab as first there is a visual animation glitch on Android
+11. Similar movies to 
 
 #Library edits
 1. .swiper-slide .preloader edited in material.min.css

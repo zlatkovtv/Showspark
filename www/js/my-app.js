@@ -368,22 +368,15 @@ myApp.onPageInit('tabs-main', function () {
     window.localStorage.setItem("isFloatingBPressed", false);
   });
 
-  // var mySwiper1 = myApp.swiper('.swiper-1', {
-  //   pagination:'.swiper-1 .swiper-pagination',
-  //   spaceBetween: 50
-  // });
-  // console.log("printing");
-  // console.log(mySwiper1);
-
   var html = "";
   var colorArr = ["#e74c3c", "#f1c40f", "#9b59b6", "#4CAF50", "#3F51B5", "#7f8c8d", "#2c3e50", "#f39c12"];
 
-  // SpinnerPlugin.activityStart("Loading trailers...", {dimBackground: false});
+  SpinnerPlugin.activityStart("Loading trailers...", {dimBackground: false});
 
   $$.ajax({
     complete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=17bad8fd5ecafe775377303226579c19&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=1',
     statusCode: {
@@ -394,7 +387,7 @@ myApp.onPageInit('tabs-main', function () {
         mostPopMovieObject = JSON.parse(xhr.response).results;
         for (var i = 0; i < mostPopMovieObject.length; i++) {
           html += Template7.templates.showcaseCardTemplate({
-            inputName: mostPopMovieObject[i].title,
+            inputName: mostPopMovieObject[i].original_title,
             inputBackground: mostPopMovieObject[i].backdrop_path,
             inputId: mostPopMovieObject[i].id
           });
@@ -433,11 +426,11 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      // SpinnerPlugin.activityStart(null, {dimBackground: false});
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     listTemplate: '<ul>' +
     '{{#each items}}' +
@@ -488,11 +481,11 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      // SpinnerPlugin.activityStart(null, {dimBackground: false});
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     listTemplate: '<ul>' +
     '{{#each items}}' +
@@ -543,11 +536,11 @@ myApp.onPageInit('tabs-main', function () {
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
-      // SpinnerPlugin.activityStart(null, {dimBackground: false});
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
     },
     onAjaxComplete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     listTemplate: '<ul>' +
     '{{#each items}}' +
@@ -802,14 +795,14 @@ myApp.onPageInit('wizard-result', function (page) {
 
   console.log(genreString);
 
-  // SpinnerPlugin.activityStart(null, {dimBackground: false});
+  SpinnerPlugin.activityStart(null, {dimBackground: false});
   console.log("ajaxstart");
 
   //make api call, make object and assign it to items below
   $$.ajax({
     complete: function () {
       console.log("ajaxcomplete");
-      // SpinnerPlugin.activityStop();
+      SpinnerPlugin.activityStop();
     },
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
@@ -817,8 +810,7 @@ myApp.onPageInit('wizard-result', function (page) {
         console.log('page not found');
       },
       200: function (xhr) {
-        buildMovieDetailPopup(xhr);
-
+        buildSortedMovieList(xhr);
       }
     }
   })
@@ -829,24 +821,24 @@ function normalizeApiObj(obj) {
     for (var i = 0; i < obj.length; i++) {
       obj[i].poster_path = "http://image.tmdb.org/t/p/w342/" + obj[i].poster_path;
       obj[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + obj[i].backdrop_path;
+      obj[i].release_year = obj[i].release_date.substring(0,4);
       if(obj[i].vote_average === 0) {
-        obj[i].vote_average = "Unknown";
+        obj[i].vote_average = "No rating yet";
       }
     }
   } else {
     obj.poster_path = "http://image.tmdb.org/t/p/w342" + obj.poster_path;
     obj.backdrop_path = "http://image.tmdb.org/t/p/w1920" + obj.backdrop_path;
+    obj.release_year = obj.release_date.substring(0,4);
     if(obj.vote_average === 0) {
-      obj.vote_average = "Unknown";
+      obj.vote_average = "No rating yet";
     }
   }
-
-
 
   return obj;
 }
 
-function buildMovieDetailPopup(xhr) {
+function buildSortedMovieList(xhr) {
   apiObject = JSON.parse(xhr.response).results;
   apiObject = normalizeApiObj(apiObject);
 
@@ -859,10 +851,11 @@ function buildMovieDetailPopup(xhr) {
       '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
       '<div class="item-inner">' +
       '<div class="item-title-row">' +
-      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
+      '<div class="item-title">' + (index + 1) + '. ' + item.original_title + '</div>' +
+      '<div class="item-after">' + item.vote_average + '</div>' +
       '</div>' +
-      '<div class="item-subtitle">Average vote: ' + item.vote_average + '</div>' +
-      '<div class="item-text">' + item.overview + '</div>' +
+      '<div class="item-subtitle">' + item.release_year + '</div>' +
+      '<div class="item-text item-text-5-rows">' + item.overview + '</div>' +
       '</div>' +
       '</a>' +
       '</li>';
@@ -873,26 +866,82 @@ function buildMovieDetailPopup(xhr) {
   $$('.detail-link').on('click', function () {
     var clickedObjId = $$(this).prop('id');
 
-    $$.ajax({
-      complete: function () {
-        console.log("ajaxcomplete");
-      },
-      url: 'https://api.themoviedb.org/3/movie/' + clickedObjId + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
-      statusCode: {
-        404: function (xhr) {
-          console.log('page not found');
-        },
-        200: function (xhr) {
-          var movieObj = JSON.parse(xhr.response);
-          console.log(movieObj);
-          movieObj = normalizeApiObj(movieObj);
-          console.log(movieObj);
-          var popupHTML = Template7.templates.movieDetailTemplate({
-            obj: movieObj
-          });
-          myApp.popup(popupHTML);
-        }
-      }
-    })
+    getMovieDetailInfo(clickedObjId);
   });
+}
+
+function getMovieDetailInfo(id) {
+  $$.ajax({
+    complete: function () {
+      console.log("ajaxcomplete");
+    },
+    url: 'https://api.themoviedb.org/3/movie/' + id + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    statusCode: {
+      404: function (xhr) {
+        console.log('page not found');
+      },
+      200: function (xhr) {
+        var movieObj = JSON.parse(xhr.response);
+
+        popUpMovieDetail(movieObj);
+        getSimilarMovies(id);
+      }
+    }
+  })
+}
+
+function popUpMovieDetail(movieObj) {
+  movieObj = normalizeApiObj(movieObj);
+  var popupHTML = Template7.templates.movieDetailTemplate({
+    obj: movieObj
+  });
+  myApp.popup(popupHTML);
+}
+
+function getSimilarMovies(id) {
+  $$.ajax({
+    complete: function () {
+      console.log("ajaxcomplete");
+    },
+    url: 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    statusCode: {
+      404: function (xhr) {
+        console.log('page not found');
+      },
+      200: function (xhr) {
+        var silimarMovieArr = JSON.parse(xhr.response).results;
+
+        if(!silimarMovieArr || !silimarMovieArr instanceof Array) {
+          return;
+        }
+
+        var popupHTML = '<div class="content-block-title">Similar movies</div>' +
+        '<div class="swiper-container swiper-1">' +
+        '<div class="swiper-pagination"></div>' +
+        '<div class="swiper-wrapper">';
+
+        for (var i = 0; i < 10; i++) {
+          // if(silimarMovieArr[i].id === id) {
+          //   duplicate
+          // }
+          silimarMovieArr[i] = normalizeApiObj(silimarMovieArr[i]);
+          popupHTML += Template7.templates.similarMovieTemplate({
+            obj: silimarMovieArr[i]
+          });
+        }
+
+        popupHTML += '</div>'+
+        '</div>';
+
+        console.log(popupHTML);
+
+        $$('#similarMovies').append(popupHTML);
+
+        var mySwiper1 = myApp.swiper('.swiper-1', {
+          pagination:'.swiper-1 .swiper-pagination',
+          spaceBetween: 50
+        });
+      }
+    }
+  })
 }
