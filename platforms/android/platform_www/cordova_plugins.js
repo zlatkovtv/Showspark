@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "com.bunkerpalace.cordova.YoutubeVideoPlayer.YoutubeVideoPlayer",
+        "file": "plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
+        "pluginId": "com.bunkerpalace.cordova.YoutubeVideoPlayer",
+        "clobbers": [
+            "YoutubeVideoPlayer"
+        ]
+    },
+    {
         "id": "cordova-plugin-browsertab.BrowserTab",
         "file": "plugins/cordova-plugin-browsertab/www/browsertab.js",
         "pluginId": "cordova-plugin-browsertab",
@@ -88,19 +96,12 @@ module.exports = [
         "clobbers": [
             "universalLinks"
         ]
-    },
-    {
-        "id": "com.bunkerpalace.cordova.YoutubeVideoPlayer.YoutubeVideoPlayer",
-        "file": "plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/plugins/com.bunkerpalace.cordova.YoutubeVideoPlayer/www/YoutubeVideoPlayer.js",
-        "pluginId": "com.bunkerpalace.cordova.YoutubeVideoPlayer",
-        "clobbers": [
-            "YoutubeVideoPlayer"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5",
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-buildinfo": "1.1.0",
@@ -115,8 +116,7 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.2.4-dev",
     "net.ekuwang.cordova.plugin.statusbar": "1.0.0",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-universal-links-plugin": "1.2.1",
-    "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5"
+    "cordova-universal-links-plugin": "1.2.1"
 };
 // BOTTOM OF METADATA
 });

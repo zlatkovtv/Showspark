@@ -147,7 +147,7 @@
 	<div class="views">
 		<div class="view view-main">
 			<div class="pages">
-				<div class="page" data-page="home">
+				<div class="page" data-page="login">
 					<div class="page-content login-screen-content login-background">
 						<div class="login-screen-title color-white">Sign in to discover the Hollywood goodness</div>
 						<div class="content-block login-buttons-div">
@@ -187,15 +187,15 @@
 
 	<script type="text/template7" id="movieDetailTemplate">
 		<div class="popup custom-grey-background ">
-			<div class="navbar navbar-fixed theme-deeppurple">
+			<div id="movieDetailNavbar" class="navbar navbar-fixed theme-deeppurple">
 				<div class="navbar-inner">
 					<div class="left">
 						<a href="#" class="link icon-only close-popup">
-							<i class="material-icons">keyboard_backspace
+							<i class="material-icons text-shadow-1">keyboard_backspace
 							</i>
 						</a>
 					</div>
-					<div class="center">{{obj.original_title}}</div>
+					<div class="center text-shadow-1">{{obj.original_title}}</div>
 					<div class="right"> </div>
 				</div>
 			</div>
@@ -204,12 +204,23 @@
 					<div id="movieDetailRating" class="card">
 						{{obj.vote_average}}
 					</div>
-					<div class="movie-detail-poster card" style="background:url({{obj.poster_path}})  50% / 100%">
+					<div class="movie-detail-poster card" style="background:url({{obj.poster_path}})  50% / 100%, url('img/default-movie-poster.jpg') 50% / 100%;">
 						<img class="innerImgResizer" src="{{obj.poster_path}}">
 					</div>
 				</div>
+				<div id="movie-detail-trailer-button" class="col-33 main-movie-detail-half">
+					<a href="#" id="movie-detail-trailer-a" class="link button button-fill button-raised">
+						<svg class="movie-detail-play-icon" viewBox="0 0 24 24">
+							<path fill="white" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+						</svg>
+						<span id="movie-detail-trailer-label">
+							Play Trailer
+						</span>
+					</a>
+				</div>
 			</div>
 			<div class="row">
+				<div class="content-block-title">Overview</div>
 				<div id="movieDescriptionDiv" class="card">
 					<div class="card-content">
 						<div class="card-content-inner">
@@ -242,7 +253,14 @@
 	<script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
 	<script type="text/javascript" src="lib/framework7-feeds/framework7.feeds.js"></script>
 	<script type="text/javascript" src="lib/framework7-welcomescreen/welcomescreen.js"></script>
+	<script type="text/javascript" src="lib/color-thief/color-thief.min.js"></script>
+
 	<script type="text/javascript" src="js/my-app.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/login-with-email.js"></script>
+	<script type="text/javascript" src="js/wizard.js"></script>
+	<script type="text/javascript" src="js/wizard-order-by.js"></script>
+	<script type="text/javascript" src="js/wizard-result.js"></script>
 
 	<!-- For debugging, remove when you build for production -->
 	<!-- <script src="http://192.168.0.103:1515/target/target-script-min.js#anonymous"></script> -->

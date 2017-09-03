@@ -125,6 +125,11 @@ html {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
 
+a.floating-button.color-white.custom-floating-button-tutorial {
+  background-color: #34495e;
+  color: white;
+}
+
 .align-left {
   text-align: left;
 }
@@ -349,7 +354,7 @@ span.modal-button {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .chip {
@@ -363,19 +368,19 @@ span.modal-button {
 }
 
 div#tab-movies {
-    padding-top: 103px;
+  padding-top: 103px;
 }
 
 div#tab-tv {
-    padding-top: 103px;
+  padding-top: 103px;
 }
 
 div#tab-sc {
-    padding-top: 103px;
+  padding-top: 103px;
 }
 
 div#tab-rv {
-    padding-top: 103px;
+  padding-top: 103px;
 }
 
 .profile-container {
@@ -385,7 +390,7 @@ div#tab-rv {
 }
 
 .swiper-slide {
-  background: #fff;
+  /*background: #fff;*/
   box-sizing: border-box;
   border: none;
   border-radius: 4px 4px 2px 2px;
@@ -400,12 +405,20 @@ div#tab-rv {
 
 .swiper-pagination {
   top: 10px;
-  left: 0;
+  right: 20px;
   width: 100%;
+  text-align: right;
+  zoom: 0.8;
 }
 
 span.swiper-pagination-bullet {
-    margin: 0 5px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #111112;
 }
 
 .swiper-container.swiper-1.swiper-container-horizontal {
@@ -444,6 +457,13 @@ div[class*="col-"] {
   color: white;
   bottom: 2px;
   left: 2px;
+}
+
+.movie-detail-play-icon {
+  width: 30px;
+  height: 30px;
+  color: black;
+  vertical-align: middle;
 }
 
 .navbar.navbar-hidden {
@@ -492,14 +512,6 @@ div[class*="col-"] {
   transition-duration: 0.15s !important;
 }
 
-.row.no-gutter.main-movie-detail {
-  /*display: table;*/
-  width: 100%;
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .movie-detail-poster {
   border: none;
   margin: 0px;
@@ -517,7 +529,9 @@ div[class*="col-"] {
 }
 
 #movieDetailRating {
-  margin: 0px 0px 4px 0px;
+  position: absolute;
+  top: 56px;
+  right: 0px;
   padding: 0px 5px 0px 5px;
   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
   background: rgba(255, 255, 255, 0.7);
@@ -571,4 +585,38 @@ div[class*="col-"] {
 .item-text.item-text-5-rows {
   max-height: 100px;
   -webkit-line-clamp: 4;
+}
+
+div#movie-detail-trailer-button {
+  width: 100%;
+  margin-left: calc(100% - 138px);
+  margin-top: -42px;
+  height: 30px;
+  text-align: center;
+}
+
+span#movie-detail-trailer-label {
+  color: white;
+  vertical-align: middle;
+  text-transform: none;
+}
+
+a#movie-detail-trailer-a {
+  background-color: #111112;
+  width: 130px;
+}
+
+.hidden {
+  display: none;
+}
+
+div#movieDetailFirstDiv {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 1px black;
 }

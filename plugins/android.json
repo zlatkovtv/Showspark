@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-plugin-browsertab": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
@@ -56,9 +59,6 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "net.ekuwang.cordova.plugin.statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
