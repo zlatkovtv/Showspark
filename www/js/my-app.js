@@ -136,23 +136,27 @@ $$(document).on('deviceready', function() {
 });
 
 function goBack(){
-  var mainView = myApp.addView('.view-main');
   mainView.router.back();
 }
 
+function goToPage(pageName) {
+  mainView.router.loadPage(pageName + '.html');
+}
+
 function goToIndex() {
-  var mainView = myApp.addView('.view-main');
   mainView.router.loadPage('index.html');
 }
 
 function goToTabs(){
-  var mainView = myApp.addView('.view-main');
-  mainView.router.loadPage('homeTabView.html');
+  mainView.router.loadPage('home.html');
 }
 
 function goToWizard(){
-  var mainView = myApp.addView('.view-main');
   mainView.router.loadPage('wizard.html');
+}
+
+function goToWizardOrderby() {
+  mainView.router.loadPage('wizardOrderBy.html');
 }
 
 var pressed = false;
@@ -180,19 +184,14 @@ function closeSignUpPopup() {
   document.addEventListener("backbutton", goToIndex, false);
 }
 
-function goToWizardOrderby() {
-  var mainView = myApp.addView('.view-main');
-  mainView.router.loadPage('wizardOrderBy.html');
-}
-
-myApp.onPageBeforeInit('home', function () {
+myApp.onPageBeforeInit('login', function () {
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", goToIndex, false);
   document.addEventListener("backbutton", exitPrompt, false);
 })
 
-myApp.onPageInit('home', function () {
+myApp.onPageInit('login', function () {
   console.log("index onPageInit");
 
   var currUser = firebase.auth().currentUser;
@@ -242,7 +241,7 @@ myApp.onPageBeforeInit('login-with-email', function () {
   document.addEventListener("backbutton", goToIndex, false);
 })
 
-myApp.onPageBeforeInit('tabs-main', function () {
+myApp.onPageBeforeInit('home', function () {
   document.removeEventListener("backbutton", goToWizard, false);
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", goToIndex, false);
@@ -361,7 +360,7 @@ myApp.onPageInit('login-with-email', function () {
   });
 })
 
-myApp.onPageInit('tabs-main', function () {
+myApp.onPageInit('home', function () {
   myApp.swipePanel = 'left';
   myApp.swipePanelActiveArea = 20;
   myApp.showBarsOnPageScrollEnd = false;
@@ -457,7 +456,7 @@ myApp.onPageInit('tabs-main', function () {
     '<div class="navbar theme-deeppurple">' +
     '<div class="navbar-inner">' +
     '<div class="left sliding">' +
-    '<a href="homeTabView.html" class="close-popup link">' +
+    '<a href="home.html" class="close-popup link">' +
     '<i class="icon icon-back"></i>' +
     '<span>Back</span>' +
     '</a>' +
@@ -510,7 +509,7 @@ myApp.onPageInit('tabs-main', function () {
     '<div class="navbar theme-deeppurple">' +
     '<div class="navbar-inner">' +
     '<div class="left sliding">' +
-    '<a href="homeTabView.html" class="close-popup link">' +
+    '<a href="home.html" class="close-popup link">' +
     '<i class="icon icon-back"></i>' +
     '<span>Back</span>' +
     '</a>' +
@@ -562,7 +561,7 @@ myApp.onPageInit('tabs-main', function () {
     '<div class="navbar theme-deeppurple">' +
     '<div class="navbar-inner">' +
     '<div class="left sliding">' +
-    '<a href="homeTabView.html" class="close-popup link">' +
+    '<a href="home.html" class="close-popup link">' +
     '<i class="icon icon-back"></i>' +
     '<span>Back</span>' +
     '</a>' +
