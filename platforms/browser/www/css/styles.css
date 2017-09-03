@@ -1,0 +1,622 @@
+/*
+statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+statusbar plugin is added, it also adds default setting to make the content white via:
+
+<preference name="StatusBarStyle" value="lightcontent"/>
+
+Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+in the config.xml file and will be added by the CLI when you build locally.
+
+See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+  background: #000000;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+  url(../lib/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+html {
+  font-family: 'Proxima Nova', 'Roboto', sans-serif;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.card {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+}
+.card-header-pic .card-header {
+  height: 40vw !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.infinite-scroll-preloader {
+  margin-top:-7px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.infinite-scroll-preloader .preloader {
+  width:34px;
+  height:34px;
+}
+
+.toolbar.toolbar-bottom.tabbar {
+  position: absolute;
+}
+
+.page-content.infinite-scroll {
+  padding-bottom: 30px;
+}
+
+.page-content.raised-page {
+  padding-bottom: 25px;
+}
+
+.panel {
+  width: 300px;
+}
+
+.no-text-decor {
+  text-decoration:none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.custom-floating-button {
+  bottom: 10px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.custom-floating-button-tutorial {
+  pointer-events: none;
+  position: absolute;
+  top: calc(80% - 26px);
+  left: calc(50% - 26px);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+a.floating-button.color-white.custom-floating-button-tutorial {
+  background-color: #34495e;
+  color: white;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.navbar-bottom {
+  top: auto;
+  bottom: 0px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.login-buttons-div {
+  position: relative;
+  top: 30px;
+}
+
+.login-background {
+  background-image: url("../img/login-background-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.no-caps {
+  text-transform: none;
+}
+
+.color-black-custom {
+  color: black !important;
+}
+
+.color-white-custom {
+  color: white !important;
+}
+
+.color-black-custom {
+  color: #111112 !important;
+}
+
+.card.col-50.color-black-custom-1 {
+  background-color: #111112;
+  color: white;
+}
+
+.login-button-logo-absolute {
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/google-logo.jpg");
+}
+
+.custom-layout-dark {
+  background-color: #222;
+}
+
+a.floating-button.color-deeppurple-custom.custom-floating-button {
+  background-color: #34495e;
+}
+
+.toolbar-inner {
+  background-color: #111112;
+}
+
+.button-float-right {
+  width: 200px;
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.left-panel-pic {
+  background-image: url("../img/purple-orange.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 100%;
+  height: 30%;
+}
+
+.toolbar.toolbar-bottom.tabbar.tabbar-labels.toolbar-hidden {
+  transform: translate3d(0,128px,0);
+}
+
+.wizard-background {
+  background-image: url("../img/rocks.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.facebook-card .card-header {
+  display: block;
+  padding: 10px;
+}
+.facebook-card .facebook-avatar {
+  float: left;
+}
+.facebook-card .facebook-name {
+  margin-left: 44px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.facebook-card .facebook-date {
+  margin-left: 44px;
+  font-size: 13px;
+  color: #8e8e93;
+}
+.facebook-card .card-footer {
+  background: #000000;
+}
+.facebook-card .card-footer a {
+  color: #8e8e93;
+  font-weight: 500;
+}
+.facebook-card .card-content img {
+  display: block;
+}
+.facebook-card .card-content-inner {
+  padding: 15px 10px;
+}
+
+.item-media.custom-item-media-width {
+  width: 15%;
+}
+
+.modal.modal-in {
+  background-color: #222;
+  color: rgba(255,255,255,.87);
+}
+
+.modal-title {
+  color: rgba(255,255,255,.87);
+}
+
+input.modal-text-input {
+  background-color: #222;
+  color: white;
+}
+
+span.modal-button {
+  color: rgba(255,255,255,.87);
+}
+
+.demo-card-header-pic .card-header {
+  height: 49vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo-center {
+  height: 55px;
+  width: 55px;
+  background-image: url(../img/fire-logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  margin-top: 3px;
+}
+
+.showspark-center {
+  height: 45px;
+  width: 120px;
+  background-image: url(../img/showspark.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 11px;
+  background-position: top left;
+  float: left;
+}
+
+.center.center-in-tabs {
+  width: 100%;
+  text-align: center;
+}
+
+.logo-center-canvas {
+  width: 180px;
+  height: 61px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  left: calc(50% - 97px);
+  background-color: white;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.text-border-black {
+  text-shadow: 1px 1px 1px black;
+  font-size: 15px;
+}
+
+.navbar {
+  box-shadow: none !important;
+}
+
+.toolbar.tabbar {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.custom-grey-background {
+  background-color: #eeeeee;
+}
+
+.horizontal-scroll {
+  overflow-x: auto;
+  width: auto;
+  white-space: nowrap;
+  margin: 16px 0px 12px 0px;
+}
+
+.content-block-title {
+  padding-top: 0px !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  margin: 2px 10px 2px 0px !important;
+  color: white !important;
+  background-color: #34495e !important;
+}
+
+.subnavbar.toolbar.tabbar {
+  top: 55px;
+}
+
+div#tab-movies {
+  padding-top: 103px;
+}
+
+div#tab-tv {
+  padding-top: 103px;
+}
+
+div#tab-sc {
+  padding-top: 103px;
+}
+
+div#tab-rv {
+  padding-top: 103px;
+}
+
+.profile-container {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.swiper-slide {
+  /*background: #fff;*/
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px 4px 2px 2px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+.swiper-slide span {
+  text-align:center;
+  display:block;
+  margin: 20px;
+  font-size:21px;
+}
+
+.swiper-pagination {
+  top: 10px;
+  right: 20px;
+  width: 100%;
+  text-align: right;
+  zoom: 0.8;
+}
+
+span.swiper-pagination-bullet {
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #111112;
+}
+
+.swiper-container.swiper-1.swiper-container-horizontal {
+  padding: 0px 8px 8px 8px;
+}
+
+div[class*="col-"] {
+  background: #fff;
+  text-align: left;
+  color: #000;
+  border: 1px solid #ddd;
+  margin: 8px 0px 0px 0px;
+}
+
+.row {
+  /*margin-bottom: 15px;*/
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.no-margin {
+  margin: 0px;
+  padding: 0px 8px 0px 8px;
+}
+
+.card.col-50 {
+  border: none;
+}
+
+.play-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: white;
+  bottom: 2px;
+  left: 2px;
+}
+
+.movie-detail-play-icon {
+  width: 30px;
+  height: 30px;
+  color: black;
+  vertical-align: middle;
+}
+
+.navbar.navbar-hidden {
+  transition-duration: .2s;
+}
+
+.navbar.navbar-hiding {
+  transition-duration: .2s;
+}
+
+.pulse-btn {
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  /*display: block;*/
+  /*width: 50px;*/
+  /*height: 50px;*/
+  /*line-height:50px;*/
+  /*text-align:center;*/
+  /*color: #fff;*/
+  border: none;
+  box-shadow: 0 0 0 0 #f0f0f0, 0 0 0 0 #34495e;
+  /*border-radius: 25px;*/
+  /*v-align: middle;*/
+  /*background: #e3730e;*/
+  /*cursor: pointer;*/
+  transform: translate3d(0, 0, 0);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0.33, 0, 1);
+}
+
+.pulse-btn:hover > i {
+  color:#fff;
+  text-shadow: 3px 3px 3px rgba(0,0,0,.35);
+}
+.pulse-btn:focus > i {
+  color:#fff;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 12px transparent, 0 0 0 24px rgba(227, 115, 14, 0);
+  }
+}
+
+.accordion-item-content {
+  transition-duration: 0.15s !important;
+}
+
+.movie-detail-poster {
+  border: none;
+  margin: 0px;
+}
+
+.main-movie-detail-half {
+  /*display: table-cell;*/
+  border: none !important;
+  background: transparent !important;
+}
+
+#ratingAndPoster {
+  margin: 8px 5px 5px 8px;
+  width: 40%;
+}
+
+#movieDetailRating {
+  position: absolute;
+  top: 56px;
+  right: 0px;
+  padding: 0px 5px 0px 5px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  min-width: 21px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#movieDescriptionDiv {
+  /*max-height: 250px;*/
+  /*overflow: scroll;*/
+  text-align: justify;
+}
+
+.innerImgResizer {
+  vertical-align: top;
+  width: 100%;
+  opacity: 0;
+}
+
+#similarMovies {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.similar-movie-rating {
+  padding: 0px 5px 0px 5px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  min-width: 21px;
+  text-align: center;
+  font-size: 1.5em;
+  top: 0px;
+  left: 0px;
+}
+
+.similar-movie-title {
+  padding: 0px 5px 0px 5px;
+  background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+  background: rgba(255, 255, 255, 0.7);
+  min-width: 21px;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+}
+
+.item-text.item-text-5-rows {
+  max-height: 100px;
+  -webkit-line-clamp: 4;
+}
+
+div#movie-detail-trailer-button {
+  width: 100%;
+  margin-left: calc(100% - 138px);
+  margin-top: -42px;
+  height: 30px;
+  text-align: center;
+}
+
+span#movie-detail-trailer-label {
+  color: white;
+  vertical-align: middle;
+  text-transform: none;
+}
+
+a#movie-detail-trailer-a {
+  background-color: #111112;
+  width: 130px;
+}
+
+.hidden {
+  display: none;
+}
+
+div#movieDetailFirstDiv {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 1px black;
+}

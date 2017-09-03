@@ -1,0 +1,38 @@
+{
+  "_from": "git+https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git",
+  "_id": "com.bunkerpalace.cordova.YoutubeVideoPlayer@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-j2EXWWHxwNYfmx4njT1bGigU+3Y=",
+  "_location": "/com.bunkerpalace.cordova.YoutubeVideoPlayer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/JonSmart/CordovaYoutubeVideoPlayer",
+    "rawSpec": "https://github.com/JonSmart/CordovaYoutubeVideoPlayer",
+    "saveSpec": "git+https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git",
+    "fetchSpec": "https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git#819fac1231022c05925b0f5391ec565e6a0f9907",
+  "_spec": "https://github.com/JonSmart/CordovaYoutubeVideoPlayer",
+  "_where": "C:\\Users\\Memphis\\Desktop\\ImdbUI\\WhatToWatch_PG7\\node_modules",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.bunkerpalace.cordova.YoutubeVideoPlayer",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "**Play Youtube Videos in a native Video Player on Android &amp; iOS.**",
+  "engines": {
+    "cordovaDependencies": {}
+  },
+  "name": "com.bunkerpalace.cordova.YoutubeVideoPlayer",
+  "version": "1.0.1"
+}

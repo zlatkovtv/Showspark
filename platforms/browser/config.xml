@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Showspark</name>
+    <description>
+        A newsfeed app.
+    </description>
+    <author email="konstantinzlatkov@gmail.com" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <icon src="www\img\fire-logo.png" />
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
+    <universal-links>
+        <host name="m2mf5.app.goo.gl" scheme="https" />
+        <host name="whattowatch-d5653.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="YouTubeDataApiKey" value="AIzaSyBeCdNgyqERu2cpCy6zNuqo8AJe_f0y6xg" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreenDelay" value="2250" />
+    <preference name="SplashScreenBackgroundColor" value="green" />
+</widget>
