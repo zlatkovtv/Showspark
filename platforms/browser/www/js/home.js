@@ -71,8 +71,8 @@ myApp.onPageInit('home', function () {
     }
   })
 
-  var myFeed = myApp.feeds('.movie-feed', {
-    url: 'http://www.cinemablend.com/rss.php',
+  var myFeed = myApp.feeds('.cinema-feed', {
+    url: 'https://feeds.feedburner.com/cinemablendallthing?format=xml',
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
@@ -124,10 +124,10 @@ myApp.onPageInit('home', function () {
     '</div>'
   });
 
-  var myFeed2 = myApp.feeds('.tv-feed', {
-    url: 'http://www.cinemablend.com/rss_television.xml',
+  var myFeed2 = myApp.feeds('.theaters-feed', {
+    url: 'http://www.cinemablend.com/rss_preview.php',
     openIn: 'popup',
-    customItemFields: ["enclosure||url"],
+    customItemFields: ["enclosure||url", "description"],
     onAjaxStart: function () {
       console.log("ajaxstart");
     },
@@ -192,10 +192,11 @@ myApp.onPageInit('home', function () {
     '<li class="accordion-item"><a href="#" class="item-content item-link">' +
     '<div class="item-inner">' +
     '<div class="item-title">{{title}}</div>' +
-    '  </div></a>' +
-    '<div class="accordion-item-content">' +
+    '</div></a>' +
+    '<div class="accordion-item-content" style="padding-bottom: 5px;">' +
     '<div class="content-block">' +
     '<p>{{description}}</p>' +
+    '<a class="button button-raised button-fill custom-purple-color float-left" onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">Read full review</a>' +
     '</div>' +
     '</div>' +
     '</li>' +

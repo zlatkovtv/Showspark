@@ -131,7 +131,6 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-customurlscheme": "4.3.0",
     "cordova-plugin-spinner": "1.1.0",
-    "cordova-plugin-crosswalk-webview": "2.3.0",
     "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5"
 }
 // BOTTOM OF METADATA

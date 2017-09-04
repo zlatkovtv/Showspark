@@ -81,13 +81,6 @@
     <splash density="land-mdpi" src="www\img\res\drawable-land-mdpi\screen.png" />
     <splash density="land-xhdpi" src="www\img\res\drawable-land-xhdpi\screen.png" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
-    <preference name="xwalkVersion" value="23+" />
-    <preference name="xwalkLiteVersion" value="xwalk_core_library_canary:17+" />
-    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
-    <preference name="xwalkMode" value="embedded" />
-    <preference name="xwalkMultipleApk" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="YouTubeDataApiKey" value="AIzaSyBeCdNgyqERu2cpCy6zNuqo8AJe_f0y6xg" />
     <preference name="SplashScreen" value="screen" />
@@ -96,4 +89,5 @@
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreenDelay" value="2250" />
     <preference name="SplashScreenBackgroundColor" value="green" />
+    <preference name="android-minSdkVersion" value="14" />
 </widget>

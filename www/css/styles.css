@@ -72,6 +72,7 @@ html {
 .card {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
 }
+
 .card-header-pic .card-header {
   height: 40vw !important;
   background-size: cover !important;
@@ -189,6 +190,10 @@ a.floating-button.color-white.custom-floating-button-tutorial {
 
 a.floating-button.color-deeppurple-custom.custom-floating-button {
   background-color: #34495e;
+}
+
+.custom-purple-color {
+  background-color: #34495e !important;
 }
 
 .toolbar-inner {
@@ -547,6 +552,10 @@ div[class*="col-"] {
   text-align: justify;
 }
 
+.justify {
+  text-align: justify;
+}
+
 .innerImgResizer {
   vertical-align: top;
   width: 100%;
@@ -619,4 +628,42 @@ div#movieDetailFirstDiv {
 
 .text-shadow-1 {
   text-shadow: 1px 1px 1px black;
+}
+
+#imdbButton {
+  background-image: url(../img/imdb-button.png);
+  width: 92px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content-block.horizontal-scroll.movie-detail-horizontal-scroll {
+  margin: 0px 0px 0px 0px;
+}
+
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.max-height-200 {
+  max-height: 200px;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

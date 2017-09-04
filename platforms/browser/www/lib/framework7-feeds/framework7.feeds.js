@@ -167,6 +167,9 @@ Framework7.prototype.plugins.feeds = function (app) {
                 var items = channel.find('item');
                 items.each(function (index, el) {
                     var item = $(el);
+                    if(item.children('description').text() === null) {
+                      return true;
+                    }
                     var itemData = {
                         title: item.children('title').text().replace('<![CDATA[', '').replace(']]>', ''),
                         link: item.children('link').text(),

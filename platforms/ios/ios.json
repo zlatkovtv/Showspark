@@ -128,9 +128,6 @@
         "cordova-plugin-spinner": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
@@ -266,7 +263,6 @@
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-customurlscheme": "4.3.0",
         "cordova-plugin-spinner": "1.1.0",
-        "cordova-plugin-crosswalk-webview": "2.3.0",
         "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5"
     }
 }

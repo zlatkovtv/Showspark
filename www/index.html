@@ -186,7 +186,7 @@
 	</script>
 
 	<script type="text/template7" id="movieDetailTemplate">
-		<div class="popup custom-grey-background ">
+		<div id="movieDetailContainer" class="popup custom-grey-background">
 			<div id="movieDetailNavbar" class="navbar navbar-fixed theme-deeppurple">
 				<div class="navbar-inner">
 					<div class="left">
@@ -195,8 +195,10 @@
 							</i>
 						</a>
 					</div>
-					<div class="center text-shadow-1">{{obj.original_title}}</div>
-					<div class="right"> </div>
+					<div class="center text-shadow-1">{{obj.original_title}} ({{obj.release_year}})</div>
+					<div class="right" id="imdbContainer">
+
+					</div>
 				</div>
 			</div>
 			<div id="movieDetailFirstDiv" class="row no-gutter main-movie-detail custom-grey-background" style="background-image:url({{obj.backdrop_path}})">
@@ -223,16 +225,23 @@
 				<div class="content-block-title">Overview</div>
 				<div id="movieDescriptionDiv" class="card">
 					<div class="card-content">
-						<div class="card-content-inner">
+						<div class="card-content-inner noselect">
 							{{obj.overview}}
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div id="similarMovies">
+			<div id="genresContainer">
 
-				</div>
+			</div>
+			<div id="similarMoviesContainer">
+
+			</div>
+			<div id="socialButtonsContainer">
+
+			</div>
+			<div id="reviewsContainer">
+
 			</div>
 		</div>
 	</script>

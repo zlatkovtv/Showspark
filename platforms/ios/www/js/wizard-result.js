@@ -27,8 +27,6 @@ myApp.onPageInit('wizard-result', function (page) {
 
   $$('.wizard-result-title').append(wizardHtml);
 
-  console.log(selectedGenres);
-
   var genreString = "&with_genres=";
   var apiObject;
 
@@ -42,8 +40,6 @@ myApp.onPageInit('wizard-result', function (page) {
       }
     }
   }
-
-  console.log(genreString);
 
   console.log("ajaxstart");
 

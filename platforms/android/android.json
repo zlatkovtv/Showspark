@@ -23,34 +23,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkVersion\" value=\"23+\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkLiteVersion\" value=\"xwalk_core_library_canary:17+\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkMode\" value=\"embedded\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"xwalkMultipleApk\" value=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"LaunchMyApp\"><param name=\"android-package\" value=\"nl.xservices.plugins.LaunchMyApp\" /></feature>",
                             "count": 1
                         },
@@ -123,16 +95,6 @@
                             "count": 1
                         }
                     ],
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-                            "count": 1
-                        }
-                    ],
                     "/manifest/application/activity": [
                         {
                             "xml": "<intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"com.firebase.cordova\" /></intent-filter>",
@@ -161,14 +123,6 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-crosswalk-webview": {
-            "XWALK_VERSION": "23+",
-            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-            "XWALK_MODE": "embedded",
-            "XWALK_MULTIPLEAPK": "true",
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-customurlscheme": {
@@ -312,7 +266,6 @@
         "cordova-plugin-browsertab": "0.2.0",
         "cordova-plugin-buildinfo": "1.1.0",
         "cordova-plugin-console": "1.0.7",
-        "cordova-plugin-crosswalk-webview": "2.3.0",
         "cordova-plugin-customurlscheme": "4.3.0",
         "cordova-plugin-device": "1.1.6",
         "cordova-plugin-googleplus": "5.1.1",

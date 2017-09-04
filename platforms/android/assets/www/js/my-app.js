@@ -4,10 +4,12 @@ var myApp = new Framework7({
   cache:true,
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
+    console.log("Ajax start");
     // SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
+    console.log("Ajax complete");
     // SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
@@ -103,12 +105,10 @@ $$(document).on('deviceready', function() {
   var fbProvider = new firebase.auth.FacebookAuthProvider();
 
   $$('.google-auth-button').on('click', function () {
-    console.log("!!!! google button event");
     firebase.auth().signInWithRedirect(provider).then(function() {
       firebase.auth().getRedirectResult().then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        console.log(user);
         goToTabs();
       }).catch(function(error) {
         console.log(error.code);
@@ -118,12 +118,10 @@ $$(document).on('deviceready', function() {
   });
 
   $$('.facebook-auth-button').on('click', function () {
-    console.log("!!!! facebook button event");
     firebase.auth().signInWithRedirect(fbProvider).then(function() {
       firebase.auth().getRedirectResult().then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        console.log(user);
         goToTabs();
       }).catch(function(error) {
         console.log(error.code);
@@ -192,10 +190,7 @@ myApp.onPageBeforeInit('login', function () {
 })
 
 myApp.onPageInit('login', function () {
-  console.log("index onPageInit");
-
   var currUser = firebase.auth().currentUser;
-  console.log(currUser);
   if(currUser) {
     $$('.user-name-label').text("Signed in as " + currUser.displayName);
   }
@@ -204,12 +199,10 @@ myApp.onPageInit('login', function () {
   var fbProvider = new firebase.auth.FacebookAuthProvider();
 
   $$('.google-auth-button').on('click', function () {
-    console.log("!!!! google button event");
     firebase.auth().signInWithRedirect(provider).then(function() {
       firebase.auth().getRedirectResult().then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        console.log(user);
         goToTabs();
       }).catch(function(error) {
         console.log(error.code);
@@ -219,12 +212,10 @@ myApp.onPageInit('login', function () {
   });
 
   $$('.facebook-auth-button').on('click', function () {
-    console.log("!!!! facebook button event");
     firebase.auth().signInWithRedirect(fbProvider).then(function() {
       firebase.auth().getRedirectResult().then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        console.log(user);
         goToTabs();
       }).catch(function(error) {
         console.log(error.code);
@@ -243,6 +234,10 @@ function normalizeApiObj(obj) {
       if(obj[i].vote_average === 0) {
         obj[i].vote_average = "No rating yet";
       }
+
+      if(obj[i].vote_average % 1 === 0) {
+        obj[i].vote_average = obj[i].vote_average + '.0';
+      }
     }
   } else {
     obj.poster_path = "http://image.tmdb.org/t/p/w342" + obj.poster_path;
@@ -250,6 +245,10 @@ function normalizeApiObj(obj) {
     obj.release_year = obj.release_date.substring(0,4);
     if(obj.vote_average === 0) {
       obj.vote_average = "No rating yet";
+    }
+
+    if(obj.vote_average % 1 === 0) {
+      obj.vote_average = obj.vote_average + '.0';
     }
   }
 
@@ -291,7 +290,6 @@ function buildSortedMovieList(xhr) {
 function getMovieDetailInfo(id) {
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
     url: 'https://api.themoviedb.org/3/movie/' + id + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
@@ -308,14 +306,36 @@ function getMovieDetailInfo(id) {
           return;
         }
 
+        console.log(movieObj);
         popUpMovieDetail(movieObj);
+
+        if(movieObj.imdb_id) {
+          attachImdbButton(movieObj.imdb_id);
+        }
+
         changeNavbarColor(movieObj);
+        if (typeof movieObj.genres !== 'undefined' && movieObj.genres.length > 0) {
+          attachGenres(movieObj.genres);
+        }
+
         attachTrailer(id);
         getSimilarMovies(id);
-        // getMovieReviews(id);
+
+        getMovieReviews(id);
       }
     }
   })
+}
+
+function attachImdbButton(imdbId) {
+  var html = '<a href="#" id="imdbButton">' +
+  '</a>';
+
+  $$('#imdbContainer').append(html);
+
+  $$('#imdbButton').on('click', function () {
+    cordova.InAppBrowser.open('http://www.imdb.com/title/' + imdbId, '_self', 'location=yes');
+  });
 }
 
 function popUpMovieDetail(movieObj) {
@@ -333,7 +353,6 @@ function changeNavbarColor(obj) {
   img.onload = function () {
     var colorThief = new ColorThief();
     navbarColor = colorThief.getColor(img);
-    console.log(navbarColor);
     $$('#movieDetailNavbar').css('background-color', 'rgb(' + navbarColor[0]+ ',' + navbarColor[1] + ',' + navbarColor[2] + ')');
   };
   img.crossOrigin = 'Anonymous';
@@ -343,7 +362,6 @@ function changeNavbarColor(obj) {
 function getMovieReviews(id) {
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
     url: 'https://api.themoviedb.org/3/movie/' + id + '/reviews?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
@@ -356,22 +374,18 @@ function getMovieReviews(id) {
           return;
         }
 
-        var popupHTML = '<div class="content-block-title">Reviews</div>' +
-        '<div class="swiper-container swiper-1">' +
-        '<div class="swiper-pagination"></div>' +
-        '<div class="swiper-wrapper">';
+        var rvHtml = '<div class="content-block-title">Reviews</div>';
 
-        for (var i = 0; i < silimarMovieArr.length; i++) {
-          silimarMovieArr[i] = normalizeApiObj(silimarMovieArr[i]);
-          popupHTML += Template7.templates.similarMovieTemplate({
-            obj: silimarMovieArr[i]
-          });
+        for (var i = 0; i < reviewArr.length; i++) {
+          rvHtml += '<div class="card" onClick="cordova.InAppBrowser.open(\'' + reviewArr[i].url + '\', \'_self\', \'location=yes\');">'+
+            '<div class="card-header noselect">From ' + reviewArr[i].author + '</div>' +
+            '<div class="card-content max-height-200 overflow-hidden">' +
+              '<div class="card-content-inner noselect">' + reviewArr[i].content + '</div>' +
+            '</div>' +
+          '</div>';
         }
 
-        popupHTML += '</div>'+
-        '</div>';
-
-        $$('#similarMovies').append(popupHTML);
+        $$('#reviewsContainer').append(rvHtml);
       }
     }
   })
@@ -380,7 +394,6 @@ function getMovieReviews(id) {
 function attachTrailer(id) {
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
     url: 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
@@ -394,7 +407,9 @@ function attachTrailer(id) {
         } else {
           $$('#movie-detail-trailer-a').on('click', function () {
             console.log("playing");
-            YoutubeVideoPlayer.openVideo(movieObj.key, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+            YoutubeVideoPlayer.openVideo(movieObj.key, function(result) {
+              console.log('YoutubeVideoPlayer result = ' + result);
+            });
           });
         }
       }
@@ -405,7 +420,6 @@ function attachTrailer(id) {
 function getSimilarMovies(id) {
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
     url: 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
@@ -414,8 +428,6 @@ function getSimilarMovies(id) {
       },
       200: function (xhr) {
         var silimarMovieArr = JSON.parse(xhr.response).results;
-        console.log("silimarMovieArr");
-        console.log(silimarMovieArr);
 
         if(!silimarMovieArr || !silimarMovieArr instanceof Array || silimarMovieArr.length === 0) {
           return;
@@ -425,15 +437,13 @@ function getSimilarMovies(id) {
           return movie.backdrop_path != undefined;
         });
 
-        var popupHTML = '<div class="content-block-title">Similar movies</div>' +
+        var popupHTML = '<div class="row">' +
+        '<div class="content-block-title">Similar movies</div>' +
         '<div class="swiper-container swiper-1">' +
         '<div class="swiper-pagination"></div>' +
         '<div class="swiper-wrapper">';
 
         for (var i = 0; i < silimarMovieArr.length; i++) {
-          // if(silimarMovieArr[i].id === id) {
-          //   duplicate
-          // }
           if(i >= 10) {
             break;
           }
@@ -445,9 +455,10 @@ function getSimilarMovies(id) {
         }
 
         popupHTML += '</div>'+
+        '</div>' +
         '</div>';
 
-        $$('#similarMovies').append(popupHTML);
+        $$('#similarMoviesContainer').append(popupHTML);
 
         var mySwiper1 = myApp.swiper('.swiper-1', {
           pagination:'.swiper-1 .swiper-pagination',
@@ -456,4 +467,39 @@ function getSimilarMovies(id) {
       }
     }
   })
+}
+
+function attachGenres(genresArr) {
+  genresArr.sort(compareGenres);
+  var popupHTML = '<div class="row">' +
+  '<div class="content-block-title">Genres</div>' +
+  '</div>' +
+  '<div class="row">' +
+  '<div class="content-block horizontal-scroll movie-detail-horizontal-scroll">' +
+  '<div class="inner-horizontal-scroll">';
+
+  genresArr = genresArr.map(function(genre) {
+    return genre.name;
+  });
+
+  for (var i = 0; i < genresArr.length; i++) {
+    popupHTML +=
+       '<div class="chip">' +
+         '<div class="chip-label">' + genresArr[i] + '</div>' +
+       '</div>';
+  }
+
+  popupHTML += '</div>' +
+  '</div>' +
+  '</div>';
+
+  $$('#genresContainer').append(popupHTML);
+}
+
+function compareGenres(a,b) {
+  if (a.name < b.name)
+    return -1;
+  if (a.name > b.name)
+    return 1;
+  return 0;
 }
