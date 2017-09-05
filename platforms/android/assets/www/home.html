@@ -32,27 +32,28 @@
   </div>
   <div class="subnavbar toolbar tabbar tabbar-scrollable">
     <div class="toolbar-inner">
-      <a href="#tab-movies" class="tab-link active">
+      <a href="#tab-cinema" class="tab-link active">
         Cinema
       </a>
-      <a href="#tab-tv" class="tab-link">
-        In theaters
-      </a>
-      <a href="#tab-rv" class="tab-link">
-        Reviews
-      </a>
-      <a href="#tab-sc" class="tab-link">
-        <i class="material-icons">local_movies</i>
-      </a>
-    </div>
+      <!-- <a href="#tab-tv" class="tab-link">
+      In theaters
+    </a> -->
+    <a href="#tab-rv" class="tab-link">
+      Reviews
+    </a>
+    <a href="#tab-sc" class="tab-link">
+      Trailers
+      <!-- <i class="material-icons">local_movies</i> -->
+    </a>
   </div>
+</div>
 </div>
 
 <!-- Tabs animated wrapper, required to switch tabs with transition VALUES : tabs-{{animated/swipeable}}-wrap:  -->
 <div class="tabs-animated-wrap">
   <!-- Tabs, tabs wrapper -->
   <div class="tabs">
-    <div id="tab-movies" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
+    <div id="tab-cinema" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
       <div class="pull-to-refresh-layer">
         <div class="preloader"></div>
         <div class="pull-to-refresh-arrow"></div>
@@ -68,49 +69,65 @@
     </div> -->
   </div>
   <!-- Tab 2 -->
-  <div id="tab-tv" class="page-content pull-to-refresh-content tab hide-navbar-on-scroll">
-    <div class="pull-to-refresh-layer">
-      <div class="preloader"></div>
-      <div class="pull-to-refresh-arrow"></div>
-    </div>
+  <!-- <div id="tab-tv" class="page-content pull-to-refresh-content tab hide-navbar-on-scroll">
+  <div class="pull-to-refresh-layer">
+  <div class="preloader"></div>
+  <div class="pull-to-refresh-arrow"></div>
+</div> -->
 
-    <!-- <div class="content-block-title">OR MAYBE SOME TV NEWS</div> -->
-    <div class="list-block theaters-feed no-margin-top"></div>
+<!-- <div class="list-block theaters-feed no-margin-top"></div>
+</div> -->
+
+<!-- Tab 3 -->
+<div id="tab-rv" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
+  <div class="pull-to-refresh-layer">
+    <div class="preloader"></div>
+    <div class="pull-to-refresh-arrow"></div>
   </div>
 
-  <!-- Tab 3 -->
-  <div id="tab-rv" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
-    <div class="pull-to-refresh-layer">
-      <div class="preloader"></div>
-      <div class="pull-to-refresh-arrow"></div>
+  <!-- <div class="content-block-title">REVIEWS</div> -->
+  <div class="list-block accordion-list rv-feed no-margin-top"></div>
+
+</div>
+<!-- Tab 4 -->
+<div id="tab-sc" class="page-content tab hide-navbar-on-scroll">
+  <!-- <div class="content-block-title">MOVIE TRAILERS</div> -->
+
+  <div class="content-block no-margin">
+    <div class="row margin-bottom-15 showcase-container">
+
     </div>
-
-     <!-- <div class="content-block-title">REVIEWS</div> -->
-     <div class="list-block accordion-list rv-feed no-margin-top"></div>
-
   </div>
-  <!-- Tab 4 -->
-  <div id="tab-sc" class="page-content tab hide-navbar-on-scroll">
-    <div class="content-block-title">MOVIE TRAILERS</div>
 
-    <div class="content-block no-margin">
-      <div class="row margin-bottom-15 showcase-container">
-
-      </div>
-    </div>
-
-  </div>
+</div>
 
 </div>
 </div>
 
-<!-- Floating Action Button -->
-<a href="wizard.html" id="main-fl-button" class="floating-button color-deeppurple-custom custom-floating-button">
-  <i class="material-icons color-white-custom">movie
-  </i>
-</a>
-
-
+<div class="speed-dial">
+    <!-- FAB inside will open Speed Dial actions -->
+    <a href="#" class="floating-button color-deeppurple-custom custom-floating-button">
+      <!-- First icon is visible when Speed Dial actions are closed -->
+      <i class="icon icon-plus"></i>
+      <!-- Second icon is visible when Speed Dial actions are opened -->
+      <i class="icon icon-close"></i>
+    </a>
+    <!-- Speed Dial Actions -->
+    <div class="speed-dial-buttons">
+      <!-- First Speed Dial button -->
+      <a href="wizard.html" class="color-deeppurple-custom custom-floating-button">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="white" d="M10,13V11H18V13H10M10,19V17H14V19H10M10,7V5H22V7H10M6,17H8.5L5,20.5L1.5,17H4V4H6V17Z" />
+        </svg>
+      </a>
+      <!-- Second Speed Dial  button -->
+      <a href="#" class="color-deeppurple-custom custom-floating-button">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="white" d="M4,15H6A2,2 0 0,1 8,17V19H9V17A2,2 0 0,1 11,15H13A2,2 0 0,1 15,17V19H16V17A2,2 0 0,1 18,15H20A2,2 0 0,1 22,17V19H23V22H1V19H2V17A2,2 0 0,1 4,15M11,7L15,10L11,13V7M4,2H20A2,2 0 0,1 22,4V13.54C21.41,13.19 20.73,13 20,13V4H4V13C3.27,13 2.59,13.19 2,13.54V4A2,2 0 0,1 4,2Z" />
+        </svg>
+      </a>
+    </div>
+  </div>
 
 </div>
 </div>

@@ -106,6 +106,7 @@ module.exports.metadata =
     "cordova-plugin-browsertab": "0.2.0",
     "cordova-plugin-buildinfo": "1.1.0",
     "cordova-plugin-console": "1.0.7",
+    "cordova-plugin-crosswalk-webview": "2.3.0",
     "cordova-plugin-customurlscheme": "4.3.0",
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-googleplus": "5.1.1",

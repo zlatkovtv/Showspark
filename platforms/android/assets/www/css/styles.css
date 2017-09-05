@@ -131,6 +131,11 @@ a.floating-button.color-white.custom-floating-button-tutorial {
   color: white;
 }
 
+a.color-white.custom-floating-button-tutorial {
+  background-color: #34495e;
+  color: white;
+}
+
 .align-left {
   text-align: left;
 }
@@ -189,6 +194,10 @@ a.floating-button.color-white.custom-floating-button-tutorial {
 }
 
 a.floating-button.color-deeppurple-custom.custom-floating-button {
+  background-color: #34495e;
+}
+
+a.color-deeppurple-custom.custom-floating-button {
   background-color: #34495e;
 }
 
@@ -372,7 +381,7 @@ span.modal-button {
   top: 55px;
 }
 
-div#tab-movies {
+div#tab-cinema {
   padding-top: 103px;
 }
 
@@ -448,7 +457,7 @@ div[class*="col-"] {
 
 .no-margin {
   margin: 0px;
-  padding: 0px 8px 0px 8px;
+  padding: 0px;
 }
 
 .card.col-50 {
@@ -457,8 +466,8 @@ div[class*="col-"] {
 
 .play-icon {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   color: white;
   bottom: 2px;
   left: 2px;
@@ -666,4 +675,21 @@ div#movieDetailFirstDiv {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.trailer-title {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 17px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.fab-label {
+  position: absolute;
+  left: -100px;
+  bottom: 16px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }

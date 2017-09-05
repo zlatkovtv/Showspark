@@ -10,7 +10,7 @@ myApp.onPageInit('home', function () {
   myApp.swipePanelActiveArea = 20;
   myApp.showBarsOnPageScrollEnd = false;
 
-  myApp.showTab("#tab-movies");
+  myApp.showTab("#tab-cinema");
 
   var pressed = window.localStorage.getItem("isFloatingBPressed");
   if(!pressed) {
@@ -38,13 +38,11 @@ myApp.onPageInit('home', function () {
         mostPopMovieObject = JSON.parse(xhr.response).results;
         for (var i = 0; i < mostPopMovieObject.length; i++) {
           html += Template7.templates.showcaseCardTemplate({
-            inputName: mostPopMovieObject[i].original_title,
-            inputBackground: mostPopMovieObject[i].backdrop_path,
-            inputId: mostPopMovieObject[i].id
+            obj: mostPopMovieObject[i]
           });
         }
+        
         $$('.showcase-container').append(html);
-
 
         $$('.video-link').on('click', function () {
           console.log("video");
@@ -113,7 +111,7 @@ myApp.onPageInit('home', function () {
     '<div class="page-content">' +
     '<img src="{{enclosure}}" class="full-width">' +
     '<div class="content-block">' +
-    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
+    '<a onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">{{title}}</a><br>' +
     '<small>{{formattedDate}}</small>' +
     '</div>' +
     '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
@@ -124,58 +122,58 @@ myApp.onPageInit('home', function () {
     '</div>'
   });
 
-  var myFeed2 = myApp.feeds('.theaters-feed', {
-    url: 'http://www.cinemablend.com/rss_preview.php',
-    openIn: 'popup',
-    customItemFields: ["enclosure||url", "description"],
-    onAjaxStart: function () {
-      console.log("ajaxstart");
-    },
-    onAjaxComplete: function () {
-      console.log("ajaxcomplete");
-    },
-    listTemplate: '<ul>' +
-    '{{#each items}}' +
-    '<li>' +
-    '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
-    '<div class="card demo-card-header-pic">' +
-    '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
-    '</a>' +
-    '<div class="card-footer">' +
-    '<i class="material-icons link">bookmark_border</i>' +
-    '<i class="material-icons link">share</i>' +
-    '</div>' +
-    '</div>' +
-    '</li>' +
-    '{{/each}}' +
-    '</ul>',
-    itemPopupTemplate: '<div class="popup">' +
-    '<div class="view navbar-fixed">' +
-    '<div class="navbar theme-deeppurple">' +
-    '<div class="navbar-inner">' +
-    '<div class="left sliding">' +
-    '<a href="home.html" class="close-popup link">' +
-    '<i class="icon icon-back"></i>' +
-    '<span>Back</span>' +
-    '</a>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '<div class="pages">' +
-    '<div class="page feeds-page-tv" data-page="feeds-page-{{index}}">' +
-    '<div class="page-content">' +
-    '<img src="{{enclosure}}" class="full-width">' +
-    '<div class="content-block">' +
-    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
-    '<small>{{formattedDate}}</small>' +
-    '</div>' +
-    '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '</div>'
-  });
+  // var myFeed2 = myApp.feeds('.theaters-feed', {
+  //   url: 'http://www.cinemablend.com/rss_preview.php',
+  //   openIn: 'popup',
+  //   customItemFields: ["enclosure||url", "description"],
+  //   onAjaxStart: function () {
+  //     console.log("ajaxstart");
+  //   },
+  //   onAjaxComplete: function () {
+  //     console.log("ajaxcomplete");
+  //   },
+  //   listTemplate: '<ul>' +
+  //   '{{#each items}}' +
+  //   '<li>' +
+  //   '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
+  //   '<div class="card demo-card-header-pic">' +
+  //   '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
+  //   '</a>' +
+  //   '<div class="card-footer">' +
+  //   '<i class="material-icons link">bookmark_border</i>' +
+  //   '<i class="material-icons link">share</i>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '</li>' +
+  //   '{{/each}}' +
+  //   '</ul>',
+  //   itemPopupTemplate: '<div class="popup">' +
+  //   '<div class="view navbar-fixed">' +
+  //   '<div class="navbar theme-deeppurple">' +
+  //   '<div class="navbar-inner">' +
+  //   '<div class="left sliding">' +
+  //   '<a href="home.html" class="close-popup link">' +
+  //   '<i class="icon icon-back"></i>' +
+  //   '<span>Back</span>' +
+  //   '</a>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '<div class="pages">' +
+  //   '<div class="page feeds-page-tv" data-page="feeds-page-{{index}}">' +
+  //   '<div class="page-content">' +
+  //   '<img src="{{enclosure}}" class="full-width">' +
+  //   '<div class="content-block">' +
+  //   '<a onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">{{title}}</a><br>' +
+  //   '<small>{{formattedDate}}</small>' +
+  //   '</div>' +
+  //   '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '</div>' +
+  //   '</div>'
+  // });
 
   var myFeed3 = myApp.feeds('.rv-feed', {
     url: 'http://www.cinemablend.com/rss_review.php',
@@ -196,7 +194,7 @@ myApp.onPageInit('home', function () {
     '<div class="accordion-item-content" style="padding-bottom: 5px;">' +
     '<div class="content-block">' +
     '<p>{{description}}</p>' +
-    '<a class="button button-raised button-fill custom-purple-color float-left" onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">Read full review</a>' +
+    '<a class="button button-raised button-fill custom-purple-color float-left" onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">Read full review</a>' +
     '</div>' +
     '</div>' +
     '</li>' +
@@ -219,7 +217,7 @@ myApp.onPageInit('home', function () {
     '<div class="page-content">' +
     '<img src="{{enclosure}}" class="full-width">' +
     '<div class="content-block">' +
-    '<a onClick="cordova.InAppBrowser.open(\'{{link}}\', \'_self\', \'location=yes\');">{{title}}</a><br>' +
+    '<a onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">{{title}}</a><br>' +
     '<small>{{formattedDate}}</small>' +
     '</div>' +
     '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +

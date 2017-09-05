@@ -5,12 +5,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    // SpinnerPlugin.activityStart(null, {dimBackground: false});
+    SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    // SpinnerPlugin.activityStop();
+    SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -97,6 +97,7 @@ $$(document).on('deviceready', function() {
       welcomescreen.close();
       goToTabs();
     } else {
+      goToIndex();
       console.log("No user is logged in");
     }
   });
@@ -142,7 +143,7 @@ function goToPage(pageName) {
 }
 
 function goToIndex() {
-  mainView.router.loadPage('index.html');
+  mainView.router.loadPage('login.html');
 }
 
 function goToTabs(){
@@ -181,49 +182,6 @@ function closeSignUpPopup() {
   document.removeEventListener("backbutton", closeSignUpPopup, false);
   document.addEventListener("backbutton", goToIndex, false);
 }
-
-myApp.onPageBeforeInit('login', function () {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", exitPrompt, false);
-})
-
-myApp.onPageInit('login', function () {
-  var currUser = firebase.auth().currentUser;
-  if(currUser) {
-    $$('.user-name-label').text("Signed in as " + currUser.displayName);
-  }
-
-  var provider = new firebase.auth.GoogleAuthProvider();
-  var fbProvider = new firebase.auth.FacebookAuthProvider();
-
-  $$('.google-auth-button').on('click', function () {
-    firebase.auth().signInWithRedirect(provider).then(function() {
-      firebase.auth().getRedirectResult().then(function(result) {
-        var token = result.credential.accessToken;
-        var user = result.user;
-        goToTabs();
-      }).catch(function(error) {
-        console.log(error.code);
-        console.log(error.message);
-      });
-    });
-  });
-
-  $$('.facebook-auth-button').on('click', function () {
-    firebase.auth().signInWithRedirect(fbProvider).then(function() {
-      firebase.auth().getRedirectResult().then(function(result) {
-        var token = result.credential.accessToken;
-        var user = result.user;
-        goToTabs();
-      }).catch(function(error) {
-        console.log(error.code);
-        console.log(error.message);
-      });
-    });
-  });
-});
 
 function normalizeApiObj(obj) {
   if (obj instanceof Array) {
@@ -334,7 +292,7 @@ function attachImdbButton(imdbId) {
   $$('#imdbContainer').append(html);
 
   $$('#imdbButton').on('click', function () {
-    cordova.InAppBrowser.open('http://www.imdb.com/title/' + imdbId, '_self', 'location=yes');
+    cordova.plugins.browsertab.openUrl('http://www.imdb.com/title/' + imdbId);
   });
 }
 
@@ -377,7 +335,7 @@ function getMovieReviews(id) {
         var rvHtml = '<div class="content-block-title">Reviews</div>';
 
         for (var i = 0; i < reviewArr.length; i++) {
-          rvHtml += '<div class="card" onClick="cordova.InAppBrowser.open(\'' + reviewArr[i].url + '\', \'_self\', \'location=yes\');">'+
+          rvHtml += '<div class="card" onClick="cordova.plugins.browsertab.openUrl(\'' + reviewArr[i].url + '\');">'+
             '<div class="card-header noselect">From ' + reviewArr[i].author + '</div>' +
             '<div class="card-content max-height-200 overflow-hidden">' +
               '<div class="card-content-inner noselect">' + reviewArr[i].content + '</div>' +

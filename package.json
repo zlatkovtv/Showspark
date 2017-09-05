@@ -29,7 +29,14 @@
                 "ANDROID_PATHPREFIX": "/"
             },
             "cordova-plugin-spinner": {},
-            "com.bunkerpalace.cordova.YoutubeVideoPlayer": {}
+            "com.bunkerpalace.cordova.YoutubeVideoPlayer": {},
+            "cordova-plugin-crosswalk-webview": {
+                "XWALK_VERSION": "23+",
+                "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+                "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+                "XWALK_MODE": "embedded",
+                "XWALK_MULTIPLEAPK": "true"
+            }
         }
     },
     "dependencies": {
@@ -41,6 +48,7 @@
         "cordova-plugin-buildinfo": "^1.1.0",
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-console": "~1.0.1",
+        "cordova-plugin-crosswalk-webview": "^2.3.0",
         "cordova-plugin-customurlscheme": "^4.3.0",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-googleplus": "git+https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
