@@ -2,28 +2,52 @@
   <div data-page="wizard" class="page theme-deeppurple navbar-fixed">
     <div class="page-content raised-page">
       <div class="content-block">
-        <div class="login-screen-title align-left">First select some genres </div>
+        <div class="login-screen-title align-left">Order items by </div>
+        <div class="list-block">
+          <ul>
+            <li>
+              <a href="#" class="item-link smart-select" data-open-in="picker" data-picker-height="50%">
+                <select name="order-by-form">
+                  <option value="popularity" selected>Popularity</option>
+                  <option value="vote_average">Average vote</option>
+                  <option value="primary_release_date">Release date</option>
+                  <option value="revenue">Revenue</option>
+                </select>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title">Order by</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Virtual List -->
-      <form id="genre-form" class="list-block virtual-list">
-        <!-- keep it empty -->
-      </form>
+      <div class="content-block">
+        <div class="login-screen-title align-left">Show movies that are all of these genres </div>
+
+
+        <!-- Virtual List -->
+        <form id="genre-form" class="list-block virtual-list">
+          <!-- keep it empty -->
+        </form>
+      </div>
+
+      <div class="content-block">
+        <a href="wizardResult.html" class="button button-raised button-fill button-big custom-purple-color float-left no-animation wizard-next-button">Continue</a>
+      </div>
     </div>
 
-    <div class="navbar navbar-bottom">
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="left">
           <a href="home.html" class="link">
-            <i class="material-icons">chevron_left</i>
+            <i class="material-icons">keyboard_backspace</i>
           </a>
         </div>
         <div class="center"></div>
         <div class="right">
-          <a href="wizardOrderBy.html" class="link no-animation wizard-home-next-button">
-            <span>NEXT</span>
-            <i class="material-icons">chevron_right</i>
-          </a>
         </div>
       </div>
     </div>

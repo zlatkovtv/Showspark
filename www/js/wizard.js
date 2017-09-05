@@ -101,8 +101,19 @@ myApp.onPageInit('wizard', function (page) {
     '</li>'
   });
 
-  $$('.wizard-home-next-button').on('click', function(){
+  $$('.wizard-next-button').on('click', function(){
     var formData = myApp.formToJSON('#genre-form');
     selectedGenres = formData;
+
+    $$('select[name="order-by-form"] option:checked').each(function () {
+      selectedOrderByCategory = this.value;
+    });
+
+    if(selectedGenres === null || selectedOrderByCategory === null) {
+      myApp.addNotification({
+        message: 'Something went wrong...',
+        hold: 2500
+      });
+    }
   });
 });
