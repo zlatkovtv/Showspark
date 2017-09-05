@@ -6502,9 +6502,19 @@
 
             function handleScroll(e) {
                 if (pageContainer.hasClass('page-on-left')) return;
-                currentScroll = scrollContent[0].scrollTop;
-                scrollHeight = scrollContent[0].scrollHeight;
-                offsetHeight = scrollContent[0].offsetHeight;
+
+								// SHOWSPARK activeTabIndex replaces 0 index. This hides bar on scroll on i-tab instead of only the first
+								var activeTabIndex = 0;
+								for (var i = 0; i < scrollContent.length; i++) {
+									if (scrollContent[i].className.indexOf('active') > -1) {
+										activeTabIndex = i;
+									}
+								}
+
+                currentScroll = scrollContent[activeTabIndex].scrollTop;
+                scrollHeight = scrollContent[activeTabIndex].scrollHeight;
+                offsetHeight = scrollContent[activeTabIndex].offsetHeight;
+
                 reachEnd =  currentScroll + offsetHeight >= scrollHeight - bottomBarHeight;
                 navbarHidden = navbar.hasClass('navbar-hidden');
                 toolbarHidden = toolbar.hasClass('toolbar-hidden');
@@ -6661,6 +6671,11 @@
             var oldTab = tabs.children('.tab.active').removeClass('active');
             // Add active class to new tab
             newTab.addClass('active');
+
+						// SHOWSPARK below two lines show navbar when switching between tabs
+						var pageContainer = $(this.views[0].activePage.container);
+						app.showNavbar(pageContainer.find('.page-content').parents('.' + app.params.viewClass).find('.navbar'));
+
             // Trigger 'show' event on new tab
             newTab.trigger('show');
 

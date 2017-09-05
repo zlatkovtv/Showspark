@@ -41,7 +41,7 @@ myApp.onPageInit('home', function () {
             obj: mostPopMovieObject[i]
           });
         }
-        
+
         $$('.showcase-container').append(html);
 
         $$('.video-link').on('click', function () {
@@ -96,26 +96,17 @@ myApp.onPageInit('home', function () {
     '</ul>',
     itemPopupTemplate: '<div class="popup">' +
     '<div class="view navbar-fixed">' +
-    '<div class="navbar theme-deeppurple">' +
-    '<div class="navbar-inner">' +
-    '<div class="left sliding">' +
-    '<a href="home.html" class="close-popup link">' +
-    '<i class="icon icon-back"></i>' +
-    '<span>Back</span>' +
+    '<a href="home.html" class="close-popup link no-navbar-icon">' +
+    '<i class="material-icons text-shadow-1">arrow_back</i>' +
     '</a>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
     '<div class="pages">' +
     '<div class="page feeds-page-movie" data-page="feeds-page-{{index}}">' +
-    '<div class="page-content">' +
     '<img src="{{enclosure}}" class="full-width">' +
     '<div class="content-block">' +
     '<a onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">{{title}}</a><br>' +
     '<small>{{formattedDate}}</small>' +
     '</div>' +
     '<div class="content-block"><div class="content-block-inner">{{description}}</div></div>' +
-    '</div>' +
     '</div>' +
     '</div>' +
     '</div>' +
@@ -153,7 +144,7 @@ myApp.onPageInit('home', function () {
   //   '<div class="navbar-inner">' +
   //   '<div class="left sliding">' +
   //   '<a href="home.html" class="close-popup link">' +
-  //   '<i class="icon icon-back"></i>' +
+  //   '<i class="material-icons">arrow_back</i>' +
   //   '<span>Back</span>' +
   //   '</a>' +
   //   '</div>' +
@@ -206,7 +197,7 @@ myApp.onPageInit('home', function () {
     '<div class="navbar-inner">' +
     '<div class="left sliding">' +
     '<a href="home.html" class="close-popup link">' +
-    '<i class="icon icon-back"></i>' +
+    '<i class="material-icons">arrow_back</i>' +
     '<span>Back</span>' +
     '</a>' +
     '</div>' +
