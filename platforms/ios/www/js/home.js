@@ -86,9 +86,14 @@ myApp.onPageInit('home', function () {
     '<div class="card demo-card-header-pic">' +
     '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
     '</a>' +
-    '<div class="card-footer">' +
-    '<i class="material-icons link">bookmark_border</i>' +
+    '<div class="card-footer padding-4">' +
+    '<a href="#" class="link icon-only">' +
     '<i class="material-icons link">share</i>' +
+    '</a>' +
+    '<label>{{pubDate.slice(0,-5)}}</label>' +
+    '<a href="#" class="link icon-only">' +
+    '<i class="material-icons link">bookmark_border</i>' +
+    '</a>' +
     '</div>' +
     '</div>' +
     '</li>' +

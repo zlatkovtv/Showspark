@@ -11,7 +11,6 @@ myApp.onPageInit('login-with-email', function () {
 
   //go back button in sign in with email view
   $$('.close-login-screen').on('click', function () {
-    var mainView = myApp.addView('.view-main');
     goToIndex();
     myApp.closeModal('.login-screen');
   });

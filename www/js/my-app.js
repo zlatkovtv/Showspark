@@ -1,3 +1,5 @@
+var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
+
 // Initialize app
 var myApp = new Framework7({
   material: true,
@@ -5,12 +7,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    SpinnerPlugin.activityStart(null, {dimBackground: false});
+    // SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    SpinnerPlugin.activityStop();
+    // SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -43,7 +45,7 @@ var welcomescreen_slides = [
   {
     id: 'slide3',
     picture: '<div class="tutorialicon"></div>',
-    text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-white color-black-custom  tutorial-close-btn" href="#">End Tutorial</a>'
+    text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-white color-black-custom tutorial-close-btn" href="#">End Tutorial</a>'
   }
 ];
 
@@ -65,12 +67,16 @@ if(window.localStorage.getItem('has_run') === '') {
 }
 
 $$('.tutorial-close-btn').on('click', function () {
+  console.log("CLOSING");
   welcomescreen.close();
 });
 
 $$('.tutorial-open').on('click', function () {
   myApp.closePanel('left');
   welcomescreen.open();
+  $$('.tutorial-close-btn').on('click', function () {
+    welcomescreen.close();
+  });
 });
 
 // Add view
@@ -81,7 +87,6 @@ var mainView = myApp.addView('.view-main', {
 
 var selectedOrderByCategory;
 var selectedGenres;
-var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
 var mostPopMovieObject = [];
 
 // Handle Cordova Device Ready Event
@@ -135,7 +140,9 @@ $$(document).on('deviceready', function() {
 });
 
 function goBack(){
-  mainView.router.back();
+  mainView.router.back({
+    animatePages: false
+  });
 }
 
 function goToPage(pageName) {
@@ -143,11 +150,17 @@ function goToPage(pageName) {
 }
 
 function goToIndex() {
-  mainView.router.loadPage('login.html');
+  mainView.router.loadPage({
+    url:'login.html',
+    animatePages:false
+  });
 }
 
 function goToTabs(){
-  mainView.router.loadPage('home.html');
+  mainView.router.loadPage({
+    url: 'home.html',
+    animatePages: false
+  });
 }
 
 function goToWizard(){

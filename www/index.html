@@ -167,7 +167,7 @@
 	</script>
 
 	<script type="text/template7" id="movieDetailTemplate">
-		<div id="movieDetailContainer" class="popup custom-grey-background">
+		<div id="movieDetailContainer" class="popup navbar-fixed custom-grey-background">
 			<div id="movieDetailNavbar" class="navbar navbar-shadow theme-deeppurple">
 				<div class="navbar-inner">
 					<div class="left">
@@ -175,8 +175,9 @@
 							<i class="material-icons text-shadow-1">arrow_back
 							</i>
 						</a>
+						<label class="text-shadow-1">{{obj.original_title}} ({{obj.release_year}})</label>
 					</div>
-					<div class="center text-shadow-1">{{obj.original_title}} ({{obj.release_year}})</div>
+					<div class="center"></div>
 					<div class="right">
 						<a href="#" class="link icon-only">
 							<i class="material-icons text-shadow-1">share
