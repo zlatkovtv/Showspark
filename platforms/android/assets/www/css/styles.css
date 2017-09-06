@@ -439,6 +439,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   padding: 0px 8px 8px 8px;
 }
 
+.padding-sides-8 {
+  padding: 0px 8px;
+}
+
 div[class*="col-"] {
   background: #fff;
   text-align: left;
@@ -458,10 +462,6 @@ div[class*="col-"] {
 .no-margin {
   margin: 0px;
   padding: 0px;
-}
-
-.margin-0 {
-  margin: 0px;
 }
 
 .card.col-50 {
@@ -707,4 +707,12 @@ div#movieDetailFirstDiv {
 
 #homepageButton {
   margin-top: 9px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+.navbar-shadow {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3) !important;
 }

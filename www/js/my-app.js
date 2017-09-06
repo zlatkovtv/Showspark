@@ -258,9 +258,9 @@ function attachButtons(obj) {
   '<div class="content-block-title">Social</div>' +
   '</div>' +
   '<div class="row">' +
-  '<div class="content-block margin-0">' +
-  '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left">Official website</a>' +
-  '<a href="#" id="imdbButton" class="float-left">' +
+  '<div class="padding-sides-8">' +
+  '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left margin-right-5">Official website</a>' +
+  '<a href="#" id="imdbButton" class="float-left margin-right-5">' +
   '</a>' +
   '</div>' +
   '</div>';
