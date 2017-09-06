@@ -20,7 +20,6 @@
     <allow-navigation href="*" />
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
-        <preference name="xwalkVersion" value="xwalk_core_library:23.53.589.4" />
         <allow-intent href="market:*" />
         <splash density="port-hdpi" src="www\img\res\drawable-hdpi\screen.png" />
         <splash density="port-ldpi" src="www\img\res\drawable-ldpi\screen.png" />

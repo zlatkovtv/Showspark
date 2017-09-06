@@ -71,7 +71,7 @@ myApp.onPageInit('home', function () {
 
   var myFeed = myApp.feeds('.cinema-feed', {
     url: 'https://feeds.feedburner.com/cinemablendallthing?format=xml',
-    openIn: 'popup',
+    openIn: 'none',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
       console.log("ajaxstart");
@@ -82,7 +82,7 @@ myApp.onPageInit('home', function () {
     listTemplate: '<ul>' +
     '{{#each items}}' +
     '<li>' +
-    '<a class="item-link feeds-item-link" data-index="{{@index}}">' +
+    '<a class="item-link feeds-item-link" data-index="{{@index}}" onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">' +
     '<div class="card demo-card-header-pic">' +
     '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
     '</a>' +

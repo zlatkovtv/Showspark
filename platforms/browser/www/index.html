@@ -89,7 +89,7 @@
 
 	<!-- Left panel with reveal effect-->
 	<div class="panel panel-left panel-cover">
-		<div class="left-panel-pic card-header"v>
+		<div class="left-panel-pic">
 			<div class="profile-container color-white">
 
 				<i class="material-icons">account_circle</i>
@@ -161,10 +161,8 @@
 		<div id="{{obj.id}}" class="card video-link" style="background:url(http://image.tmdb.org/t/p/w1920/{{obj.backdrop_path}})  50% / 100%;">
 			<img class="innerImgResizer" src="http://image.tmdb.org/t/p/w1920/{{obj.backdrop_path}}">
 			<div class="trailer-title">{{obj.original_title}}</div>
-			<div class="card-content">
 				<i class="material-icons text-shadow-1 play-icon">play_circle_outline
 				</i>
-			</div>
 		</div>
 	</script>
 
@@ -179,8 +177,15 @@
 						</a>
 					</div>
 					<div class="center text-shadow-1">{{obj.original_title}} ({{obj.release_year}})</div>
-					<div class="right" id="imdbContainer">
-
+					<div class="right">
+						<a href="#" class="link icon-only">
+							<i class="material-icons text-shadow-1">share
+							</i>
+						</a>
+						<a href="#" class="link icon-only">
+							<i class="material-icons text-shadow-1">bookmark_border
+							</i>
+						</a>
 					</div>
 				</div>
 			</div>

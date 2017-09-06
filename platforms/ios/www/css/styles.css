@@ -400,7 +400,7 @@ div#tab-rv {
 .profile-container {
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  top: calc(30% - 35px);
 }
 
 .swiper-slide {
@@ -460,16 +460,20 @@ div[class*="col-"] {
   padding: 0px;
 }
 
+.margin-0 {
+  margin: 0px;
+}
+
 .card.col-50 {
   border: none;
 }
 
 .play-icon {
   position: absolute;
-  font-size: 13vw;
+  font-size: 20vw;
   color: white;
-  bottom: 2px;
-  left: 2px;
+  top: calc(50% - 49px);
+  left: calc(50% - 49px);
 }
 
 .movie-detail-play-icon {
@@ -699,4 +703,8 @@ div#movieDetailFirstDiv {
   left: 15px;
   z-index: 100;
   color: white;
+}
+
+#homepageButton {
+  margin-top: 9px;
 }

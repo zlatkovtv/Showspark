@@ -235,8 +235,8 @@ function getMovieDetailInfo(id) {
         console.log(movieObj);
         popUpMovieDetail(movieObj);
 
-        if(movieObj.imdb_id) {
-          attachImdbButton(movieObj.imdb_id);
+        if(movieObj.imdb_id || movieObj.homepage) {
+          attachButtons(movieObj);
         }
 
         changeNavbarColor(movieObj);
@@ -253,14 +253,26 @@ function getMovieDetailInfo(id) {
   })
 }
 
-function attachImdbButton(imdbId) {
-  var html = '<a href="#" id="imdbButton">' +
-  '</a>';
+function attachButtons(obj) {
+  var html = '<div class="row">' +
+  '<div class="content-block-title">Social</div>' +
+  '</div>' +
+  '<div class="row">' +
+  '<div class="content-block margin-0">' +
+  '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left">Official website</a>' +
+  '<a href="#" id="imdbButton" class="float-left">' +
+  '</a>' +
+  '</div>' +
+  '</div>';
 
-  $$('#imdbContainer').append(html);
+  $$('#socialButtonsContainer').append(html);
 
   $$('#imdbButton').on('click', function () {
-    cordova.plugins.browsertab.openUrl('http://www.imdb.com/title/' + imdbId);
+    cordova.plugins.browsertab.openUrl('http://www.imdb.com/title/' + obj.imdb_id);
+  });
+
+  $$('#homepageButton').on('click', function () {
+    cordova.plugins.browsertab.openUrl(obj.homepage);
   });
 }
 
