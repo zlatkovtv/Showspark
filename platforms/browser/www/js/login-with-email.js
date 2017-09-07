@@ -24,24 +24,24 @@ myApp.onPageInit('login-with-email', function () {
   //sign in with email button click method
   $$('.validate-signin').on('click', function () {
     //auto login below (disabled when commented)
-    goToTabs();
-    // var formData = myApp.formToJSON('#email-signin-form');
-    // if(formData.password === '' || formData.email === '') {
-    //   myApp.alert('Please fill in everything before you submit', 'Fields missing');
-    //   return;
-    // }
-    //
-    // if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
-    //   myApp.alert('Please enter a valid email', 'Email invalid');
-    //   return;
-    // }
-    //
-    // firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   console.log(errorMessage);
-    // });
+    // goToTabs();
+    var formData = myApp.formToJSON('#email-signin-form');
+    if(formData.password === '' || formData.email === '') {
+      myApp.alert('Please fill in everything before you submit', 'Fields missing');
+      return;
+    }
+
+    if(formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
+      myApp.alert('Please enter a valid email', 'Email invalid');
+      return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+    });
   });
 
   $$('.validate-signup').on('click', function () {

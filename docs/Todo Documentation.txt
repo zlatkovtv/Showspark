@@ -36,3 +36,8 @@ NEW TODO
 3. implement in theaters
 4. implement search page
 5. implement saved
+6. fix all templates especially moviedetail bc when you press a similar movie you should load it
+7.movie detail title pushes navbar buttons out of view
+8.vibrantjs
+9.fix pop movie detail methods to be decoupled so i can reuse
+10. wizardresult - no movie info pops up if movie doesnt have poster ob backdrop. if it has something, show it and replace poster with placeholder image

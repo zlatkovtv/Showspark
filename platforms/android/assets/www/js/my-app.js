@@ -7,12 +7,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    // SpinnerPlugin.activityStart(null, {dimBackground: false});
+    SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    // SpinnerPlugin.activityStop();
+    SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -197,33 +197,35 @@ function closeSignUpPopup() {
 }
 
 function normalizeApiObj(obj) {
-  if (obj instanceof Array) {
-    for (var i = 0; i < obj.length; i++) {
-      obj[i].poster_path = "http://image.tmdb.org/t/p/w342/" + obj[i].poster_path;
-      obj[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + obj[i].backdrop_path;
-      obj[i].release_year = obj[i].release_date.substring(0,4);
-      if(obj[i].vote_average === 0) {
-        obj[i].vote_average = "No rating yet";
-      }
-
-      if(obj[i].vote_average % 1 === 0) {
-        obj[i].vote_average = obj[i].vote_average + '.0';
-      }
-    }
+  var arr = [];
+  if(obj instanceof Array) {
+    arr = obj;
   } else {
-    obj.poster_path = "http://image.tmdb.org/t/p/w342" + obj.poster_path;
-    obj.backdrop_path = "http://image.tmdb.org/t/p/w1920" + obj.backdrop_path;
-    obj.release_year = obj.release_date.substring(0,4);
-    if(obj.vote_average === 0) {
-      obj.vote_average = "No rating yet";
+    arr.push(obj);
+  }
+
+  for (var i = 0; i < arr.length; i++) {
+    arr[i].poster_path = "http://image.tmdb.org/t/p/w342/" + arr[i].poster_path;
+    arr[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + arr[i].backdrop_path;
+    arr[i].release_year = arr[i].release_date.substring(0,4);
+    if(arr[i].vote_average === 0) {
+      arr[i].vote_average = "No rating yet";
     }
 
-    if(obj.vote_average % 1 === 0) {
-      obj.vote_average = obj.vote_average + '.0';
+    if(arr[i].vote_average % 1 === 0) {
+      arr[i].vote_average = arr[i].vote_average + '.0';
+    }
+
+    if(arr[i].overview === "" || arr[i].overview === null) {
+      arr[i].overview = "No overview found."
     }
   }
 
-  return obj;
+  if(obj instanceof Array) {
+    return arr;
+  } else {
+    return arr[0];
+  }
 }
 
 function getMovieDetailInfo(id) {
@@ -353,7 +355,7 @@ function attachTrailer(id) {
       },
       200: function (xhr) {
         var movieObj = JSON.parse(xhr.response).results[0];
-        if(!movieObj.key) {
+        if(!movieObj || !movieObj.key) {
           $$('#movie-detail-trailer-a').addClass('hidden');
         } else {
           $$('#movie-detail-trailer-a').on('click', function () {
@@ -387,6 +389,10 @@ function getSimilarMovies(id) {
         silimarMovieArr = silimarMovieArr.filter(function (movie) {
           return movie.backdrop_path != undefined;
         });
+
+        if(silimarMovieArr.length < 1) {
+          return;
+        }
 
         var popupHTML = '<div class="row">' +
         '<div class="content-block-title">Similar movies</div>' +
@@ -426,7 +432,7 @@ function attachGenres(genresArr) {
   '<div class="content-block-title">Genres</div>' +
   '</div>' +
   '<div class="row">' +
-  '<div class="content-block horizontal-scroll movie-detail-horizontal-scroll">' +
+  '<div class="padding-sides-8 horizontal-scroll movie-detail-horizontal-scroll">' +
   '<div class="inner-horizontal-scroll">';
 
   genresArr = genresArr.map(function(genre) {

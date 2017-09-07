@@ -72,7 +72,7 @@ function buildSortedMovieList(xhr) {
       '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
       '<div class="item-inner">' +
       '<div class="item-title-row">' +
-      '<div class="item-title">' + (index + 1) + '. ' + item.original_title + '</div>' +
+      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
       '<div class="item-after">' + item.vote_average + '</div>' +
       '</div>' +
       '<div class="item-subtitle">' + item.release_year + '</div>' +

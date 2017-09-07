@@ -107,14 +107,6 @@
 					<div class="item-title">Saved(TBI)</div>
 				</div>
 			</a>
-			<a href="#" class="item-link item-content tutorial-open">
-				<div class="item-media">
-					<i class="material-icons">help_outline</i>
-				</div>
-				<div class="item-inner">
-					<div class="item-title">Tutorial</div>
-				</div>
-			</a>
 			<a href="#" class="item-link item-content">
 				<div class="item-media">
 					<i class="material-icons">settings</i>
@@ -129,6 +121,14 @@
 				</div>
 				<div class="item-inner">
 					<div class="item-title">About us(TBI)</div>
+				</div>
+			</a>
+			<a href="#" class="item-link item-content tutorial-open">
+				<div class="item-media">
+					<i class="material-icons">help_outline</i>
+				</div>
+				<div class="item-inner">
+					<div class="item-title">Tutorial</div>
 				</div>
 			</a>
 			<a href="#" class="item-link item-content panel-signout">
@@ -175,9 +175,10 @@
 							<i class="material-icons text-shadow-1">arrow_back
 							</i>
 						</a>
-						<label class="text-shadow-1">{{obj.original_title}} ({{obj.release_year}})</label>
 					</div>
-					<div class="center"></div>
+					<div id="movieDetailNavbarCenterDiv" class="center">
+						<label class="text-shadow-1">{{obj.title}} ({{obj.release_year}})</label>
+					</div>
 					<div class="right">
 						<a href="#" class="link icon-only">
 							<i class="material-icons text-shadow-1">share
@@ -213,7 +214,7 @@
 			</div>
 			<div class="row">
 				<div class="content-block-title">Overview</div>
-				<div id="movieDescriptionDiv" class="card">
+				<div id="movieDescriptionDiv" class="card full-width">
 					<div class="card-content">
 						<div class="card-content-inner noselect">
 							{{obj.overview}}
@@ -238,7 +239,7 @@
 	</script>
 
 	<script type="text/template7" id="similarMovieTemplate">
-		<div class="swiper-slide" style="background:url({{obj.backdrop_path}})  50% / 100%;width: 100%; background-repeat: no-repeat;">
+		<div class="swiper-slide full-width" style="background:url({{obj.backdrop_path}})  50% / 100%; width:100% !important; background-repeat: no-repeat;">
 			<img class="innerImgResizer" src="{{obj.backdrop_path}}">
 			<div class="absolute card similar-movie-rating">
 				{{obj.vote_average}}

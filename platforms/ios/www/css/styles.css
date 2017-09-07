@@ -110,7 +110,7 @@ html {
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .custom-floating-button {
@@ -650,7 +650,7 @@ div#movieDetailFirstDiv {
   background-size: contain;
 }
 
-.content-block.horizontal-scroll.movie-detail-horizontal-scroll {
+.padding-sides-8.horizontal-scroll.movie-detail-horizontal-scroll {
   margin: 0px 0px 0px 0px;
 }
 
@@ -723,4 +723,24 @@ div#movieDetailFirstDiv {
 
 .padding-4 {
   padding: 4px;
+}
+
+.signin-button-logo {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.google-background-color {
+  background: #DD4B39 !important;
+}
+
+.facebook-background-color {
+  background: #3B5998 !important;
+}
+
+#movieDetailNavbarCenterDiv {
+  margin-left: 0px;
 }

@@ -234,7 +234,7 @@ myApp.onPageInit('home', function () {
       myApp.closePanel('left');
       goToIndex();
     }).catch(function(error) {
-      console.log("Cant sign out from google from some reason.");
+      console.log("Cant sign out for some reason.");
     });
   });
 
