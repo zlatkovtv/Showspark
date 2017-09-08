@@ -91,8 +91,8 @@ var mostPopMovieObject = [];
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  StatusBar.backgroundColorByHexString("#111112");
-  // statusbarTransparent.enable();
+  // StatusBar.backgroundColorByHexString("#111112");
+  statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {

@@ -7,6 +7,7 @@ myApp.onPageBeforeInit('wizard', function () {
 
 //wizard page
 myApp.onPageInit('wizard', function (page) {
+  myApp.params.swipePanel = false;
   var myList = myApp.virtualList('.list-block.virtual-list', {
     // Array with items data
     items: [

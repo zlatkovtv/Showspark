@@ -7,6 +7,7 @@ myApp.onPageBeforeInit('login-with-email', function () {
 
 //Login screen methods inside this
 myApp.onPageInit('login-with-email', function () {
+  myApp.params.swipePanel = false;
   myApp.loginScreen();
 
   //go back button in sign in with email view

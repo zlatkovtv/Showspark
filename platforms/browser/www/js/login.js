@@ -6,6 +6,7 @@ myApp.onPageBeforeInit('login', function () {
 });
 
 myApp.onPageInit('login', function () {
+  myApp.params.swipePanel = false;
   var currUser = firebase.auth().currentUser;
   if(currUser) {
     $$('.user-name-label').text("Signed in as " + currUser.displayName);

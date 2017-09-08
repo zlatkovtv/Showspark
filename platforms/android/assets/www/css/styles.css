@@ -10,9 +10,9 @@ in the config.xml file and will be added by the CLI when you build locally.
 See https://github.com/apache/cordova-plugin-statusbar
 */
 
-.statusbar-overlay {
+/*.statusbar-overlay {
   background: #000000;
-}
+}*/
 
 @font-face {
   font-family: 'Material Icons';
@@ -27,7 +27,7 @@ See https://github.com/apache/cordova-plugin-statusbar
 }
 
 html {
-  font-family: 'Proxima Nova', 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Noto', sans-serif;
 }
 
 .material-icons {
@@ -73,6 +73,10 @@ html {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
 }
 
+.md-card {
+  margin: 8px 8px 0px 8px;
+}
+
 .card-header-pic .card-header {
   height: 40vw !important;
   background-size: cover !important;
@@ -102,7 +106,7 @@ html {
 }
 
 .panel {
-  width: 300px;
+  width: 280px;
 }
 
 .no-text-decor {
@@ -346,6 +350,12 @@ span.modal-button {
 
 .navbar {
   box-shadow: none !important;
+  height: 80px;
+}
+
+.navbar-inner {
+  top: 24px;
+  height: 56px;
 }
 
 .toolbar.tabbar {
@@ -378,19 +388,19 @@ span.modal-button {
 }
 
 .subnavbar.toolbar.tabbar {
-  top: 55px;
+  top: 79px;
 }
 
 div#tab-cinema {
-  padding-top: 103px;
+  padding-top: 127px;
 }
 
 div#tab-tv {
-  padding-top: 103px;
+  padding-top: 127px;
 }
 
 div#tab-sc {
-  padding-top: 103px;
+  padding-top: 127px;
 }
 
 div#tab-rv {
@@ -422,7 +432,8 @@ div#tab-rv {
   right: 20px;
   width: 100%;
   text-align: right;
-  zoom: 0.8;
+  transform: scale(0.8);
+  transform-origin: top right;
 }
 
 span.swiper-pagination-bullet {
@@ -432,7 +443,7 @@ span.swiper-pagination-bullet {
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #111112;
+  background: #34495e;
 }
 
 .swiper-container.swiper-1.swiper-container-horizontal {
@@ -547,7 +558,7 @@ div[class*="col-"] {
 
 #movieDetailRating {
   position: absolute;
-  top: 56px;
+  top: 80px;
   right: 0px;
   padding: 0px 5px 0px 5px;
   background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
@@ -610,7 +621,7 @@ div[class*="col-"] {
 
 div#movie-detail-trailer-button {
   width: 100%;
-  margin-left: calc(100% - 138px);
+  margin-left: calc(100% - 158px);
   margin-top: -42px;
   height: 30px;
   text-align: center;
@@ -624,7 +635,7 @@ span#movie-detail-trailer-label {
 
 a#movie-detail-trailer-a {
   background-color: #111112;
-  width: 130px;
+  width: 150px;
 }
 
 .hidden {
@@ -743,4 +754,25 @@ div#movieDetailFirstDiv {
 
 #movieDetailNavbarCenterDiv {
   margin-left: 0px;
+}
+
+.button {
+  padding: 0px 16px;
+}
+
+.list-block.panel-list .item-inner:after {
+  display: none;
+}
+
+.list-block.panel-list {
+  margin: 0px;
+}
+
+.list-block.accordion-list.rv-feed.no-margin-top .item-inner:after {
+  left: -16px;
+  width: calc(100% + 16px);
+}
+
+.navbar-fixed .page-content, .navbar-fixed.pages .page-content, .navbar-fixed.view .page-content, .navbar-through .page-content, .navbar-through.pages .page-content, .navbar-through.view .page-content {
+  padding-top: 80px;
 }

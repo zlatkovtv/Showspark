@@ -6,9 +6,9 @@ myApp.onPageBeforeInit('home', function () {
 });
 
 myApp.onPageInit('home', function () {
-  myApp.swipePanel = 'left';
-  myApp.swipePanelActiveArea = 20;
-  myApp.showBarsOnPageScrollEnd = false;
+  myApp.params.swipePanel = 'left';
+  myApp.params.swipePanelActiveArea = 30;
+  myApp.params.showBarsOnPageScrollEnd = false;
 
   myApp.showTab("#tab-cinema");
 
@@ -83,7 +83,7 @@ myApp.onPageInit('home', function () {
     '{{#each items}}' +
     '<li>' +
     '<a class="item-link feeds-item-link" data-index="{{@index}}" onClick="cordova.plugins.browsertab.openUrl(\'{{link}}\');">' +
-    '<div class="card demo-card-header-pic">' +
+    '<div class="card md-card demo-card-header-pic">' +
     '<div style="background-image:url({{enclosure}})" valign="bottom" class="card-header color-white no-border text-border-black">{{title}}</div>' +
     '</a>' +
     '<div class="card-footer padding-4">' +
@@ -185,7 +185,7 @@ myApp.onPageInit('home', function () {
     '{{#each items}}' +
     '<li class="accordion-item"><a href="#" class="item-content item-link">' +
     '<div class="item-inner">' +
-    '<div class="item-title">{{title}}</div>' +
+    '<div class="item-title">{{index+1}}. {{title}}</div>' +
     '</div></a>' +
     '<div class="accordion-item-content" style="padding-bottom: 5px;">' +
     '<div class="content-block">' +
