@@ -16,7 +16,10 @@ var myApp = new Framework7({
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
-  showBarsOnPageScrollEnd: false
+  showBarsOnPageScrollEnd: false,
+  upscroller : {
+    text: "Go to top"
+  }
 });
 
 screen.orientation.lock('portrait');
@@ -304,9 +307,18 @@ function changeNavbarColor(obj) {
 
   var img = new Image();
   img.onload = function () {
-    var colorThief = new ColorThief();
-    navbarColor = colorThief.getColor(img);
-    $$('#movieDetailNavbar').css('background-color', 'rgb(' + navbarColor[0]+ ',' + navbarColor[1] + ',' + navbarColor[2] + ')');
+    var vibrant = new Vibrant(img);
+    var swatches = vibrant.swatches();
+    for (var swatch in swatches){
+        if (swatches.hasOwnProperty(swatch) && swatches[swatch]){
+            navbarColor = swatches[swatch].getHex();
+            break;
+        }
+    }
+
+    // var colorThief = new ColorThief();
+    // navbarColor = colorThief.getColor(img);
+    $$('#movieDetailNavbar').css('background-color', navbarColor);
   };
   img.crossOrigin = 'Anonymous';
   img.src = obj.poster_path;

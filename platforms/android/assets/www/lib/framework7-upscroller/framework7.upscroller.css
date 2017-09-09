@@ -1,0 +1,23 @@
+.upscroller {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	transition: -webkit-transform 0.5s;
+	position: fixed;
+	left:50%;
+	margin-left:-47px;
+	top:-50px;
+	z-index:499 !important;
+	border-radius:20px;
+	background: #34495e;
+	font-size:14px;
+	text-align: center;
+	padding: 2px;
+	padding-top:3px;
+	color: #fff !important;
+	cursor: pointer;
+}
+
+.upscroller.show {
+	-webkit-transform: translate3d(0,140px,0);
+	transform: translate3d(0,140px,0);
+}

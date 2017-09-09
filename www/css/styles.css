@@ -170,8 +170,8 @@ a.color-white.custom-floating-button-tutorial {
   text-transform: none;
 }
 
-.color-black-custom {
-  color: black !important;
+.color-deepurple-custom {
+  color: #34495e !important;
 }
 
 .color-white-custom {
@@ -404,7 +404,7 @@ div#tab-sc {
 }
 
 div#tab-rv {
-  padding-top: 103px;
+  padding-top: 127px;
 }
 
 .profile-container {
@@ -494,8 +494,15 @@ div[class*="col-"] {
   vertical-align: middle;
 }
 
+/* SHOWSPARK workaround for hiding navbar with transparent statusbar*/
 .navbar.navbar-hidden {
   transition-duration: .2s;
+  -webkit-transform: translate3d(0,calc(-100% + 24px),0);
+  transform: translate3d(0,calc(-100% + 24px),0);
+}
+
+.navbar.navbar-hidden .navbar-inner {
+  display: none;
 }
 
 .navbar.navbar-hiding {

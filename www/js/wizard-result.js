@@ -7,6 +7,7 @@ myApp.onPageBeforeInit('wizard-result', function () {
 //wizard page
 myApp.onPageInit('wizard-result', function (page) {
   myApp.params.swipePanel = false;
+  
   var selectedTemplateName = "popularity";
   switch (selectedOrderByCategory) {
     case "vote_average":
