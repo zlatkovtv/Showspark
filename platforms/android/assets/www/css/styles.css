@@ -783,3 +783,9 @@ div#movieDetailFirstDiv {
 .navbar-fixed .page-content, .navbar-fixed.pages .page-content, .navbar-fixed.view .page-content, .navbar-through .page-content, .navbar-through.pages .page-content, .navbar-through.view .page-content {
   padding-top: 80px;
 }
+
+.report-bug-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}

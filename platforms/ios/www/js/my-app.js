@@ -94,7 +94,7 @@ var mostPopMovieObject = [];
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  statusbarTransparent.enable();
+  // statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {
