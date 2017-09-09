@@ -29,7 +29,7 @@ myApp.onPageInit('home', function () {
     complete: function () {
       console.log("ajaxcomplete");
     },
-    url: 'https://api.themoviedb.org/3/discover/movie?api_key=17bad8fd5ecafe775377303226579c19&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=1',
+    url: 'https://api.themoviedb.org/3/movie/upcoming?api_key=17bad8fd5ecafe775377303226579c19&language=en-US&page=1',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');

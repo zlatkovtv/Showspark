@@ -429,11 +429,11 @@ div#tab-rv {
 
 .swiper-pagination {
   top: 10px;
-  right: 20px;
+  left: 20px;
   width: 100%;
-  text-align: right;
+  text-align: left;
   transform: scale(0.8);
-  transform-origin: top right;
+  transform-origin: top left;
 }
 
 span.swiper-pagination-bullet {
@@ -608,7 +608,7 @@ div[class*="col-"] {
   text-align: center;
   font-size: 1.5em;
   top: 0px;
-  left: 0px;
+  right: 0px;
 }
 
 .similar-movie-title {
@@ -676,8 +676,8 @@ div#movieDetailFirstDiv {
   margin-top: 0px;
 }
 
-.max-height-200 {
-  max-height: 200px;
+.max-height-195 {
+  max-height: 195px;
 }
 
 .scroll-x {

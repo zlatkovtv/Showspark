@@ -1,13 +1,14 @@
 myApp.onPageBeforeInit('wizard-result', function () {
   document.removeEventListener("backbutton", exitPrompt, false);
   document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", goToTabs, false);
 });
 
 //wizard page
 myApp.onPageInit('wizard-result', function (page) {
   myApp.params.swipePanel = false;
-  
+
   var selectedTemplateName = "popularity";
   switch (selectedOrderByCategory) {
     case "vote_average":
@@ -49,7 +50,7 @@ myApp.onPageInit('wizard-result', function (page) {
     complete: function () {
       console.log("ajaxcomplete");
     },
-    url: 'https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
+    url: 'https://api.themoviedb.org/3/discover/movie?vote_count.gte=1000&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');

@@ -7,12 +7,11 @@ Framework7.prototype.plugins.upscroller = function (app, params) {
     return {
         hooks : {
 			pageBeforeInit: function (pageData) {
-        console.log(pageData);
         if(pageData.name !== "wizard-result") {
           return;
         }
 
-				var $$btn = $$('<div class="button upscroller">' + params.text + '</div>');
+				var $$btn = $$('<div class="button button-raised custom-purple-color upscroller">' + params.text + '</div>');
 				$$(pageData.container).prepend($$btn);
 				if ($$("[data-page='"+pageData.name+"'] > .searchbar")[0]) $$("[data-page='"+pageData.name+"'] >  .upscroller").css('top', '-10px');
 

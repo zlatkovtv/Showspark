@@ -7,12 +7,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    SpinnerPlugin.activityStart(null, {dimBackground: false});
+    // SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    SpinnerPlugin.activityStop();
+    // SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -94,7 +94,6 @@ var mostPopMovieObject = [];
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  // StatusBar.backgroundColorByHexString("#111112");
   statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
@@ -184,7 +183,7 @@ function exitPrompt(){
   } else {
     pressed = true;
     myApp.addNotification({
-      message: 'Press back button again to exit',
+      message: 'Press back again to exit',
       hold: 2500,
       onClose: function () {
         pressed = false;
@@ -294,12 +293,22 @@ function attachButtons(obj) {
   });
 }
 
+function closePopups() {
+  myApp.closeModal();
+  document.removeEventListener("backbutton", closePopups, false);
+  document.addEventListener("backbutton", goToTabs, false);
+}
+
 function popUpMovieDetail(movieObj) {
   movieObj = normalizeApiObj(movieObj);
   var popupHTML = Template7.templates.movieDetailTemplate({
     obj: movieObj
   });
   myApp.popup(popupHTML);
+
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.addEventListener("backbutton", closePopups, false);
 }
 
 function changeNavbarColor(obj) {
@@ -344,13 +353,18 @@ function getMovieReviews(id) {
         for (var i = 0; i < reviewArr.length; i++) {
           rvHtml += '<div class="card" onClick="cordova.plugins.browsertab.openUrl(\'' + reviewArr[i].url + '\');">'+
             '<div class="card-header noselect">From ' + reviewArr[i].author + '</div>' +
-            '<div class="card-content max-height-200 overflow-hidden">' +
-              '<div class="card-content-inner noselect">' + reviewArr[i].content + '</div>' +
+            '<div class="card-content">' +
+              '<div class="card-content-inner max-height-195 justify clamp noselect">' + reviewArr[i].content + '</div>' +
             '</div>' +
           '</div>';
         }
 
         $$('#reviewsContainer').append(rvHtml);
+
+        var clampArr = $$('.clamp');
+        for (var i = 0; i < clampArr.length; i++) {
+          $clamp(clampArr[i], {clamp: 10});
+        }
       }
     }
   })
