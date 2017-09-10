@@ -31,11 +31,16 @@ myApp.onPageInit('wizard-result', function (page) {
 
   var genreString = "&with_genres=";
   var apiObject;
+  var minVotes = 1000;
 
   if(selectedGenres.genre_ids.length === 0) {
     genreString = "";
   } else {
     for (var i = 0; i < selectedGenres.genre_ids.length; i++) {
+      if(selectedGenres.genre_ids[i] == 99) {
+        minVotes = 100;
+      }
+
       genreString += selectedGenres.genre_ids[i];
       if(i !== selectedGenres.genre_ids.length - 1) {
         genreString += ',';
@@ -50,7 +55,7 @@ myApp.onPageInit('wizard-result', function (page) {
     complete: function () {
       console.log("ajaxcomplete");
     },
-    url: 'https://api.themoviedb.org/3/discover/movie?vote_count.gte=1000&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
+    url: 'https://api.themoviedb.org/3/discover/movie?vote_count.gte=' + minVotes + '&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');

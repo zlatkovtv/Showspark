@@ -7,12 +7,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    // SpinnerPlugin.activityStart(null, {dimBackground: false});
+    SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    // SpinnerPlugin.activityStop();
+    SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -92,9 +92,12 @@ var selectedOrderByCategory;
 var selectedGenres;
 var mostPopMovieObject = [];
 
+var searchBarInput;
+var clearSearchBtn;
+
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  // statusbarTransparent.enable();
+  statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -262,6 +265,7 @@ function getMovieDetailInfo(id) {
         }
 
         attachTrailer(id);
+        getCast(id);
         getSimilarMovies(id);
 
         getMovieReviews(id);
@@ -325,12 +329,65 @@ function changeNavbarColor(obj) {
         }
     }
 
-    // var colorThief = new ColorThief();
-    // navbarColor = colorThief.getColor(img);
     $$('#movieDetailNavbar').css('background-color', navbarColor);
   };
   img.crossOrigin = 'Anonymous';
   img.src = obj.poster_path;
+}
+
+function getCast(id) {
+  $$.ajax({
+    complete: function () {
+    },
+    url: 'https://api.themoviedb.org/3/movie/' + id + '/credits?api_key=17bad8fd5ecafe775377303226579c19',
+    statusCode: {
+      404: function (xhr) {
+        console.log('page not found');
+      },
+      200: function (xhr) {
+        var crewObj = JSON.parse(xhr.response);
+        var cast = crewObj.cast.slice(0, 20);
+        var crew = crewObj.crew;
+        if(!cast || !crew || cast.length === 0 || crew.length === 0) {
+          return;
+        }
+
+        var directorArr = crew.filter(function( obj ) {
+          return obj.job === "Director";
+        });
+
+        var director = directorArr[0];
+
+        var crewHtml =
+        '<div class="horizontal-scroll" style="padding: 0px 4px;">' +
+        '<div style="width:3024px;"><div class="content-block-title director-title display-inline-block">Director</div>' +
+        '<div class="content-block-title cast-title display-inline-block">Cast</div></div>';
+        console.log(director);
+        if(director && director.name && director.job) {
+          crewHtml += '<div class="card director-crew-card display-inline-block" style="background:url(http://image.tmdb.org/t/p/w342' + director.profile_path + '")  50% / 100%;">' +
+      			'<img class="innerImgResizer" src="http://image.tmdb.org/t/p/w342' + director.profile_path + '">' +
+      			'<div class="absolute card similar-movie-title">' +
+      				director.name +
+      			'</div>' +
+      		'</div>';
+        }
+
+        for (var i = 0; i < cast.length; i++) {
+          if(!cast[i].profile_path || !cast[i].name) {
+            continue;
+          }
+
+          crewHtml += Template7.templates.castTemplate({
+            obj: cast[i]
+          });
+        }
+
+        crewHtml += '</div>';
+
+        $$('#castContainer').append(crewHtml);
+      }
+    }
+  })
 }
 
 function getMovieReviews(id) {
@@ -354,7 +411,7 @@ function getMovieReviews(id) {
           rvHtml += '<div class="card" onClick="cordova.plugins.browsertab.openUrl(\'' + reviewArr[i].url + '\');">'+
             '<div class="card-header noselect">From ' + reviewArr[i].author + '</div>' +
             '<div class="card-content">' +
-              '<div class="card-content-inner max-height-195 justify clamp noselect">' + reviewArr[i].content + '</div>' +
+              '<div class="card-content-inner max-height-195 clamp noselect">' + reviewArr[i].content + '</div>' +
             '</div>' +
           '</div>';
         }
@@ -446,6 +503,14 @@ function getSimilarMovies(id) {
         var mySwiper1 = myApp.swiper('.swiper-1', {
           pagination:'.swiper-1 .swiper-pagination',
           spaceBetween: 50
+        });
+
+        $$('.similar-movie-div').on('click', function () {
+          var clickedObjId = $$(this).prop('id');
+          clickedObjId = clickedObjId.replace('similarMovieId', '');
+          console.log(clickedObjId);
+          $$('#movieDetailContainer').remove();
+          getMovieDetailInfo(clickedObjId);
         });
       }
     }

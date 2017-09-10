@@ -430,7 +430,7 @@ div#tab-rv {
 .swiper-pagination {
   top: 10px;
   left: 20px;
-  width: 100%;
+  height: 20px;
   text-align: left;
   transform: scale(0.8);
   transform-origin: top left;
@@ -788,4 +788,106 @@ div#movieDetailFirstDiv {
   position: absolute;
   width: 100%;
   bottom: 0px;
+}
+
+#fab-tv-label {
+  position: absolute;
+  top: 10px;
+  left: -40px;
+}
+
+#fab-movie-label {
+  position: absolute;
+  top: 65px;
+  left: -70px;
+}
+
+.searchBarMain {
+	background: #fff;
+	width: auto;
+	max-width: 680px;
+	margin: 0 auto;
+	height: 42px;
+	margin-top: 11px;
+	border-radius: 2px;
+	box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 36px;
+  margin: 0px 8px;
+}
+
+.searchBarMain i.searchBarSearchIcon {
+	height: 100%;
+	line-height: 42px;
+	float: left;
+	width: 52px;
+	text-align: center;
+	color: rgba(68, 68, 68, 0.5);
+}
+
+.searchBarMain input#searchBarInput {
+	height: 42px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	background: transparent;
+	width: calc(100% - 52px);
+	outline: none;
+	padding-right: 32px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.76);
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+.searchBarMain i.clearSearchBarField {
+	position: absolute;
+	right: 12px;
+	top: 11px;
+	color: rgba(0, 0, 0, 0.84);
+	display: none;
+	font-size: 20px;
+}
+
+.searchBarMain i.clearSearchBarField:hover {
+	cursor: pointer;
+}
+
+.cast-card {
+  width: 180px;
+  height: 270px;
+  background-repeat: no-repeat !important;
+  margin: 0px 4px 0px 4px;
+  background-position: top !important;
+  background-size: cover !important;
+}
+
+.director-crew-card {
+  width: 180px;
+  height: 270px;
+  background-repeat: no-repeat !important;
+  margin: 0px 24px 0px 4px;
+  background-position: top !important;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.director-title {
+  margin-right: 150px;
+}
+
+.cast-title {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 16px;
 }

@@ -33,11 +33,13 @@ NEW TODO
 1. Export constants
 1.5 Export templates
 2. Refactor ajax methods
-3. implement in theaters
+FIXED - mergerd with showcase3. implement in theaters
 4. implement search page
 5. implement saved
 6. fix all templates especially moviedetail bc when you press a similar movie you should load it
-7.movie detail title pushes navbar buttons out of view
-8.vibrantjs
-9.fix pop movie detail methods to be decoupled so i can reuse
+FIXED 7.movie detail title pushes navbar buttons out of view
+FIXED 8.vibrantjs
+FIXED 9.fix pop movie detail methods to be decoupled so i can reuse
 10. wizardresult - no movie info pops up if movie doesnt have poster ob backdrop. if it has something, show it and replace poster with placeholder image
+11. three tabs in search - movies/tv/collections
+12. wizard form - and or/ movie tv

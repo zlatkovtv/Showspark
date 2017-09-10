@@ -231,6 +231,9 @@
 			<div id="genresContainer">
 
 			</div>
+			<div id="castContainer">
+
+			</div>
 			<div id="similarMoviesContainer">
 
 			</div>
@@ -245,13 +248,22 @@
 	</script>
 
 	<script type="text/template7" id="similarMovieTemplate">
-		<div class="swiper-slide full-width" style="background:url({{obj.backdrop_path}})  50% / 100%; width:100% !important; background-repeat: no-repeat;">
+		<div id="similarMovieId{{obj.id}}" class="swiper-slide similar-movie-div full-width" style="background:url({{obj.backdrop_path}})  50% / 100%; width:100% !important; background-repeat: no-repeat;">
 			<img class="innerImgResizer" src="{{obj.backdrop_path}}">
 			<div class="absolute card similar-movie-rating">
 				{{obj.vote_average}}
 			</div>
 			<div class="absolute card similar-movie-title">
 				{{obj.title}} ({{obj.release_year}})
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template7" id="castTemplate">
+		<div class="card cast-card display-inline-block" style="background:url(http://image.tmdb.org/t/p/w342{{obj.profile_path}})  50% / 100%;">
+			<img class="innerImgResizer" src="http://image.tmdb.org/t/p/w342{{obj.profile_path}}">
+			<div class="absolute card similar-movie-title">
+				{{obj.name}}
 			</div>
 		</div>
 	</script>

@@ -22,6 +22,25 @@ myApp.onPageInit('home', function () {
     window.localStorage.setItem("isFloatingBPressed", false);
   });
 
+  // $$('.search-button').on('click', function () {
+  //   $$('.left').hide();
+  //   $$('.center').hide();
+  //   $$('.right').hide();
+  //   var html = 	'<div class="searchBarMain">' +
+	// 	'<i class="material-icons searchBarSearchIcon noselect">search</i>' +
+	// 	'<input type="text" name="header-search" value="" id="searchBarInput" placeholder="Search, discover, explore...">' +
+	// 	'<i class="material-icons clearSearchBarField noselect"">clear</i>' +
+	//    '</div>';
+  //   $$(".navbar-inner").append(html);
+  //   $$('.searchBarSearchIcon').on('click', function () {
+  //     console.log("reverting");
+  //     $$('.left').show();
+  //     $$('.center').show();
+  //     $$('.right').show();
+  //     $$('.searchBarMain').hide();
+  //   });
+  // });
+
   var html = "";
   var colorArr = ["#e74c3c", "#f1c40f", "#9b59b6", "#4CAF50", "#3F51B5", "#7f8c8d", "#2c3e50", "#f39c12"];
 
