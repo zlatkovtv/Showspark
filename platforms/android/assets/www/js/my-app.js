@@ -1,76 +1,18 @@
 var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
 
-// Initialize app
-var myApp = new Framework7({
-  material: true,
-  cache:true,
-  precompileTemplates: true,
-  onAjaxStart: function (xhr) {
-    console.log("Ajax start");
-    // SpinnerPlugin.activityStart(null, {dimBackground: false});
+var myApp;
+var $$;
+var mainView;
+var welcomescreen_slides;
+var options;
+var welcomescreen;
 
-  },
-  onAjaxComplete: function (xhr) {
-    console.log("Ajax complete");
-    // SpinnerPlugin.activityStop();
-  },
-  swipePanel: 'left',
-  swipePanelActiveArea: 30,
-  showBarsOnPageScrollEnd: false,
-  upscroller : {
-    text: "Go to top"
-  }
-});
+var backButtonIsPressed = false;
 
-screen.orientation.lock('portrait');
-
-var $$ = Dom7;
-
-var welcomescreen_slides = [
-  {
-    id: 'slide0',
-    picture: '<div class="tutorialicon"></div>',
-    text: 'Welcome to What To Watch!</br> We think you are going to love it. </br> <i class="material-icons md-36">chevron_right</i>'
-  },
-  {
-    id: 'slide1',
-    picture: '<div class="tutorialicon"></div>',
-    text: 'This is a movie newsfeed app with a wizard that lets you find and sort movies and tv series easily! </br> <i class="material-icons md-36">chevron_right</i>'
-  },
-  {
-    id: 'slide2',
-    picture: '<a href="#" class="floating-button color-white custom-floating-button-tutorial">' +
-    '<i class="material-icons color-deeppurple-custom">movie' +
-    '</i>' +
-    '</a>',
-    text: 'Just press this button when you are in the newsfeed to fire up the wizard! </br> <i class="material-icons md-36">chevron_right</i>'
-  },
-  {
-    id: 'slide3',
-    picture: '<div class="tutorialicon"></div>',
-    text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-white color-black-custom tutorial-close-btn" href="#">End Tutorial</a>'
-  }
-];
-
-var options = {
-  'bgcolor': '#393939',
-  'fontcolor': '#fff',
-  'pagination': false,
-  'parallax': true,
-  'parallaxBackgroundImage': 'img/tutorial-back-cut.png',
-  'parallaxSlideElements':  {title: -100, subtitle: -300, text: 0},
-  'open': false
-}
-
-var welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
-
-if(window.localStorage.getItem('has_run') === '') {
-  window.localStorage.setItem('has_run', 'true');
-  welcomescreen.open();
-}
+initiateApp();
+initiateWelcomeScreen();
 
 $$('.tutorial-close-btn').on('click', function () {
-  console.log("CLOSING");
   welcomescreen.close();
 });
 
@@ -82,22 +24,110 @@ $$('.tutorial-open').on('click', function () {
   });
 });
 
-// Add view
-var mainView = myApp.addView('.view-main', {
-  // Because we want to use dynamic navbar, we need to enable it for this view:
-  dynamicNavbar: true
-});
+var genresJson = [
+  {
+    "id": 28,
+    "title": "Action",
+    "min_votes": 1000
+  },
+  {
+    "id": 12,
+    "title": "Adventure",
+    "min_votes": 1000
+  },
+  {
+    "id": 16,
+    "title": "Animation",
+    "min_votes": 1000
+  },
+  {
+    "id": 35,
+    "title": "Comedy",
+    "min_votes": 1000
+  },
+  {
+    "id": 80,
+    "title": "Crime",
+    "min_votes": 1000
+  },
+  {
+    "id": 99,
+    "title": "Documentary",
+    "min_votes": 100
+  },
+  {
+    "id": 18,
+    "title": "Drama",
+    "min_votes": 1000
+  },
+  {
+    "id": 10751,
+    "title": "Family",
+    "min_votes": 1000
+  },
+  {
+    "id": 14,
+    "title": "Fantasy",
+    "min_votes": 1000
+  },
+  {
+    "id": 36,
+    "title": "History",
+    "min_votes": 1000
+  },
+  {
+    "id": 27,
+    "title": "Horror",
+    "min_votes": 1000
+  },
+  {
+    "id": 10402,
+    "title": "Music",
+    "min_votes": 1000
+  },
+  {
+    "id": 9648,
+    "title": "Mystery",
+    "min_votes": 1000
+  },
+  {
+    "id": 10749,
+    "title": "Romance",
+    "min_votes": 1000
+  },
+  {
+    "id": 878,
+    "title": "Science Fiction",
+    "min_votes": 1000
+  },
+  {
+    "id": 10770,
+    "title": "TV Movie",
+    "min_votes": 1000
+  },
+  {
+    "id": 53,
+    "title": "Thriller",
+    "min_votes": 1000
+  },
+  {
+    "id": 10752,
+    "title": "War",
+    "min_votes": 1000
+  },
+  {
+    "id": 37,
+    "title": "Western",
+    "min_votes": 1000
+  }
+]
 
 var selectedOrderByCategory;
 var selectedGenres;
-var mostPopMovieObject = [];
+var tvOrMovie;
 
-var searchBarInput;
-var clearSearchBtn;
-
-// Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  // statusbarTransparent.enable();
+  statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -144,6 +174,78 @@ $$(document).on('deviceready', function() {
   console.log("Device is ready!");
 });
 
+function initiateApp() {
+  myApp = new Framework7({
+    material: true,
+    cache:true,
+    precompileTemplates: true,
+    onAjaxStart: function (xhr) {
+      console.log("Ajax start");
+      SpinnerPlugin.activityStart(null, {dimBackground: false});
+
+    },
+    onAjaxComplete: function (xhr) {
+      console.log("Ajax complete");
+      SpinnerPlugin.activityStop();
+    },
+    swipePanel: 'left',
+    swipePanelActiveArea: 30,
+    showBarsOnPageScrollEnd: false,
+    upscroller : {
+      text: "Go to top"
+    }
+  });
+
+  $$ = Dom7;
+  mainView = myApp.addView('.view-main');
+  screen.orientation.lock('portrait');
+}
+
+function initiateWelcomeScreen() {
+  welcomescreen_slides = [
+    {
+      id: 'slide0',
+      picture: '<div class="tutorialicon"></div>',
+      text: 'Welcome to What To Watch!</br> We think you are going to love it. </br> <i class="material-icons md-36">chevron_right</i>'
+    },
+    {
+      id: 'slide1',
+      picture: '<div class="tutorialicon"></div>',
+      text: 'This is a movie newsfeed app with a wizard that lets you find and sort movies and tv series easily! </br> <i class="material-icons md-36">chevron_right</i>'
+    },
+    {
+      id: 'slide2',
+      picture: '<a href="#" class="floating-button color-white custom-floating-button-tutorial">' +
+      '<i class="material-icons color-deeppurple-custom">movie' +
+      '</i>' +
+      '</a>',
+      text: 'Just press this button when you are in the newsfeed to fire up the wizard! </br> <i class="material-icons md-36">chevron_right</i>'
+    },
+    {
+      id: 'slide3',
+      picture: '<div class="tutorialicon"></div>',
+      text: 'That\'s about it really! Enjoy!<br><br><a class="button button-big button-raised button-fill color-white color-black-custom tutorial-close-btn" href="#">End Tutorial</a>'
+    }
+  ];
+
+  options = {
+    'bgcolor': '#393939',
+    'fontcolor': '#fff',
+    'pagination': false,
+    'parallax': true,
+    'parallaxBackgroundImage': 'img/tutorial-back-cut.png',
+    'parallaxSlideElements':  {title: -100, subtitle: -300, text: 0},
+    'open': false
+  }
+
+  welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
+
+  if(window.localStorage.getItem('has_run') === '') {
+    window.localStorage.setItem('has_run', 'true');
+    welcomescreen.open();
+  }
+}
+
 function goBack(){
   mainView.router.back({
     animatePages: false
@@ -176,20 +278,18 @@ function goToWizardResult(){
   mainView.router.loadPage('wizardResult.html');
 }
 
-var pressed = false;
-
 function exitPrompt(){
-  if(pressed) {
-    pressed = false;
+  if(backButtonIsPressed) {
+    backButtonIsPressed = false;
     navigator.app.clearHistory();
     navigator.app.exitApp();
   } else {
-    pressed = true;
+    backButtonIsPressed = true;
     myApp.addNotification({
       message: 'Press back again to exit',
       hold: 2500,
       onClose: function () {
-        pressed = false;
+        backButtonIsPressed = false;
       }
     });
   }

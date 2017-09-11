@@ -1,0 +1,99 @@
+{
+  "genres" : [
+    {
+      "id": 28,
+      "title": "Action",
+      "min_votes": 1000
+    },
+    {
+      "id": 12,
+      "title": "Adventure",
+      "min_votes": 1000
+    },
+    {
+      "id": 16,
+      "title": "Animation",
+      "min_votes": 1000
+    },
+    {
+      "id": 35,
+      "title": "Comedy",
+      "min_votes": 1000
+    },
+    {
+      "id": 80,
+      "title": "Crime",
+      "min_votes": 1000
+    },
+    {
+      "id": 99,
+      "title": "Documentary",
+      "min_votes": 100
+    },
+    {
+      "id": 18,
+      "title": "Drama",
+      "min_votes": 1000
+    },
+    {
+      "id": 10751,
+      "title": "Family",
+      "min_votes": 1000
+    },
+    {
+      "id": 14,
+      "title": "Fantasy",
+      "min_votes": 1000
+    },
+    {
+      "id": 36,
+      "title": "History",
+      "min_votes": 1000
+    },
+    {
+      "id": 27,
+      "title": "Horror",
+      "min_votes": 1000
+    },
+    {
+      "id": 10402,
+      "title": "Music",
+      "min_votes": 1000
+    },
+    {
+      "id": 9648,
+      "title": "Mystery",
+      "min_votes": 1000
+    },
+    {
+      "id": 10749,
+      "title": "Romance",
+      "min_votes": 1000
+    },
+    {
+      "id": 878,
+      "title": "Science Fiction",
+      "min_votes": 1000
+    },
+    {
+      "id": 10770,
+      "title": "TV Movie",
+      "min_votes": 1000
+    },
+    {
+      "id": 53,
+      "title": "Thriller",
+      "min_votes": 1000
+    },
+    {
+      "id": 10752,
+      "title": "War",
+      "min_votes": 1000
+    },
+    {
+      "id": 37,
+      "title": "Western",
+      "min_votes": 1000
+    }
+  ]
+}

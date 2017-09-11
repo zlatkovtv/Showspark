@@ -482,10 +482,10 @@ div[class*="col-"] {
 
 .play-icon {
   position: absolute;
-  font-size: 20vw;
+  font-size: 70px;
   color: white;
-  top: calc(50% - 49px);
-  left: calc(50% - 49px);
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
 }
 
 .movie-detail-play-icon {
@@ -891,4 +891,12 @@ div#movieDetailFirstDiv {
 .video-link {
   background-position: center !important;
   background-size: auto 100% !important;
+}
+
+.list-block.wizard-result-list ul:after {
+  display: none;
+}
+
+.list-block.wizard-result-list ul:before {
+  display: none;
 }

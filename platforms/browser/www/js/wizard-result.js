@@ -21,8 +21,8 @@ myApp.onPageInit('wizard-result', function (page) {
     selectedTemplateName = "revenue";
     break;
     default:
-
   }
+
   var wizardHtml = Template7.templates.wizardResultTitleTemplate({
     selectedValue: selectedTemplateName
   });
@@ -48,14 +48,10 @@ myApp.onPageInit('wizard-result', function (page) {
     }
   }
 
-  console.log("ajaxstart");
-
-  //make api call, make object and assign it to items below
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
-    url: 'https://api.themoviedb.org/3/discover/movie?vote_count.gte=' + minVotes + '&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
+    url: 'https://api.themoviedb.org/3/discover/' + tvOrMovie + '?vote_count.gte=' + minVotes + '&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
@@ -77,7 +73,7 @@ function buildSortedMovieList(xhr) {
     renderItem: function (index, item) {
       return '<li>' +
       '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
-      '<div class="item-media"><img style="border-radius: 2px;" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
       '<div class="item-inner">' +
       '<div class="item-title-row">' +
       '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
@@ -89,7 +85,7 @@ function buildSortedMovieList(xhr) {
       '</a>' +
       '</li>';
     },
-    height: 176
+    height: 163
   });
 
   $$('.detail-link').on('click', function () {

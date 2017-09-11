@@ -22,6 +22,16 @@ myApp.onPageInit('home', function () {
     window.localStorage.setItem("isFloatingBPressed", false);
   });
 
+  $$('#moviesFab').on('click', function () {
+    tvOrMovie = "movie";
+    goToWizard();
+  });
+
+  $$('#tvFab').on('click', function () {
+    tvOrMovie = "tv";
+    goToWizard();
+  });
+
   // $$('.search-button').on('click', function () {
   //   $$('.left').hide();
   //   $$('.center').hide();
@@ -46,16 +56,18 @@ myApp.onPageInit('home', function () {
 
   $$.ajax({
     complete: function () {
-      console.log("ajaxcomplete");
     },
-    url: 'https://api.themoviedb.org/3/movie/upcoming?api_key=17bad8fd5ecafe775377303226579c19&language=en-US&page=1',
+    url: 'https://api.themoviedb.org/3/movie/upcoming?api_key=17bad8fd5ecafe775377303226579c19&region=US&page=1',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
       },
       200: function (xhr) {
-        mostPopMovieObject = JSON.parse(xhr.response).results;
+        var mostPopMovieObject = JSON.parse(xhr.response).results;
         for (var i = 0; i < mostPopMovieObject.length; i++) {
+          if(!mostPopMovieObject[i].backdrop_path) {
+            continue;
+          }
           html += Template7.templates.showcaseCardTemplate({
             obj: mostPopMovieObject[i]
           });
@@ -69,7 +81,6 @@ myApp.onPageInit('home', function () {
 
           $$.ajax({
             complete: function () {
-              console.log("ajaxcomplete");
             },
             url: 'https://api.themoviedb.org/3/movie/' + clickedObjId + '/videos?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
             statusCode: {
@@ -93,10 +104,8 @@ myApp.onPageInit('home', function () {
     openIn: 'none',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
-      console.log("ajaxstart");
     },
     onAjaxComplete: function () {
-      console.log("ajaxcomplete");
     },
     listTemplate: '<ul>' +
     '{{#each items}}' +
@@ -195,10 +204,8 @@ myApp.onPageInit('home', function () {
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
-      console.log("ajaxstart");
     },
     onAjaxComplete: function () {
-      console.log("ajaxcomplete");
     },
     listTemplate: '<ul>' +
     '{{#each items}}' +
