@@ -77,7 +77,7 @@ function buildSortedMovieList(xhr) {
     renderItem: function (index, item) {
       return '<li>' +
       '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
-      '<div class="item-media"><img src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<div class="item-media"><img style="border-radius: 2px;" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
       '<div class="item-inner">' +
       '<div class="item-title-row">' +
       '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +

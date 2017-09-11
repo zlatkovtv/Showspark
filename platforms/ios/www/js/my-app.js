@@ -359,8 +359,8 @@ function getCast(id) {
         var director = directorArr[0];
 
         var crewHtml =
-        '<div class="horizontal-scroll" style="padding: 0px 4px;">' +
-        '<div style="width:3024px;"><div class="content-block-title director-title display-inline-block">Director</div>' +
+        '<div class="horizontal-scroll" style="padding: 0px 4px; margin:0px; height: 332px;">' +
+        '<div><div class="content-block-title director-title display-inline-block">Director</div>' +
         '<div class="content-block-title cast-title display-inline-block">Cast</div></div>';
         console.log(director);
         if(director && director.name && director.job) {

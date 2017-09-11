@@ -866,16 +866,17 @@ div#movieDetailFirstDiv {
   height: 270px;
   background-repeat: no-repeat !important;
   margin: 0px 4px 0px 4px;
-  background-position: top !important;
-  background-size: cover !important;
+  background-position: center !important;
+  background-size: auto 100% !important;
 }
 
 .director-crew-card {
   width: 180px;
   height: 270px;
   background-repeat: no-repeat !important;
-  margin: 0px 24px 0px 4px;
-  background-position: top !important;
+  margin: 0px 30px 0px 4px;
+  background-position: center !important;
+  background-size: auto 100% !important;
 }
 
 .display-inline-block {
@@ -886,8 +887,7 @@ div#movieDetailFirstDiv {
   margin-right: 150px;
 }
 
-.cast-title {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 16px;
+.video-link {
+  background-position: center !important;
+  background-size: auto 100% !important;
 }
