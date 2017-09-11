@@ -7,12 +7,12 @@ var myApp = new Framework7({
   precompileTemplates: true,
   onAjaxStart: function (xhr) {
     console.log("Ajax start");
-    SpinnerPlugin.activityStart(null, {dimBackground: false});
+    // SpinnerPlugin.activityStart(null, {dimBackground: false});
 
   },
   onAjaxComplete: function (xhr) {
     console.log("Ajax complete");
-    SpinnerPlugin.activityStop();
+    // SpinnerPlugin.activityStop();
   },
   swipePanel: 'left',
   swipePanelActiveArea: 30,
@@ -97,7 +97,7 @@ var clearSearchBtn;
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
-  statusbarTransparent.enable();
+  // statusbarTransparent.enable();
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -359,7 +359,7 @@ function getCast(id) {
         var director = directorArr[0];
 
         var crewHtml =
-        '<div class="horizontal-scroll" style="padding: 0px 4px; margin:0px; height: 332px;">' +
+        '<div class="horizontal-scroll" style="padding: 0px 4px; margin:0px;height: 295px;">' +
         '<div><div class="content-block-title director-title display-inline-block">Director</div>' +
         '<div class="content-block-title cast-title display-inline-block">Cast</div></div>';
         console.log(director);
