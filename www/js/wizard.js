@@ -9,18 +9,20 @@ myApp.onPageBeforeInit('wizard', function () {
 myApp.onPageInit('wizard', function (page) {
   myApp.params.swipePanel = false;
 
-  // if(genresJson) {
-    buildGenresForm(genresJson);
-  // } else {
-  //   $$.getJSON('../json_db/genres.json', function (data) {
-  //     genresJson = data.genres;
-  //     buildGenresForm(genresJson);
-  //   });
-  // }
+  if(tvOrMovie === 'tv') {
+    buildGenresForm(tvGenresJson);
+  } else {
+    buildGenresForm(movieGenresJson);
+  }
 
   $$('.wizard-next-button').on('click', function(){
-    var formData = myApp.formToJSON('#genre-form');
-    selectedGenres = formData;
+    selectedGenres = myApp.formToJSON('#genre-form');
+    combineGenres = myApp.formToJSON('#combine-form').combineGenres[0];
+    if(combineGenres) {
+      combineGenres = true;
+    } else {
+      combineGenres = false;
+    }
 
     $$('select[name="order-by-form"] option:checked').each(function () {
       selectedOrderByCategory = this.value;
@@ -37,9 +39,7 @@ myApp.onPageInit('wizard', function (page) {
 
 function buildGenresForm(genreJson) {
   var myList = myApp.virtualList('.list-block.virtual-list', {
-    // Array with items data
     items: genreJson,
-    // Template 7 template to render each item
     template: '<li>' +
     '<label class="label-checkbox item-content">' +
     '<input type="checkbox" name="genre_ids" value={{id}} >' +

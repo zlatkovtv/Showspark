@@ -5,7 +5,6 @@ myApp.onPageBeforeInit('wizard-result', function () {
   document.addEventListener("backbutton", goToTabs, false);
 });
 
-//wizard page
 myApp.onPageInit('wizard-result', function (page) {
   myApp.params.swipePanel = false;
 
@@ -32,6 +31,12 @@ myApp.onPageInit('wizard-result', function (page) {
   var genreString = "&with_genres=";
   var apiObject;
   var minVotes = 1000;
+  var genreSeparator;
+  if(combineGenres) {
+    genreSeparator = ',';
+  } else {
+    genreSeparator = '|'
+  }
 
   if(selectedGenres.genre_ids.length === 0) {
     genreString = "";
@@ -43,9 +48,13 @@ myApp.onPageInit('wizard-result', function (page) {
 
       genreString += selectedGenres.genre_ids[i];
       if(i !== selectedGenres.genre_ids.length - 1) {
-        genreString += ',';
+        genreString += genreSeparator;
       }
     }
+  }
+
+  if(tvOrMovie === 'tv') {
+    minVotes = 100;
   }
 
   $$.ajax({
@@ -57,18 +66,23 @@ myApp.onPageInit('wizard-result', function (page) {
         console.log('page not found');
       },
       200: function (xhr) {
-        buildSortedMovieList(xhr);
+        buildSortedItemList(xhr);
       }
     }
   })
 });
 
-function buildSortedMovieList(xhr) {
+function buildSortedItemList(xhr) {
   apiObject = JSON.parse(xhr.response).results;
   apiObject = normalizeApiObj(apiObject);
+  if(apiObject && apiObject.length === 0) {
+    myApp.addNotification({
+      message: 'No items found for these specifiers',
+      hold: 2500
+    });
+  }
 
   var myList = myApp.virtualList('.list-block.virtual-list.media-list', {
-    // Array with items data
     items: apiObject,
     renderItem: function (index, item) {
       return '<li>' +

@@ -24,7 +24,7 @@ $$('.tutorial-open').on('click', function () {
   });
 });
 
-var genresJson = [
+var movieGenresJson = [
   {
     "id": 28,
     "title": "Action",
@@ -122,9 +122,77 @@ var genresJson = [
   }
 ]
 
+var tvGenresJson = [
+    {
+      "id": 10759,
+      "title": "Action & Adventure"
+    },
+    {
+      "id": 16,
+      "title": "Animation"
+    },
+    {
+      "id": 35,
+      "title": "Comedy"
+    },
+    {
+      "id": 80,
+      "title": "Crime"
+    },
+    {
+      "id": 99,
+      "title": "Documentary"
+    },
+    {
+      "id": 18,
+      "title": "Drama"
+    },
+    {
+      "id": 10751,
+      "title": "Family"
+    },
+    {
+      "id": 10762,
+      "title": "Kids"
+    },
+    {
+      "id": 9648,
+      "title": "Mystery"
+    },
+    {
+      "id": 10763,
+      "title": "News"
+    },
+    {
+      "id": 10764,
+      "title": "Reality"
+    },
+    {
+      "id": 10765,
+      "title": "Sci-Fi & Fantasy"
+    },
+    {
+      "id": 10766,
+      "title": "Soap"
+    },
+    {
+      "id": 10767,
+      "title": "Talk"
+    },
+    {
+      "id": 10768,
+      "title": "War & Politics"
+    },
+    {
+      "id": 37,
+      "title": "Western"
+    }
+  ]
+
 var selectedOrderByCategory;
 var selectedGenres;
 var tvOrMovie;
+var combineGenres;
 
 $$(document).on('deviceready', function() {
   statusbarTransparent.enable();
@@ -312,7 +380,18 @@ function normalizeApiObj(obj) {
   for (var i = 0; i < arr.length; i++) {
     arr[i].poster_path = "http://image.tmdb.org/t/p/w342/" + arr[i].poster_path;
     arr[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + arr[i].backdrop_path;
-    arr[i].release_year = arr[i].release_date.substring(0,4);
+    if(arr[i].release_date) {
+      arr[i].release_year = arr[i].release_date.substring(0,4);
+    }
+
+    if(arr[i].first_air_date) {
+      arr[i].release_year = arr[i].first_air_date.substring(0,4);
+    }
+
+    if(arr[i].name) {
+      arr[i].title = arr[i].name;
+    }
+
     if(arr[i].vote_average === 0) {
       arr[i].vote_average = "No rating yet";
     }
@@ -337,7 +416,7 @@ function getMovieDetailInfo(id) {
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/movie/' + id + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    url: 'https://api.themoviedb.org/3/' + tvOrMovie + '/' + id + '?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
@@ -364,7 +443,7 @@ function getMovieDetailInfo(id) {
           attachGenres(movieObj.genres);
         }
 
-        attachTrailer(id);
+        attachTrailer(movieObj);
         getCast(id);
         getSimilarMovies(id);
 
@@ -439,16 +518,18 @@ function getCast(id) {
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/movie/' + id + '/credits?api_key=17bad8fd5ecafe775377303226579c19',
+    url: 'https://api.themoviedb.org/3/' + tvOrMovie + '/' + id + '/credits?api_key=17bad8fd5ecafe775377303226579c19',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
       },
       200: function (xhr) {
         var crewObj = JSON.parse(xhr.response);
+        console.log(crewObj);
         var cast = crewObj.cast.slice(0, 20);
         var crew = crewObj.crew;
-        if(!cast || !crew || cast.length === 0 || crew.length === 0) {
+
+        if((!cast && !crew) || (cast.length === 0 && crew.length === 0)) {
           return;
         }
 
@@ -458,11 +539,16 @@ function getCast(id) {
 
         var director = directorArr[0];
 
-        var crewHtml =
-        '<div class="horizontal-scroll" style="padding: 0px 4px; margin:0px;height: 295px;">' +
-        '<div><div class="content-block-title director-title display-inline-block">Director</div>' +
-        '<div class="content-block-title cast-title display-inline-block">Cast</div></div>';
-        console.log(director);
+        var crewHtml = '<div class="horizontal-scroll" style="padding: 0px 4px; margin:0px;height: 295px;"><div>';
+        if(director && director.name && director.job) {
+          crewHtml += '<div class="content-block-title director-title display-inline-block">Director</div>';
+        }
+
+        if(cast.length !== 0) {
+          crewHtml += '<div class="content-block-title cast-title display-inline-block">Cast</div>';
+        }
+
+        crewHtml += '</div>';
         if(director && director.name && director.job) {
           crewHtml += '<div class="card director-crew-card display-inline-block" style="background:url(http://image.tmdb.org/t/p/w342' + director.profile_path + '")  50% / 100%;">' +
       			'<img class="innerImgResizer" src="http://image.tmdb.org/t/p/w342' + director.profile_path + '">' +
@@ -494,10 +580,10 @@ function getMovieReviews(id) {
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/movie/' + id + '/reviews?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    url: 'https://api.themoviedb.org/3/' + tvOrMovie + '/' + id + '/reviews?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
       404: function (xhr) {
-        console.log('page not found');
+        console.log('No reviews for item');
       },
       200: function (xhr) {
         var reviewArr = JSON.parse(xhr.response).results;
@@ -527,11 +613,29 @@ function getMovieReviews(id) {
   })
 }
 
-function attachTrailer(id) {
+function attachTrailer(obj) {
+  var navbarColor = "black";
+
+  var img = new Image();
+  img.onload = function () {
+    var vibrant = new Vibrant(img);
+    var swatches = vibrant.swatches();
+    for (var swatch in swatches){
+        if (swatches.hasOwnProperty(swatch) && swatches[swatch]){
+            navbarColor = swatches[swatch].getHex();
+            break;
+        }
+    }
+
+    $$('#movie-detail-trailer-a').css('background-color', navbarColor);
+  };
+  img.crossOrigin = 'Anonymous';
+  img.src = obj.poster_path;
+
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    url: 'https://api.themoviedb.org/3/' + tvOrMovie + '/' + obj.id + '/videos?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
@@ -557,7 +661,7 @@ function getSimilarMovies(id) {
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
+    url: 'https://api.themoviedb.org/3/' + tvOrMovie + '/' + id + '/recommendations?api_key=17bad8fd5ecafe775377303226579c19&language=en-US',
     statusCode: {
       404: function (xhr) {
         console.log('page not found');

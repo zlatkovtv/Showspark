@@ -118,7 +118,6 @@ html {
 }
 
 .custom-floating-button {
-  bottom: 10px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
 
@@ -629,8 +628,8 @@ div[class*="col-"] {
 
 div#movie-detail-trailer-button {
   width: 100%;
-  margin-left: calc(100% - 158px);
-  margin-top: -42px;
+  margin-left: calc(100% - 72px);
+  margin-top: -60px;
   height: 30px;
   text-align: center;
 }
@@ -642,8 +641,7 @@ span#movie-detail-trailer-label {
 }
 
 a#movie-detail-trailer-a {
-  background-color: #111112;
-  width: 150px;
+  position: static;
 }
 
 .hidden {
@@ -899,4 +897,25 @@ div#movieDetailFirstDiv {
 
 .list-block.wizard-result-list ul:before {
   display: none;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.label-switch.theme-deeppurple input[type=checkbox]:checked+.checkbox:after, .theme-deeppurple .label-switch input[type=checkbox]:checked+.checkbox:after {
+  background-color: #34495e;
+}
+
+.form-radio input[type=radio]:checked~i:after, label.label-radio input[type=checkbox]:checked+.item-media i.icon-form-radio:after, label.label-radio input[type=checkbox]:checked~.item-after i.icon-form-radio:after, label.label-radio input[type=checkbox]:checked~.item-inner i.icon-form-radio:after, label.label-radio input[type=radio]:checked+.item-media i.icon-form-radio:after, label.label-radio input[type=radio]:checked~.item-after i.icon-form-radio:after, label.label-radio input[type=radio]:checked~.item-inner i.icon-form-radio:after {
+  background-color: #34495e;
+}
+
+.form-radio input[type=radio]:checked~i, label.label-radio input[type=checkbox]:checked+.item-media i.icon-form-radio, label.label-radio input[type=checkbox]:checked~.item-after i.icon-form-radio, label.label-radio input[type=checkbox]:checked~.item-inner i.icon-form-radio, label.label-radio input[type=radio]:checked+.item-media i.icon-form-radio, label.label-radio input[type=radio]:checked~.item-after i.icon-form-radio, label.label-radio input[type=radio]:checked~.item-inner i.icon-form-radio {
+  border-color: #34495e;
+}
+
+.theme-deeppurple label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=checkbox]:checked~.item-after i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=checkbox]:checked~.item-inner i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked~.item-after i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked~.item-inner i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked+.item-media i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked~.item-after i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked~.item-inner i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked+.item-media i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked~.item-after i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked~.item-inner i.icon-form-checkbox {
+  background-color: #34495e;
+  border-color: #34495e;
 }
