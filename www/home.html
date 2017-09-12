@@ -15,116 +15,101 @@
         <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
       </div>
     </form> -->
-    <div class="center center-in-tabs">
+        <div class="center center-in-tabs">
 
-    </div>
-    <div class="right">
-      <a href="#" class="link search-button">
-        <i class="material-icons">search</i>
-      </a>
-      <a href="#" class="link">
-        <i class="material-icons">more_vert</i>
-      </a>
-    </div>
+        </div>
+        <div class="right">
+          <a href="#" class="link search-button">
+            <i class="material-icons">search</i>
+          </a>
+          <a href="#" class="link">
+            <i class="material-icons">more_vert</i>
+          </a>
+        </div>
 
-  </div>
-  <div class="subnavbar toolbar tabbar tabbar-scrollable">
-    <div class="toolbar-inner">
-      <a href="#tab-cinema" class="tab-link active">
-        Newsfeed
-      </a>
-      <a href="#tab-rv" class="tab-link">
-        Reviews
-      </a>
-      <a href="#tab-sc" class="tab-link">
-        Trailers
-        <!-- <i class="material-icons">local_movies</i> -->
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Tabs animated wrapper, required to switch tabs with transition VALUES : tabs-{{animated/swipeable}}-wrap:  -->
-<div class="tabs-animated-wrap">
-  <!-- Tabs, tabs wrapper -->
-  <div class="tabs">
-    <div id="tab-cinema" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
-      <div class="pull-to-refresh-layer">
-        <div class="preloader"></div>
-        <div class="pull-to-refresh-arrow"></div>
       </div>
-
-      <!-- <div class="content-block-title">THE LATEST IN THE MOVIE INDUSTRY</div> -->
-
-      <div class="list-block cinema-feed no-margin-top"></div>
-
-      <!-- Preloader -->
-      <!-- <div class="infinite-scroll-preloader">
-      <div class="preloader"></div>
-    </div> -->
-  </div>
-  <!-- Tab 2 -->
-  <!-- <div id="tab-tv" class="page-content pull-to-refresh-content tab hide-navbar-on-scroll">
-  <div class="pull-to-refresh-layer">
-  <div class="preloader"></div>
-  <div class="pull-to-refresh-arrow"></div>
-</div> -->
-
-<!-- <div class="list-block theaters-feed no-margin-top"></div>
-</div> -->
-
-<!-- Tab 3 -->
-<div id="tab-rv" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
-  <div class="pull-to-refresh-layer">
-    <div class="preloader"></div>
-    <div class="pull-to-refresh-arrow"></div>
-  </div>
-
-  <!-- <div class="content-block-title">REVIEWS</div> -->
-  <div class="list-block accordion-list rv-feed no-margin-top"></div>
-
-</div>
-<!-- Tab 4 -->
-<div id="tab-sc" class="page-content tab hide-navbar-on-scroll">
-  <!-- <div class="content-block-title">MOVIE TRAILERS</div> -->
-
-  <div class="content-block no-margin">
-    <div class="row margin-bottom-15 showcase-container">
-
+      <div class="subnavbar toolbar tabbar tabbar-scrollable">
+        <div class="toolbar-inner">
+          <a href="#tab-newsfeed" class="tab-link active">
+            Newsfeed
+          </a>
+          <a href="#tab-in-theaters" class="tab-link">
+            In Theaters
+          </a>
+          <a href="#tab-upcoming" class="tab-link">
+            Upcoming
+          </a>
+          <a href="#tab-reviews" class="tab-link">
+            Reviews
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
 
-</div>
+    <!-- Tabs animated wrapper, required to switch tabs with transition VALUES : tabs-{{animated/swipeable}}-wrap:  -->
+    <div class="tabs-animated-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <div id="tab-newsfeed" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
+          <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+          </div>
+          <div class="list-block news-feed no-margin-top"></div>
+        </div>
 
-</div>
-</div>
+        <div id="tab-in-theaters" class="page-content tab hide-navbar-on-scroll">
+          <div class="content-block no-margin">
+            <div class="row margin-bottom-15 in-theaters-container">
+            </div>
+          </div>
+        </div>
 
-<div class="speed-dial">
-    <!-- FAB inside will open Speed Dial actions -->
-    <a href="#" class="floating-button color-deeppurple-custom custom-floating-button">
-      <!-- First icon is visible when Speed Dial actions are closed -->
-      <i class="icon icon-plus"></i>
-      <!-- Second icon is visible when Speed Dial actions are opened -->
-      <i class="icon icon-close"></i>
-    </a>
-    <!-- Speed Dial Actions -->
-    <div class="speed-dial-buttons">
-      <!-- First Speed Dial button -->
-      <label class="text-border-black color-white-custom" id="fab-movie-label">Movies</label>
-      <a href="#" id="moviesFab" class="floating-button color-deeppurple-custom custom-floating-button">
-        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <div id="tab-upcoming" class="page-content tab hide-navbar-on-scroll">
+          <div class="content-block no-margin">
+            <div class="row margin-bottom-15 upcoming-container">
+            </div>
+          </div>
+        </div>
+
+
+        <div id="tab-reviews" class="page-content pull-to-refresh-content hide-navbar-on-scroll tab">
+          <div class="pull-to-refresh-layer">
+            <div class="preloader"></div>
+            <div class="pull-to-refresh-arrow"></div>
+          </div>
+          <div class="list-block accordion-list reviews-feed no-margin-top"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="speed-dial">
+      <!-- FAB inside will open Speed Dial actions -->
+      <a href="#" class="floating-button color-deeppurple-custom custom-floating-button">
+        <!-- First icon is visible when Speed Dial actions are closed -->
+        <i class="icon icon-plus"></i>
+        <!-- Second icon is visible when Speed Dial actions are opened -->
+        <i class="icon icon-close"></i>
+      </a>
+      <!-- Speed Dial Actions -->
+      <div class="speed-dial-buttons">
+        <!-- First Speed Dial button -->
+        <label class="text-border-black color-white-custom" id="fab-movie-label">Movies</label>
+        <a href="#" id="moviesFab" class="floating-button color-deeppurple-custom custom-floating-button">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
             <path fill="white" d="M18,4L20,8H17L15,4H13L15,8H12L10,4H8L10,8H7L5,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V4H18Z" />
-        </svg>
-      </a>
-      <!-- Second Speed Dial  button -->
-      <label class="text-border-black color-white-custom" id="fab-tv-label">TV</label>
-      <a href="#" id="tvFab" class="floating-button color-deeppurple-custom custom-floating-button" style="margin-bottom:16px;">
-        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          </svg>
+        </a>
+        <!-- Second Speed Dial  button -->
+        <label class="text-border-black color-white-custom" id="fab-tv-label">TV</label>
+        <a href="#" id="tvFab" class="floating-button color-deeppurple-custom custom-floating-button" style="margin-bottom:16px;">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
             <path fill="white" d="M8.16,3L6.75,4.41L9.34,7H4C2.89,7 2,7.89 2,9V19C2,20.11 2.89,21 4,21H20C21.11,21 22,20.11 22,19V9C22,7.89 21.11,7 20,7H14.66L17.25,4.41L15.84,3L12,6.84L8.16,3M4,9H17V19H4V9M19.5,9A1,1 0 0,1 20.5,10A1,1 0 0,1 19.5,11A1,1 0 0,1 18.5,10A1,1 0 0,1 19.5,9M19.5,12A1,1 0 0,1 20.5,13A1,1 0 0,1 19.5,14A1,1 0 0,1 18.5,13A1,1 0 0,1 19.5,12Z" />
-        </svg>
-      </a>
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
 </div>
