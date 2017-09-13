@@ -112,6 +112,45 @@ module.exports = [
         "clobbers": [
             "YoutubeVideoPlayer"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "pluginId": "cordova-plugin-x-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "id": "es6-promise-plugin.Promise",
+        "pluginId": "es6-promise-plugin",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-social-message/www/socialmessage.js",
+        "id": "cordova-plugin-social-message.SocialMessage",
+        "pluginId": "cordova-plugin-social-message",
+        "clobbers": [
+            "socialmessage"
+        ]
+    },
+    {
+        "file": "plugins/ionic-plugin-keyboard/www/browser/keyboard.js",
+        "id": "ionic-plugin-keyboard.keyboard",
+        "pluginId": "ionic-plugin-keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ],
+        "runs": true
+    },
+    {
+        "file": "plugins/fr._46cl.focus/www/focus.js",
+        "id": "fr._46cl.focus.focus",
+        "pluginId": "fr._46cl.focus",
+        "clobbers": [
+            "cordova.plugins.Focus"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -132,7 +171,12 @@ module.exports.metadata =
     "cordova-plugin-customurlscheme": "4.3.0",
     "cordova-plugin-spinner": "1.1.0",
     "com.bunkerpalace.cordova.YoutubeVideoPlayer": "1.0.5",
-    "cordova-plugin-crosswalk-webview": "2.3.0"
+    "cordova-plugin-crosswalk-webview": "2.3.0",
+    "cordova-plugin-x-socialsharing": "5.1.8",
+    "es6-promise-plugin": "4.1.0",
+    "cordova-plugin-social-message": "0.4.0",
+    "ionic-plugin-keyboard": "2.2.1",
+    "fr._46cl.focus": "0.1.3"
 }
 // BOTTOM OF METADATA
 });

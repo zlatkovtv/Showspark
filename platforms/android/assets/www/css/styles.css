@@ -724,6 +724,7 @@ div#movieDetailFirstDiv {
 
 #homepageButton {
   margin-top: 9px;
+  margin-bottom: 11px;
 }
 
 .margin-right-5 {
@@ -918,4 +919,26 @@ div#movieDetailFirstDiv {
 .theme-deeppurple label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=checkbox]:checked~.item-after i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=checkbox]:checked~.item-inner i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked~.item-after i.icon-form-checkbox, .theme-deeppurple label.label-checkbox input[type=radio]:checked~.item-inner i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked+.item-media i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked~.item-after i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=checkbox]:checked~.item-inner i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked+.item-media i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked~.item-after i.icon-form-checkbox, label.label-checkbox.theme-deeppurple input[type=radio]:checked~.item-inner i.icon-form-checkbox {
   background-color: #34495e;
   border-color: #34495e;
+}
+
+::-webkit-input-placeholder {
+  color: grey !important;
+}
+::-moz-placeholder {
+  color: grey !important;
+}
+:-ms-input-placeholder {
+  color: grey !important;
+}
+:-moz-placeholder {
+  color: grey !important;
+}
+
+.grey-input {
+  border-bottom: 0px solid white !important;
+  color: grey !important;
+}
+
+.color-grey {
+  color: grey !important;
 }

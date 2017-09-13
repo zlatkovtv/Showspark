@@ -5,8 +5,7 @@
     "cordova": {
         "platforms": [
             "android",
-            "browser",
-            "ios"
+            "browser"
         ],
         "plugins": {
             "cordova-plugin-console": {},
@@ -36,14 +35,18 @@
                 "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
                 "XWALK_MODE": "embedded",
                 "XWALK_MULTIPLEAPK": "true"
-            }
+            },
+            "cordova-plugin-x-socialsharing": {},
+            "cordova-plugin-social-message": {},
+            "fr._46cl.focus": {},
+            "ionic-plugin-keyboard": {}
         }
     },
     "dependencies": {
         "com.bunkerpalace.cordova.YoutubeVideoPlayer": "git+https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
-        "cordova-ios": "~4.3.1",
+        "cordova-ios": "^4.3.1",
         "cordova-plugin-browsertab": "^0.2.0",
         "cordova-plugin-buildinfo": "^1.1.0",
         "cordova-plugin-compat": "^1.0.0",
@@ -53,12 +56,17 @@
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-googleplus": "git+https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
         "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-social-message": "git+https://github.com/leecrossley/cordova-plugin-social-message.git",
         "cordova-plugin-spinner": "^1.1.0",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "~1.0.1",
         "cordova-plugin-statusbar-transparent": "file:plugins\\cordova-plugin-statusbar-transparent",
         "cordova-plugin-whitelist": "^1.3.2",
+        "cordova-plugin-x-socialsharing": "^5.2.0",
         "cordova-universal-links-plugin": "^1.2.1",
+        "es6-promise-plugin": "^4.1.0",
+        "fr._46cl.focus": "git+https://github.com/46cl/cordova-android-focus-plugin.git",
+        "ionic-plugin-keyboard": "^2.2.1",
         "net.ekuwang.cordova.plugin.statusbar": "plugins/cordova-plugin-statusbar-transparent"
     }
 }

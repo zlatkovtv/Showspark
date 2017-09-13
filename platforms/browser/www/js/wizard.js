@@ -8,6 +8,7 @@ myApp.onPageBeforeInit('wizard', function () {
 //wizard page
 myApp.onPageInit('wizard', function (page) {
   myApp.params.swipePanel = false;
+  attachSearchButton();
 
   if(tvOrMovie === 'tv') {
     buildGenresForm(tvGenresJson);

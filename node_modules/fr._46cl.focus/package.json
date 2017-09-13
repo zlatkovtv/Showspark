@@ -1,0 +1,38 @@
+{
+  "_from": "git+https://github.com/46cl/cordova-android-focus-plugin.git",
+  "_id": "fr._46cl.focus@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-6hmN+xdBiPAG6TntSC4pxka/484=",
+  "_location": "/fr._46cl.focus",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "fr._46cl.focus@git+https://github.com/46cl/cordova-android-focus-plugin.git",
+    "name": "fr._46cl.focus",
+    "escapedName": "fr._46cl.focus",
+    "rawSpec": "git+https://github.com/46cl/cordova-android-focus-plugin.git",
+    "saveSpec": "git+https://github.com/46cl/cordova-android-focus-plugin.git",
+    "fetchSpec": "https://github.com/46cl/cordova-android-focus-plugin.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/46cl/cordova-android-focus-plugin.git#da668f4249217655a572a49e13496c1947573c39",
+  "_spec": "fr._46cl.focus@git+https://github.com/46cl/cordova-android-focus-plugin.git",
+  "_where": "C:\\Users\\Memphis\\Desktop\\Projects\\Showspark_stable\\node_modules",
+  "bundleDependencies": false,
+  "cordova_name": "Focus",
+  "deprecated": false,
+  "description": "Focus plugin for android",
+  "issue": "https://github.com/46cl/cordova-android-focus-plugin/issues",
+  "keywords": [
+    "android",
+    "focus"
+  ],
+  "license": "MIT",
+  "name": "fr._46cl.focus",
+  "repo": "https://github.com/46cl/cordova-android-focus-plugin.git",
+  "version": "0.1.0"
+}

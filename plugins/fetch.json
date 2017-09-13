@@ -104,7 +104,10 @@
         },
         "is_top_level": true,
         "variables": {
-            "URL_SCHEME": "com.firebase.cordova"
+            "URL_SCHEME": "com.firebase.cordova",
+            "ANDROID_SCHEME": " ",
+            "ANDROID_HOST": " ",
+            "ANDROID_PATHPREFIX": "/"
         }
     },
     "cordova-plugin-spinner": {
@@ -127,6 +130,52 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-crosswalk-webview@2.3.0"
+        },
+        "is_top_level": true,
+        "variables": {
+            "XWALK_VERSION": "23+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true"
+        }
+    },
+    "cordova-plugin-x-socialsharing": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-x-socialsharing@^5.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "es6-promise-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "es6-promise-plugin@4.1.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-social-message": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-social-message@git+https://github.com/leecrossley/cordova-plugin-social-message.git"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "fr._46cl.focus": {
+        "source": {
+            "type": "registry",
+            "id": "fr._46cl.focus@git+https://github.com/46cl/cordova-android-focus-plugin.git"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard@^2.2.1"
         },
         "is_top_level": true,
         "variables": {}

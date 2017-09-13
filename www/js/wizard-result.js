@@ -8,6 +8,8 @@ myApp.onPageBeforeInit('wizard-result', function () {
 myApp.onPageInit('wizard-result', function (page) {
   myApp.params.swipePanel = false;
 
+  attachSearchButton();
+
   var selectedTemplateName = "popularity";
   switch (selectedOrderByCategory) {
     case "vote_average":
@@ -66,45 +68,8 @@ myApp.onPageInit('wizard-result', function (page) {
         console.log('page not found');
       },
       200: function (xhr) {
-        buildSortedItemList(xhr);
+        buildSortedItemList(xhr, '.list-block.wizard-result-list.virtual-list.media-list');
       }
     }
   })
 });
-
-function buildSortedItemList(xhr) {
-  apiObject = JSON.parse(xhr.response).results;
-  apiObject = normalizeApiObj(apiObject);
-  if(apiObject && apiObject.length === 0) {
-    myApp.addNotification({
-      message: 'No items found for these specifiers',
-      hold: 2500
-    });
-  }
-
-  var myList = myApp.virtualList('.list-block.virtual-list.media-list', {
-    items: apiObject,
-    renderItem: function (index, item) {
-      return '<li>' +
-      '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
-      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
-      '<div class="item-inner">' +
-      '<div class="item-title-row">' +
-      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
-      '<div class="item-after">' + item.vote_average + '</div>' +
-      '</div>' +
-      '<div class="item-subtitle">' + item.release_year + '</div>' +
-      '<div class="item-text item-text-5-rows">' + item.overview + '</div>' +
-      '</div>' +
-      '</a>' +
-      '</li>';
-    },
-    height: 163
-  });
-
-  $$('.detail-link').on('click', function () {
-    var clickedObjId = $$(this).prop('id');
-
-    getMovieDetailInfo(clickedObjId);
-  });
-}

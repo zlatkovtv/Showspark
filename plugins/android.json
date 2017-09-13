@@ -43,6 +43,9 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
+        "cordova-plugin-social-message": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-plugin-spinner": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
@@ -55,15 +58,27 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-universal-links-plugin": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "net.ekuwang.cordova.plugin.statusbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "fr._46cl.focus": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     }

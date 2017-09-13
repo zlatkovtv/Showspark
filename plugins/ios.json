@@ -7,16 +7,7 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-universal-links-plugin": {
+        "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-browsertab": {
@@ -25,38 +16,62 @@
         "cordova-plugin-buildinfo": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-googleplus": {
-            "REVERSED_CLIENT_ID": "145837743537-fnt8lbmm155gq7fp8o76ci087iqm3fu1",
+        "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "net.ekuwang.cordova.plugin.statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-splashscreen": {
+        "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-customurlscheme": {
             "URL_SCHEME": "com.firebase.cordova",
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "145837743537-fnt8lbmm155gq7fp8o76ci087iqm3fu1",
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-plugin-spinner": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-universal-links-plugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "net.ekuwang.cordova.plugin.statusbar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-social-message": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "fr._46cl.focus": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "es6-promise-plugin": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     }

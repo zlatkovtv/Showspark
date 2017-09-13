@@ -35,4 +35,5 @@
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreenDelay" value="2250" />
     <preference name="SplashScreenBackgroundColor" value="green" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
 </widget>

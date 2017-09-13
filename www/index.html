@@ -141,7 +141,7 @@
 			</a>
 		</div>
 		<div class="content-block report-bug-container">
-			<a href="#" class="button button-raised button-fill button-big custom-purple-color">
+			<a href="#" class="button button-raised button-fill button-big custom-purple-color report-bug">
 				<i class="material-icons md-36 signin-button-logo">bug_report</i>
 				Report a bug
 			</a>
@@ -186,7 +186,7 @@
 						<label class="text-shadow-1">{{obj.title}} ({{obj.release_year}})</label>
 					</div>
 					<div class="right">
-						<a href="#" class="link icon-only">
+						<a href="#" class="link icon-only share-movie">
 							<i class="material-icons text-shadow-1">share
 							</i>
 						</a>
@@ -262,6 +262,27 @@
 			<div class="absolute card similar-movie-title">
 				{{obj.name}}
 			</div>
+		</div>
+	</script>
+
+	<script type="text/template7" id="searchTemplate">
+		<div class="popup popup-search custom-layout-dark">
+			<div class="navbar theme-white navbar-shadow">
+				<div class="navbar-inner">
+						<a href="#" class="link icon-only close-popup color-grey">
+							<i class="material-icons">arrow_back</i>
+						</a>
+						<div class="item-input" style="width: calc(100% - 88px);">
+              <input class="grey-input" type="text" name="name" placeholder="Search movies or tv series" onKeyPress="callApiOnSearchEvent(value)" onKeyUp="callApiOnSearchEvent(value)">
+          	</div>
+				</div>
+			</div>
+			<div class="page-content login-screen-content">
+	      <!-- Virtual List -->
+	      <div class="list-block search-result-list virtual-list media-list">
+	        <!-- keep it empty -->
+	      </div>
+	    </div>
 		</div>
 	</script>
 

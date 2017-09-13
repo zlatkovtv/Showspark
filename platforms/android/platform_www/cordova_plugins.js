@@ -58,6 +58,14 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-social-message.SocialMessage",
+        "file": "plugins/cordova-plugin-social-message/www/socialmessage.js",
+        "pluginId": "cordova-plugin-social-message",
+        "clobbers": [
+            "socialmessage"
+        ]
+    },
+    {
         "id": "cordova-plugin-spinner.SpinnerPlugin",
         "file": "plugins/cordova-plugin-spinner/www/spinner-plugin.js",
         "pluginId": "cordova-plugin-spinner",
@@ -90,11 +98,42 @@ module.exports = [
         ]
     },
     {
+        "id": "es6-promise-plugin.Promise",
+        "file": "plugins/es6-promise-plugin/www/promise.js",
+        "pluginId": "es6-promise-plugin",
+        "runs": true
+    },
+    {
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "pluginId": "cordova-plugin-x-socialsharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
         "id": "cordova-universal-links-plugin.universalLinks",
         "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
         "pluginId": "cordova-universal-links-plugin",
         "clobbers": [
             "universalLinks"
+        ]
+    },
+    {
+        "id": "ionic-plugin-keyboard.keyboard",
+        "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "pluginId": "ionic-plugin-keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ],
+        "runs": true
+    },
+    {
+        "id": "fr._46cl.focus.focus",
+        "file": "plugins/fr._46cl.focus/www/focus.js",
+        "pluginId": "fr._46cl.focus",
+        "clobbers": [
+            "cordova.plugins.Focus"
         ]
     }
 ];
@@ -111,12 +150,17 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-googleplus": "5.1.1",
     "cordova-plugin-inappbrowser": "1.7.1",
+    "cordova-plugin-social-message": "0.4.0",
     "cordova-plugin-spinner": "1.1.0",
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.2.4-dev",
     "net.ekuwang.cordova.plugin.statusbar": "1.0.0",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-universal-links-plugin": "1.2.1"
+    "es6-promise-plugin": "4.1.0",
+    "cordova-plugin-x-socialsharing": "5.1.8",
+    "cordova-universal-links-plugin": "1.2.1",
+    "ionic-plugin-keyboard": "2.2.1",
+    "fr._46cl.focus": "0.1.3"
 };
 // BOTTOM OF METADATA
 });

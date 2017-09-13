@@ -377,15 +377,19 @@ function normalizeApiObj(obj) {
     arr.push(obj);
   }
 
+  arr = arr.filter(function(item){return item.media_type !== "person";});
+
   for (var i = 0; i < arr.length; i++) {
     arr[i].poster_path = "http://image.tmdb.org/t/p/w342/" + arr[i].poster_path;
     arr[i].backdrop_path = "http://image.tmdb.org/t/p/w1920/" + arr[i].backdrop_path;
     if(arr[i].release_date) {
       arr[i].release_year = arr[i].release_date.substring(0,4);
+      arr[i].type = 'movie';
     }
 
     if(arr[i].first_air_date) {
       arr[i].release_year = arr[i].first_air_date.substring(0,4);
+      arr[i].type = 'tv';
     }
 
     if(arr[i].name) {
@@ -458,11 +462,20 @@ function attachButtons(obj) {
   '<div class="content-block-title">Social</div>' +
   '</div>' +
   '<div class="row">' +
-  '<div class="padding-sides-8">' +
-  '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left margin-right-5">Official website</a>' +
-  '<a href="#" id="imdbButton" class="float-left margin-right-5">' +
-  '</a>' +
-  '</div>' +
+  '<div class="padding-sides-8">';
+  if(obj.homepage) {
+    html += '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left margin-right-5">Official website</a>';
+  }
+
+  if(obj.imdb_id) {
+    html += '<a href="#" id="imdbButton" class="float-left margin-right-5"></a>';
+  }
+
+  if(obj.id) {
+    
+  }
+
+  html += '</div>' +
   '</div>';
 
   $$('#socialButtonsContainer').append(html);
@@ -488,6 +501,31 @@ function popUpMovieDetail(movieObj) {
     obj: movieObj
   });
   myApp.popup(popupHTML);
+
+  $$('.share-movie').on('click', function () {
+    var options = {
+      files: [],
+      url: 'http://www.imdb.com/title/' + movieObj.imdb_id,
+      chooserTitle: 'Share movie via' // Android only, you can override the default share sheet title
+    }
+
+    var onShareSuccess = function(result) {
+
+    }
+
+    var onShareError = function(msg) {
+      myApp.addNotification({
+        message: 'Sharing failed - ' + msg,
+        hold: 2500
+      });
+    }
+
+    if(movieObj && movieObj.imdb_id) {
+      window.plugins.socialsharing.shareWithOptions(options, onShareSuccess, onShareError);
+    } else {
+      onShareError('no movie link found');
+    }
+  });
 
   document.removeEventListener("backbutton", goToTabs, false);
   document.removeEventListener("backbutton", goToWizard, false);
@@ -754,4 +792,75 @@ function compareGenres(a,b) {
   if (a.name > b.name)
     return 1;
   return 0;
+}
+
+function buildSortedItemList(xhr, listElementToAppendTo) {
+  apiObject = JSON.parse(xhr.response).results;
+  apiObject = normalizeApiObj(apiObject);
+  if(apiObject && apiObject.length === 0) {
+    myApp.addNotification({
+      message: 'No items found for these specifiers',
+      hold: 2500
+    });
+  }
+
+  var myList = myApp.virtualList(listElementToAppendTo, {
+    items: apiObject,
+    renderItem: function (index, item) {
+      return '<li>' +
+      '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
+      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<div class="item-inner">' +
+      '<div class="item-title-row">' +
+      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
+      '<div class="item-after">' + item.vote_average + '</div>' +
+      '</div>' +
+      '<div class="item-subtitle">' + item.release_year + '</div>' +
+      '<div class="item-text item-text-5-rows">' + item.overview + '</div>' +
+      '</div>' +
+      '</a>' +
+      '</li>';
+    },
+    height: 163
+  });
+
+  $$('.detail-link').on('click', function () {
+    var clickedObjId = $$(this).prop('id');
+    tvOrMovie = apiObject.find(x => x.id == clickedObjId).type;
+
+    getMovieDetailInfo(clickedObjId);
+  });
+}
+
+var typingTimer;
+
+function callApiOnSearchEvent(searchValue) {
+  if(!searchValue || searchValue.length === 0 || searchValue === '') {
+    return;
+  }
+
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(function() {
+    $$.ajax({
+      complete: function () {
+      },
+      url: 'https://api.themoviedb.org/3/search/multi' + '?query=' + searchValue + '&include_adult=false&api_key=' + tmdbApiKey,
+      statusCode: {
+        404: function (xhr) {
+          console.log('page not found');
+        },
+        200: function (xhr) {
+          buildSortedItemList(xhr, '.list-block.search-result-list.virtual-list.media-list');
+        }
+      }
+    })
+  }, 700);
+}
+
+function attachSearchButton() {
+  $$('.search-button').on('click', function () {
+    var popupHTML = Template7.templates.searchTemplate({
+    });
+    myApp.popup(popupHTML);
+  });
 }
