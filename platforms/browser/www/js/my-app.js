@@ -464,15 +464,15 @@ function attachButtons(obj) {
   '<div class="row">' +
   '<div class="padding-sides-8">';
   if(obj.homepage) {
-    html += '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left margin-right-5">Official website</a>';
+    html += '<a href="#" id="homepageButton" class="button button-raised button-fill custom-purple-color float-left margin-right-10">Official website</a>';
   }
 
   if(obj.imdb_id) {
-    html += '<a href="#" id="imdbButton" class="float-left margin-right-5"></a>';
+    html += '<a href="#" id="imdbButton" class="float-left margin-right-10"></a>';
   }
 
   if(obj.id) {
-    
+    html += '<a href="#" id="tmdbButton" class="float-left margin-right-10"></a>';
   }
 
   html += '</div>' +
@@ -480,12 +480,16 @@ function attachButtons(obj) {
 
   $$('#socialButtonsContainer').append(html);
 
+  $$('#homepageButton').on('click', function () {
+    cordova.plugins.browsertab.openUrl(obj.homepage);
+  });
+
   $$('#imdbButton').on('click', function () {
     cordova.plugins.browsertab.openUrl('http://www.imdb.com/title/' + obj.imdb_id);
   });
 
-  $$('#homepageButton').on('click', function () {
-    cordova.plugins.browsertab.openUrl(obj.homepage);
+  $$('#tmdbButton').on('click', function () {
+    cordova.plugins.browsertab.openUrl('https://www.themoviedb.org/' + obj.type + '/' + obj.id);
   });
 }
 
