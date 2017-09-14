@@ -44,4 +44,4 @@ Fixed 12. wizard form - and or/ movie tv
 
 add genres to in theatres and upcoming
 fix backbutton for search and popups in general
-fix three dots button in navbar
+FIXED fix three dots button in navbar

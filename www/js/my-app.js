@@ -200,7 +200,7 @@ $$(document).on('deviceready', function() {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log("There is a logged user");
+      console.log(user);
 
       welcomescreen.close();
       goToTabs();
