@@ -7,6 +7,8 @@ var welcomescreen_slides;
 var options;
 var welcomescreen;
 
+var loggedUser;
+
 var backButtonIsPressed = false;
 
 initiateApp();
@@ -201,7 +203,7 @@ $$(document).on('deviceready', function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log(user);
-
+      loggedUser = user;
       welcomescreen.close();
       goToTabs();
     } else {

@@ -10,8 +10,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="msapplication-tap-highlight" content="no">
 
-	<!-- Your app title -->
-	<title>My App</title>
+	<title>Showspark</title>
 
 	<link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
 	<link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
@@ -90,10 +89,12 @@
 	<!-- Left panel with reveal effect-->
 	<div class="panel panel-left panel-cover">
 		<div class="left-panel-pic">
-			<div class="profile-container color-white">
-				<i class="material-icons">account_circle</i>
-				<div class=" no-border user-name-label">
-				</div>
+			<div class="profile-image-container">
+				<div id="profileImage"></div>
+			</div>
+			<div class="profile-stats-container">
+				<div id="profileFullName" class="profile-stat"></div>
+				<div id="profileEmail" class="profile-stat"></div>
 			</div>
 		</div>
 		<div class="list-block panel-list">
