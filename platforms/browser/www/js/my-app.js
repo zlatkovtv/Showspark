@@ -10,7 +10,7 @@ var welcomescreen;
 var loggedUser;
 
 var backButtonIsPressed = false;
-
+var isSearchPoppedUp = false;
 initiateApp();
 initiateWelcomeScreen();
 
@@ -365,12 +365,6 @@ function exitPrompt(){
   }
 }
 
-function closeSignUpPopup() {
-  myApp.closeModal('.popup-sign-up');
-  document.removeEventListener("backbutton", closeSignUpPopup, false);
-  document.addEventListener("backbutton", goToIndex, false);
-}
-
 function normalizeApiObj(obj) {
   var arr = [];
   if(obj instanceof Array) {
@@ -495,11 +489,6 @@ function attachButtons(obj) {
   });
 }
 
-function closePopups() {
-  myApp.closeModal();
-  document.removeEventListener("backbutton", closePopups, false);
-  document.addEventListener("backbutton", goToTabs, false);
-}
 
 function popUpMovieDetail(movieObj) {
   movieObj = normalizeApiObj(movieObj);
@@ -533,9 +522,11 @@ function popUpMovieDetail(movieObj) {
     }
   });
 
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.addEventListener("backbutton", closePopups, false);
+  if(isSearchPoppedUp) {
+    attachSearchDetailCloseFunctionality();
+  } else {
+    attachClosePopupsToBackButton();
+  }
 }
 
 function changeNavbarColor(obj) {
@@ -867,6 +858,101 @@ function attachSearchButton() {
   $$('.search-button').on('click', function () {
     var popupHTML = Template7.templates.searchTemplate({
     });
+    isSearchPoppedUp = true;
     myApp.popup(popupHTML);
+    attachCloseSearchFunctionality();
   });
+}
+
+function attachExitToBackButton() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.addEventListener("backbutton", exitPrompt, false);
+}
+
+function attachIndexToBack() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.addEventListener("backbutton", goToIndex, false);
+}
+
+function attachTabsToBackButton() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.addEventListener("backbutton", goToTabs, false);
+}
+
+function attachClosePopupsToBackButton() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", closePopups, false);
+}
+
+function attachCloseDetailPopupToBackButton() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", closeDetailPopup, false);
+}
+
+function attachCloseSearchFunctionality() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", closeSearch, false);
+}
+
+function attachSearchDetailCloseFunctionality() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.addEventListener("backbutton", closeDetailPopupOnSearch, false);
+}
+
+function closePopups() {
+  myApp.closeModal();
+  document.removeEventListener("backbutton", closePopups, false);
+  document.addEventListener("backbutton", goToTabs, false);
+}
+
+function closeSearch() {
+  isSearchPoppedUp = false;
+  myApp.closeModal('.popup-search');
+  document.removeEventListener("backbutton", closeSearch, false);
+  document.addEventListener("backbutton", exitPrompt, false);
+}
+
+function closeSignUpPopup() {
+  myApp.closeModal('.popup-sign-up');
+  document.removeEventListener("backbutton", closeSignUpPopup, false);
+  document.addEventListener("backbutton", goToIndex, false);
+}
+
+function closeDetailPopup() {
+  myApp.closeModal('.popup-movie-detail');
+  document.removeEventListener("backbutton", closeDetailPopup, false);
+  document.addEventListener("backbutton", closePopups, false);
+}
+
+function closeDetailPopupOnSearch() {
+  isSearchPoppedUp = false;
+  myApp.closeModal('.popup-movie-detail');
+  document.removeEventListener("backbutton", closeDetailPopupOnSearch, false);
+  document.addEventListener("backbutton", closeSearch, false);
+}
+
+function closeDetailPopupWhenCheckedForSearch() {
+  if(isSearchPoppedUp) {
+    closeDetailPopupOnSearch();
+  } else {
+    closePopups();
+  }
 }

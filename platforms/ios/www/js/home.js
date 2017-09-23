@@ -1,8 +1,5 @@
 myApp.onPageBeforeInit('home', function () {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", exitPrompt, false);
+  attachExitToBackButton();
 });
 
 myApp.onPageInit('home', function () {

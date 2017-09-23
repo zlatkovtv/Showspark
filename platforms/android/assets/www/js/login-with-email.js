@@ -1,8 +1,5 @@
 myApp.onPageBeforeInit('login-with-email', function () {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.addEventListener("backbutton", goToIndex, false);
+  attachIndexToBack();
 });
 
 //Login screen methods inside this

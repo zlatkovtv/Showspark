@@ -89,9 +89,7 @@
 	<!-- Left panel with reveal effect-->
 	<div class="panel panel-left panel-cover">
 		<div class="left-panel-pic">
-			<div class="profile-image-container">
-				<div id="profileImage"></div>
-			</div>
+			<div id="profileImage"></div>
 			<div class="profile-stats-container">
 				<div id="profileFullName" class="profile-stat"></div>
 				<div id="profileEmail" class="profile-stat"></div>
@@ -182,11 +180,11 @@
 	</script>
 
 	<script type="text/template7" id="movieDetailTemplate">
-		<div id="movieDetailContainer" class="popup navbar-fixed custom-grey-background">
+		<div id="movieDetailContainer" class="popup popup-movie-detail navbar-fixed custom-grey-background">
 			<div id="movieDetailNavbar" class="navbar navbar-shadow theme-deeppurple">
 				<div class="navbar-inner">
 					<div class="left">
-						<a href="#" class="link icon-only close-popup">
+						<a href="#" onClick="closeDetailPopupWhenCheckedForSearch()" class="link icon-only">
 							<i class="material-icons text-shadow-1">arrow_back
 							</i>
 						</a>
@@ -278,7 +276,7 @@
 		<div class="popup popup-search custom-layout-dark">
 			<div id="searchNavbar" class="navbar custom-grey-background-dark navbar-shadow">
 				<div class="navbar-inner">
-						<a href="#" class="link icon-only close-popup color-grey">
+						<a href="#" onClick="closeSearch()" class="link icon-only color-grey">
 							<i class="material-icons">arrow_back</i>
 						</a>
 						<div class="item-input" style="width: calc(100% - 88px);">

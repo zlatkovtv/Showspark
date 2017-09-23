@@ -43,9 +43,9 @@ FIXED 9.fix pop movie detail methods to be decoupled so i can reuse
 Fixed 12. wizard form - and or/ movie tv
 
 add genres to in theatres and upcoming
-fix backbutton for search and popups in general
+*fix backbutton for search and popups in general
 FIXED fix three dots button in navbar
 display images when theyre fully loaded
-fix sidepanel account stats
+FIXED fix sidepanel account stats
 download materialicons and load from file
 move from cdns to local

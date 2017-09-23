@@ -1,8 +1,5 @@
 myApp.onPageBeforeInit('wizard-result', function () {
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.addEventListener("backbutton", goToTabs, false);
+  attachTabsToBackButton();
 });
 
 myApp.onPageInit('wizard-result', function (page) {
