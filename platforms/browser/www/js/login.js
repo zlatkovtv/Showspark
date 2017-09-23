@@ -1,5 +1,5 @@
 myApp.onPageBeforeInit('login', function () {
-  attachExitToBackButton();
+  replaceEventListener(exitPrompt);
 });
 
 myApp.onPageInit('login', function () {

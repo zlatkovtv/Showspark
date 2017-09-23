@@ -1,5 +1,5 @@
 myApp.onPageBeforeInit('login-with-email', function () {
-  attachIndexToBack();
+  replaceEventListener(goToIndex);
 });
 
 //Login screen methods inside this

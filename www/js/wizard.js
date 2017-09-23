@@ -1,5 +1,5 @@
 myApp.onPageBeforeInit('wizard', function () {
-  attachTabsToBackButton();
+  replaceEventListener(goToTabs);
 });
 
 //wizard page

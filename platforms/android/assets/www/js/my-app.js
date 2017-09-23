@@ -523,9 +523,9 @@ function popUpMovieDetail(movieObj) {
   });
 
   if(isSearchPoppedUp) {
-    attachSearchDetailCloseFunctionality();
+    replaceEventListener(closeDetailPopupOnSearch);
   } else {
-    attachClosePopupsToBackButton();
+    replaceEventListener(closePopups);
   }
 }
 
@@ -860,97 +860,39 @@ function attachSearchButton() {
     });
     isSearchPoppedUp = true;
     myApp.popup(popupHTML);
-    attachCloseSearchFunctionality();
+    replaceEventListener(closeSearch);
   });
 }
 
-function attachExitToBackButton() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", exitPrompt, false);
-}
-
-function attachIndexToBack() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.addEventListener("backbutton", goToIndex, false);
-}
-
-function attachTabsToBackButton() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.addEventListener("backbutton", goToTabs, false);
-}
-
-function attachClosePopupsToBackButton() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.addEventListener("backbutton", closePopups, false);
-}
-
-function attachCloseDetailPopupToBackButton() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.addEventListener("backbutton", closeDetailPopup, false);
-}
-
-function attachCloseSearchFunctionality() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.addEventListener("backbutton", closeSearch, false);
-}
-
-function attachSearchDetailCloseFunctionality() {
-  myApp.addNotification({
-    message: 'in',
-    hold: 2500
-  });
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.addEventListener("backbutton", closeDetailPopupOnSearch, false);
+function replaceEventListener(methodRef) {
+  removeAllEventListeners();
+  document.addEventListener("backbutton", methodRef, false);
 }
 
 function closePopups() {
   myApp.closeModal();
-  document.removeEventListener("backbutton", closePopups, false);
-  document.addEventListener("backbutton", goToTabs, false);
+  replaceEventListener(goToTabs);
 }
 
 function closeSearch() {
   isSearchPoppedUp = false;
   myApp.closeModal('.popup-search');
-  document.removeEventListener("backbutton", closeSearch, false);
-  document.addEventListener("backbutton", exitPrompt, false);
+  replaceEventListener(exitPrompt);
 }
 
 function closeSignUpPopup() {
   myApp.closeModal('.popup-sign-up');
-  document.removeEventListener("backbutton", closeSignUpPopup, false);
-  document.addEventListener("backbutton", goToIndex, false);
+  replaceEventListener(goToIndex);
 }
 
 function closeDetailPopup() {
   myApp.closeModal('.popup-movie-detail');
-  document.removeEventListener("backbutton", closeDetailPopup, false);
-  document.addEventListener("backbutton", closePopups, false);
+  replaceEventListener(closePopups);
 }
 
 function closeDetailPopupOnSearch() {
-  isSearchPoppedUp = false;
-  //myApp.closeModal('.popup-movie-detail');
-  document.removeEventListener("backbutton", closeDetailPopupOnSearch, false);
-  document.addEventListener("backbutton", closeSearch, false);
+  myApp.closeModal('.popup-movie-detail');
+  replaceEventListener(closeSearch);
 }
 
 function closeDetailPopupWhenCheckedForSearch() {
@@ -959,4 +901,23 @@ function closeDetailPopupWhenCheckedForSearch() {
   } else {
     closePopups();
   }
+}
+
+function removeAllEventListeners() {
+  document.removeEventListener("backbutton", goToWizard, false);
+  document.removeEventListener("backbutton", exitPrompt, false);
+  document.removeEventListener("backbutton", goToIndex, false);
+  document.removeEventListener("backbutton", closeSearch, false);
+  document.removeEventListener("backbutton", goToTabs, false);
+  document.removeEventListener("backbutton", closeDetailPopupOnSearch, false);
+  document.removeEventListener("backbutton", closeDetailPopup, false);
+  document.removeEventListener("backbutton", closePopups, false);
+  document.removeEventListener("backbutton", closeSignUpPopup, false);
+}
+
+function popToBeImplementedNotification() {
+  myApp.addNotification({
+    message: 'Feature not yet implemented...',
+    hold: 2500
+  });
 }
