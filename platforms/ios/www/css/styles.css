@@ -116,6 +116,8 @@ html {
 a.floating-button.color-white.custom-floating-button-tutorial {
   background-color: #34495e;
   color: white;
+  position: absolute;
+  top: 200px;
 }
 
 a.color-white.custom-floating-button-tutorial {
@@ -392,7 +394,7 @@ div#tab-reviews {
   padding-top: 127px;
 }
 
-.swiper-slide {
+.swiper-slide.similar-movie-div {
   /*background: #fff;*/
   box-sizing: border-box;
   border: none;

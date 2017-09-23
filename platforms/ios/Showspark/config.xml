@@ -63,6 +63,9 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
+    <feature name="CDVOrientation">
+        <param name="ios-package" value="CDVOrientation" />
+    </feature>
     <name>Showspark</name>
     <description>
         A newsfeed app.

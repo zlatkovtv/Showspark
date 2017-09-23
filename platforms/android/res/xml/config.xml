@@ -61,6 +61,9 @@
         <param name="android-package" value="fr._46cl.focus.Focus" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CDVOrientation">
+        <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
+    </feature>
     <name>Showspark</name>
     <description>
         A newsfeed app.

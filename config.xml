@@ -74,6 +74,7 @@
         <variable name="REVERSED_CLIENT_ID" value="145837743537-fnt8lbmm155gq7fp8o76ci087iqm3fu1" />
     </plugin>
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
+    <plugin name="cordova-plugin-screen-orientation" spec="^2.0.1" />
     <plugin name="cordova-plugin-social-message" spec="git+https://github.com/leecrossley/cordova-plugin-social-message.git" />
     <plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />

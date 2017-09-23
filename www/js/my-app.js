@@ -11,6 +11,8 @@ var loggedUser;
 
 var backButtonIsPressed = false;
 var isSearchPoppedUp = false;
+var wizardMovieRepository = [];
+
 initiateApp();
 initiateWelcomeScreen();
 
@@ -198,6 +200,7 @@ var combineGenres;
 
 $$(document).on('deviceready', function() {
   statusbarTransparent.enable();
+  screen.orientation.lock('portrait');
   document.addEventListener("backbutton", exitPrompt, false);
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -268,7 +271,6 @@ function initiateApp() {
 
   $$ = Dom7;
   mainView = myApp.addView('.view-main');
-  screen.orientation.lock('portrait');
 }
 
 function initiateWelcomeScreen() {
@@ -276,20 +278,20 @@ function initiateWelcomeScreen() {
     {
       id: 'slide0',
       picture: '<div class="tutorialicon"></div>',
-      text: 'Welcome to What To Watch!</br> We think you are going to love it. </br> <i class="material-icons md-36">chevron_right</i>'
+      text: 'Welcome to Showspark!</br> We think you are going to love it. </br> Swipe left to continue. </br> <i class="material-icons md-36">arrow_forward</i>'
     },
     {
       id: 'slide1',
       picture: '<div class="tutorialicon"></div>',
-      text: 'This is a movie newsfeed app with a wizard that lets you find and sort movies and tv series easily! </br> <i class="material-icons md-36">chevron_right</i>'
+      text: 'This is an app that lets you discover and browse </br> through your favourite movies or TV series! </br> <i class="material-icons md-36">arrow_forward</i>'
     },
     {
       id: 'slide2',
-      picture: '<a href="#" class="floating-button color-white custom-floating-button-tutorial">' +
+      picture: '<a href="#" class="floating-button color-white custom-floating-button-tutorial pulse-btn">' +
       '<i class="material-icons color-deeppurple-custom">movie' +
       '</i>' +
       '</a>',
-      text: 'Just press this button when you are in the newsfeed to fire up the wizard! </br> <i class="material-icons md-36">chevron_right</i>'
+      text: 'Just press this button when you are in the newsfeed to discover new stuff! </br> <i class="material-icons md-36">arrow_forward</i>'
     },
     {
       id: 'slide3',
@@ -310,8 +312,8 @@ function initiateWelcomeScreen() {
 
   welcomescreen = myApp.welcomescreen(welcomescreen_slides, options);
 
-  if(window.localStorage.getItem('has_run') === '') {
-    window.localStorage.setItem('has_run', 'true');
+  if(!window.localStorage.getItem('has_run')) {
+    window.localStorage.setItem('has_run', true);
     welcomescreen.open();
   }
 }
@@ -390,6 +392,10 @@ function normalizeApiObj(obj) {
 
     if(arr[i].name) {
       arr[i].title = arr[i].name;
+    }
+
+    if(arr[i].vote_average !== 10 && arr[i].vote_average.toString().length >= 4) {
+      arr[i].vote_average = Math.round( arr[i].vote_average * 10 ) / 10;
     }
 
     if(arr[i].vote_average === 0) {
@@ -791,7 +797,10 @@ function compareGenres(a,b) {
   return 0;
 }
 
-function buildSortedItemList(xhr, listElementToAppendTo) {
+function buildSortedItemList(xhr, listElementToAppendTo, link) {
+  wizardMovieRepository = [];
+  $$(listElementToAppendTo).html('');
+
   apiObject = JSON.parse(xhr.response).results;
   apiObject = normalizeApiObj(apiObject);
   if(apiObject && apiObject.length === 0) {
@@ -801,31 +810,90 @@ function buildSortedItemList(xhr, listElementToAppendTo) {
     });
   }
 
-  var myList = myApp.virtualList(listElementToAppendTo, {
-    items: apiObject,
-    renderItem: function (index, item) {
-      return '<li>' +
-      '<a href="#" class="item-link item-content detail-link" id="'+ item.id + '">' +
-      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + item.poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
-      '<div class="item-inner">' +
-      '<div class="item-title-row">' +
-      '<div class="item-title">' + (index + 1) + '. ' + item.title + '</div>' +
-      '<div class="item-after">' + item.vote_average + '</div>' +
-      '</div>' +
-      '<div class="item-subtitle">' + item.release_year + '</div>' +
-      '<div class="item-text item-text-5-rows">' + item.overview + '</div>' +
-      '</div>' +
-      '</a>' +
-      '</li>';
-    },
-    height: 163
-  });
+  var listHtml = '<ul>';
+  for (var i = 0; i < apiObject.length; i++) {
+    listHtml += '<li>' +
+    '<a href="#" class="item-link item-content" id="'+ apiObject[i].id + '" onClick="handleDetailClick(this.id)">' +
+    '<div class="item-media" style="padding: 0px;"><img class="card" src="' + apiObject[i].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+    '<div class="item-inner">' +
+    '<div class="item-title-row">' +
+    '<div class="item-title">' + (i + 1) + '. ' + apiObject[i].title + '</div>' +
+    '<div class="item-after">' + apiObject[i].vote_average + '</div>' +
+    '</div>' +
+    '<div class="item-subtitle">' + apiObject[i].release_year + '</div>' +
+    '<div class="item-text item-text-5-rows">' + apiObject[i].overview + '</div>' +
+    '</div>' +
+    '</a>' +
+    '</li>'
+  }
 
-  $$('.detail-link').on('click', function () {
-    var clickedObjId = $$(this).prop('id');
-    tvOrMovie = apiObject.find(x => x.id == clickedObjId).type;
+  listHtml += '</ul>';
 
+  $$(listElementToAppendTo).append(listHtml);
+  wizardMovieRepository = wizardMovieRepository.concat(apiObject);
+
+  attachLazyLoaderToList(listElementToAppendTo, link);
+}
+
+function handleDetailClick(clickedObjId) {
+    tvOrMovie = wizardMovieRepository.find(x => x.id == clickedObjId).type;
     getMovieDetailInfo(clickedObjId);
+}
+
+function attachLazyLoaderToList(listElementToAppendTo, link) {
+  var loading = false;
+  var lastIndex = $$(listElementToAppendTo + ' li').length;
+  var maxItems = 100;
+  var itemsPerLoad = 20;
+  var pageToGet = 2;
+  myApp.attachInfiniteScroll("#searchPopupPageContent");
+  $$('.infinite-scroll').on('infinite', function () {
+    if (loading) return;
+    loading = true;
+
+    $$.ajax({
+      complete: function () {
+      },
+      url: link + '&page=' + pageToGet,
+      statusCode: {
+        404: function (xhr) {
+          console.log('page not found');
+        },
+        200: function (xhr) {
+          apiObject = JSON.parse(xhr.response).results;
+          apiObject = normalizeApiObj(apiObject);
+          loading = false;
+          if (lastIndex >= maxItems) {
+            myApp.detachInfiniteScroll($$('.infinite-scroll'));
+            $$('.infinite-scroll-preloader').remove();
+            return;
+          }
+
+          var html = '';
+          for (var i = 0; i < apiObject.length; i++) {
+            html += '<li>' +
+            '<a href="#" class="item-link item-content" id="'+ apiObject[i].id + '" onClick="handleDetailClick(this.id)">' +
+            '<div class="item-media" style="padding: 0px;"><img class="card" src="' + apiObject[i].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">' + (i + 1 + lastIndex) + '. ' + apiObject[i].title + '</div>' +
+            '<div class="item-after">' + apiObject[i].vote_average + '</div>' +
+            '</div>' +
+            '<div class="item-subtitle">' + apiObject[i].release_year + '</div>' +
+            '<div class="item-text item-text-5-rows">' + apiObject[i].overview + '</div>' +
+            '</div>' +
+            '</a>' +
+            '</li>'
+          }
+
+          $$('.list-block ul').append(html);
+
+          lastIndex = $$(listElementToAppendTo + ' li').length;
+          pageToGet++;
+          wizardMovieRepository = wizardMovieRepository.concat(apiObject);
+        }
+      }
+    })
   });
 }
 
@@ -836,18 +904,22 @@ function callApiOnSearchEvent(searchValue) {
     return;
   }
 
+  var link = 'https://api.themoviedb.org/3/search/multi' + '?query=' + searchValue + '&include_adult=false&api_key=' + tmdbApiKey;
+
   clearTimeout(typingTimer);
   typingTimer = setTimeout(function() {
+    $$("#searchPopupPageContent").scrollTop(0);
+
     $$.ajax({
       complete: function () {
       },
-      url: 'https://api.themoviedb.org/3/search/multi' + '?query=' + searchValue + '&include_adult=false&api_key=' + tmdbApiKey,
+      url: link,
       statusCode: {
         404: function (xhr) {
           console.log('page not found');
         },
         200: function (xhr) {
-          buildSortedItemList(xhr, '.list-block.search-result-list.virtual-list.media-list');
+          buildSortedItemList(xhr, '.list-block.search-result-list.virtual-list.media-list', link);
         }
       }
     })

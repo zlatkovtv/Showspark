@@ -65,6 +65,9 @@
         },
         "fr._46cl.focus": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {

@@ -39,7 +39,8 @@
             "cordova-plugin-x-socialsharing": {},
             "cordova-plugin-social-message": {},
             "fr._46cl.focus": {},
-            "ionic-plugin-keyboard": {}
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-screen-orientation": {}
         }
     },
     "dependencies": {
@@ -56,6 +57,7 @@
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-googleplus": "git+https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
         "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-screen-orientation": "^2.0.1",
         "cordova-plugin-social-message": "git+https://github.com/leecrossley/cordova-plugin-social-message.git",
         "cordova-plugin-spinner": "^1.1.0",
         "cordova-plugin-splashscreen": "^4.0.3",

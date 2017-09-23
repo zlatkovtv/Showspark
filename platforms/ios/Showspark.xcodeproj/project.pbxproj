@@ -66,6 +66,7 @@
 		111C9D08D3584D548653E652 /* SocialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9308E2B8D054BB4A0FD26EE /* SocialMessage.m */; };
 		B9500E7AD78A4D0FADE7B39A /* Showspark.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1DD01AEB2F1E4F459A0E16DB /* Showspark.entitlements */; };
 		E1E55AB03A294964B83604EB /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A35F152A54B72A949EB13 /* IonicKeyboard.m */; };
+		DC3B355770E74C78A3E426C7 /* CDVOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = B85DD45BCBBA429A99172636 /* CDVOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,8 @@
 		1DD01AEB2F1E4F459A0E16DB /* Showspark.entitlements */ = {isa = PBXFileReference; name = "Showspark.entitlements"; path = "Showspark.entitlements"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		507A35F152A54B72A949EB13 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		EEBFCAA073EC444880D9606C /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B85DD45BCBBA429A99172636 /* CDVOrientation.m */ = {isa = PBXFileReference; name = "CDVOrientation.m"; path = "cordova-plugin-screen-orientation/CDVOrientation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1FA87F41F6CF49B98D9BE38F /* CDVOrientation.h */ = {isa = PBXFileReference; name = "CDVOrientation.h"; path = "cordova-plugin-screen-orientation/CDVOrientation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +400,8 @@
 				03B59114E86A4039865B601E /* SocialMessage.h */,
 				507A35F152A54B72A949EB13 /* IonicKeyboard.m */,
 				EEBFCAA073EC444880D9606C /* IonicKeyboard.h */,
+				B85DD45BCBBA429A99172636 /* CDVOrientation.m */,
+				1FA87F41F6CF49B98D9BE38F /* CDVOrientation.h */,
 			);
 			name = Plugins;
 			path = "Showspark/Plugins";
@@ -541,6 +546,7 @@
 				7B3C1079CE4F4A28BCA79646 /* SocialSharing.m in Sources */,
 				111C9D08D3584D548653E652 /* SocialMessage.m in Sources */,
 				E1E55AB03A294964B83604EB /* IonicKeyboard.m in Sources */,
+				DC3B355770E74C78A3E426C7 /* CDVOrientation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

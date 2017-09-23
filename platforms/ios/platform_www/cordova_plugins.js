@@ -151,6 +151,14 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.Focus"
         ]
+    },
+    {
+        "id": "cordova-plugin-screen-orientation.screenorientation",
+        "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+        "pluginId": "cordova-plugin-screen-orientation",
+        "clobbers": [
+            "cordova.plugins.screenorientation"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -176,7 +184,8 @@ module.exports.metadata =
     "cordova-plugin-x-socialsharing": "5.1.8",
     "cordova-plugin-social-message": "0.4.0",
     "ionic-plugin-keyboard": "2.2.1",
-    "fr._46cl.focus": "0.1.3"
+    "fr._46cl.focus": "0.1.3",
+    "cordova-plugin-screen-orientation": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

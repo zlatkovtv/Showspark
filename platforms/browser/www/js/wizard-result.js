@@ -1,3 +1,6 @@
+var genreString = "&with_genres=";
+var minVotes = 1000;
+
 myApp.onPageBeforeInit('wizard-result', function () {
   replaceEventListener(goToTabs);
 });
@@ -27,9 +30,9 @@ myApp.onPageInit('wizard-result', function (page) {
 
   $$('.wizard-result-title').append(wizardHtml);
 
-  var genreString = "&with_genres=";
+
   var apiObject;
-  var minVotes = 1000;
+
   var genreSeparator;
   if(combineGenres) {
     genreSeparator = ',';
@@ -56,16 +59,18 @@ myApp.onPageInit('wizard-result', function (page) {
     minVotes = 100;
   }
 
+  var link = 'https://api.themoviedb.org/3/discover/' + tvOrMovie + '?vote_count.gte=' + minVotes + '&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc'
+
   $$.ajax({
     complete: function () {
     },
-    url: 'https://api.themoviedb.org/3/discover/' + tvOrMovie + '?vote_count.gte=' + minVotes + '&include_adult=false&api_key=' + tmdbApiKey + genreString + '&sort_by=' + selectedOrderByCategory + '.desc',
+    url: link,
     statusCode: {
       404: function (xhr) {
         console.log('page not found');
       },
       200: function (xhr) {
-        buildSortedItemList(xhr, '.list-block.wizard-result-list.virtual-list.media-list');
+        buildSortedItemList(xhr, '.list-block.wizard-result-list.virtual-list.media-list', link);
       }
     }
   })

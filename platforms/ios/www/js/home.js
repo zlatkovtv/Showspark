@@ -19,6 +19,7 @@ myApp.onPageInit('home', function () {
 
   $$('#main-fl-button').on('click', function () {
     window.localStorage.setItem("isFloatingBPressed", false);
+    document.getElementById("main-fl-button").classList.remove("pulse-btn");
   });
 
   $$('#moviesFab').on('click', function () {
