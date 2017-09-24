@@ -606,6 +606,12 @@ function closeSearch() {
   replaceEventListener(exitPrompt);
 }
 
+function closeSaved() {
+  myApp.closeModal('.popup-saved');
+  myApp.closePanel();
+  replaceEventListener(exitPrompt);
+}
+
 function closeSignUpPopup() {
   myApp.closeModal('.popup-sign-up');
   replaceEventListener(goToIndex);
@@ -645,5 +651,37 @@ function popToBeImplementedNotification() {
   myApp.addNotification({
     message: 'Feature not yet implemented...',
     hold: 2500
+  });
+}
+
+function popSavedList() {
+  var popupHTML = Template7.templates.savedTemplate({
+  });
+  myApp.popup(popupHTML);
+  replaceEventListener(closeSaved);
+
+  firebaseDb.ref('/users/' + loggedUser.uid).once('value', function(movieSnapshot) {
+    var result = movieSnapshot.val()
+    console.log(result);
+    var listHtml = '<ul>';
+    for (var id in result) {
+      listHtml += '<li>' +
+      '<a href="#" class="item-link item-content" id="'+ id + '" onClick="handleDetailClick(this.id)">' +
+      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + result[id].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<div class="item-inner">' +
+      '<div class="item-title-row">' +
+      '<div class="item-title">' + result[id].title + '</div>' +
+      '<div class="item-after">' + result[id].vote_average + '</div>' +
+      '</div>' +
+      '<div class="item-subtitle">' + result[id].release_year + '</div>' +
+      '<div class="item-text item-text-5-rows">' + result[id].overview + '</div>' +
+      '</div>' +
+      '</a>' +
+      '</li>'
+    }
+
+    listHtml += '</ul>';
+
+    $$('.list-block.saved-list.virtual-list.media-list').append(listHtml);
   });
 }

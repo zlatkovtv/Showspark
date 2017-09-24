@@ -394,7 +394,10 @@ function saveMovieToFbDb(movie) {
   var movieToAdd = {};
   movieToAdd[movie.id] = {
     title: movie.title,
-    poster_path: movie.poster_path
+    poster_path: movie.poster_path,
+    overview: movie.overview,
+    release_year: movie.release_year,
+    vote_average: movie.vote_average
   }
 
   firebaseDb.ref('users/' + loggedUser.uid).update(movieToAdd).then(function(){
