@@ -392,13 +392,7 @@ function compareGenres(a,b) {
 
 function saveMovieToFbDb(movie) {
   var movieToAdd = {};
-  movieToAdd[movie.id] = {
-    title: movie.title,
-    poster_path: movie.poster_path,
-    overview: movie.overview,
-    release_year: movie.release_year,
-    vote_average: movie.vote_average
-  }
+  movieToAdd[movie.id] = movie;
 
   firebaseDb.ref('users/' + loggedUser.uid).update(movieToAdd).then(function(){
     console.log("Successfully posted");

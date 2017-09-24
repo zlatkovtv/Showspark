@@ -984,3 +984,16 @@ div#movieDetailFirstDiv {
   left: 16px;
   top: 40px;
 }
+
+.list-block.saved-list.virtual-list.media-list {
+  margin: 0px;
+}
+
+.list-block.search-result-list {
+  margin: 0px 0px 32px 0px;
+}
+
+.welcomescreen-closebtn {
+  top: 29px;
+  font-size: 16px;
+}

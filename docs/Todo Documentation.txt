@@ -62,3 +62,14 @@ FIXED merge accounts when logging that are with the same email
 IGNORE maybe save movies not by user.uid but by user.email
 FIXED IGNORE change whattowatch to showspark
 add a push notification system
+
+FIXED      Margin on saved
+FIXED      Click on saved
+FIXED      Touch close panel
+FIXED      Skip button on tutorial
+
+Spinner think where you should block the ui
+Add timestamp to saved and orderby that
+
+For next week add backbutton for saved
+if search and save are empty, add cards

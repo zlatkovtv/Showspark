@@ -608,7 +608,6 @@ function closeSearch() {
 
 function closeSaved() {
   myApp.closeModal('.popup-saved');
-  myApp.closePanel();
   replaceEventListener(exitPrompt);
 }
 
@@ -655,6 +654,7 @@ function popToBeImplementedNotification() {
 }
 
 function popSavedList() {
+  myApp.closePanel('left');
   var popupHTML = Template7.templates.savedTemplate({
   });
   myApp.popup(popupHTML);
@@ -662,9 +662,10 @@ function popSavedList() {
 
   firebaseDb.ref('/users/' + loggedUser.uid).once('value', function(movieSnapshot) {
     var result = movieSnapshot.val()
-    console.log(result);
     var listHtml = '<ul>';
+    wizardMovieRepository = [];
     for (var id in result) {
+      wizardMovieRepository.push(result[id]);
       listHtml += '<li>' +
       '<a href="#" class="item-link item-content" id="'+ id + '" onClick="handleDetailClick(this.id)">' +
       '<div class="item-media" style="padding: 0px;"><img class="card" src="' + result[id].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
