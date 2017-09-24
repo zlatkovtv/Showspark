@@ -34,11 +34,24 @@ myApp.onPageInit('login-with-email', function () {
       return;
     }
 
-    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
-      // Handle Errors here.
+    if(formData.password.length < 6) {
+      myApp.alert('Please enter a enter a password at least 6 characters long', 'Short password');
+      return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(formData.email, formData.password).then(function(result) {
+      goToTabs();
+    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorMessage);
+
+      if(errorCode === "auth/user-not-found") {
+        myApp.alert('Please sign up before you sign in to Showspark.','User not found');
+      } else if(errorCode === "auth/wrong-password") {
+        myApp.alert('The password you have entered is incorrect. Please try again or reset it by tapping on \'Forgot Password?\'','Incorrect password');
+      } else {
+        myApp.alert(errorMessage,'Authentication error');
+      }
     });
   });
 
@@ -54,30 +67,39 @@ myApp.onPageInit('login-with-email', function () {
       return;
     }
 
+    if(formData.password.length < 6) {
+      myApp.alert('Please enter a enter a password at least 6 characters long', 'Short password');
+      return;
+    }
+
     if(formData.password != '' && (formData.password != formData.confirm_password)) {
       myApp.alert('Please make sure that your passwords match', 'Password missmatch');
       return;
     }
 
-    firebase.auth().createUserWithEmailAndPassword(formData.email, formData.password).catch(function(error) {
-      // Handle Errors here.
+    firebase.auth().createUserWithEmailAndPassword(formData.email, formData.password).then(function(result) {
+      //TODO send welcome email
+      myApp.closeModal();
+      goToTabs();
+    }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorMessage);
+
+      myApp.alert(errorMessage,'Authentication error');
     });
   });
 
   $$('.pop-forgotten-password').on('click', function () {
     var emailAddress;
-    myApp.prompt('Please enter your email', 'Resetting password', function (value) {
+    myApp.prompt('Please enter your email below', 'Reset password', function (value) {
       emailAddress = value;
       if(emailAddress.indexOf('@') === -1 || emailAddress.indexOf('.') === -1) {
         myApp.alert('Please enter a valid email', 'Email invalid');
       } else {
         firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
-          myApp.alert('An email has been sent to you with steps to reset your password');
+          myApp.alert('An email has been sent to you with steps to reset your password.', 'Thank you');
         }, function(error) {
-          myApp.alert('An error occured');
+          myApp.alert(errorMessage, 'An error occured');
         });
       }
     });

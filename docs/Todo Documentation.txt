@@ -56,9 +56,9 @@ fix tutorial button location
 FIXED fix localstorage checks
 transparent-statusbar not very stable, sometimes it doesnt work until you restart app, maybe search for replacement
 add saved list
-email templates for when user forgets password and whatnot
+FIXED email templates for when user forgets password and whatnot
 FIXED firebase - empty email (fix: disabled multiple accounts)
-merge accounts when logging that are with the same email
+FIXED merge accounts when logging that are with the same email
 IGNORE maybe save movies not by user.uid but by user.email
-IGNORE change whattowatch to showspark
+FIXED IGNORE change whattowatch to showspark
 add a push notification system

@@ -13,6 +13,7 @@ var backButtonIsPressed = false;
 var isSearchPoppedUp = false;
 var wizardMovieRepository = [];
 var firebaseDb;
+var firebaseAuth;
 
 initiateApp();
 initiateWelcomeScreen();
@@ -204,10 +205,32 @@ $$(document).on('deviceready', function() {
   screen.orientation.lock('portrait');
   document.addEventListener("backbutton", exitPrompt, false);
   firebaseDb = firebase.database();
+  var provider = new firebase.auth.GoogleAuthProvider();
+  var fbProvider = new firebase.auth.FacebookAuthProvider();
+  fbProvider.addScope('email');
+
+  //check for pending redirect if past login has dropped
+  firebase.auth().getRedirectResult().then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+    goToTabs();
+  }).catch(function(error) {
+    if(!error.email) {
+      return;
+    }
+
+    firebase.auth().fetchProvidersForEmail(error.email)
+    .then(function(providers) {
+      var isEmailRegisteredInGoogle = providers.indexOf("google.com") > -1;
+      if(isEmailRegisteredInGoogle) {
+        provider.setCustomParameters({login_hint: error.email});
+        signInWithProvider(provider);
+      }
+    });
+  });
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log(user);
       loggedUser = user;
       welcomescreen.close();
       attachProfileStatsToPanel(user);
@@ -218,38 +241,29 @@ $$(document).on('deviceready', function() {
     }
   });
 
-  var provider = new firebase.auth.GoogleAuthProvider();
-  var fbProvider = new firebase.auth.FacebookAuthProvider();
-  fbProvider.addScope('email');
-
   $$('.google-auth-button').on('click', function () {
-    firebase.auth().signInWithRedirect(provider).then(function() {
-      firebase.auth().getRedirectResult().then(function(result) {
-        var token = result.credential.accessToken;
-        var user = result.user;
-        goToTabs();
-      }).catch(function(error) {
-        console.log(error.code);
-        console.log(error.message);
-      });
-    });
+    signInWithProvider(provider);
   });
 
   $$('.facebook-auth-button').on('click', function () {
-    firebase.auth().signInWithRedirect(fbProvider).then(function() {
-      firebase.auth().getRedirectResult().then(function(result) {
-        var token = result.credential.accessToken;
-        var user = result.user;
-        goToTabs();
-      }).catch(function(error) {
-        console.log(error.code);
-        console.log(error.message);
-      });
-    });
+    signInWithProvider(fbProvider);
   });
 
   console.log("Device is ready!");
 });
+
+function signInWithProvider(provider) {
+  firebase.auth().signInWithRedirect(provider).then(function() {
+    firebase.auth().getRedirectResult().then(function(result) {
+      var token = result.credential.accessToken;
+      var user = result.user;
+      goToTabs();
+    }).catch(function(error) {
+      console.log(error.code);
+      console.log(error.message);
+    });
+  });
+}
 
 function attachProfileStatsToPanel(user) {
   $$("#profileFullName").text(user.displayName);
@@ -364,6 +378,11 @@ function goToWizardResult(){
 }
 
 function exitPrompt(){
+  if ($$('body').hasClass('with-panel-left-cover')) {
+    myApp.closePanel();
+    return;
+  }
+
   if(backButtonIsPressed) {
     backButtonIsPressed = false;
     navigator.app.clearHistory();
