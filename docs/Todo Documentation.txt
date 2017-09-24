@@ -54,3 +54,4 @@ move from cdns to local
 FIXED lock orientation
 fix tutorial button location
 FIXED fix localstorage checks
+transparent-statusbar not very stable, sometimes it doesnt work until you restart app, maybe search for replacement

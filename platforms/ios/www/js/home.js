@@ -34,12 +34,6 @@ myApp.onPageInit('home', function () {
 
   $$('.open-left-panel').on('click', function (e) {
     myApp.openPanel('left');
-    $$("#profileFullName").text(loggedUser.displayName);
-    $$("#profileEmail").text(loggedUser.email);
-    $$("#profileImage").css({
-      "background-image": "url("+ loggedUser.photoURL +")",
-      "display": "block"
-    });
   });
 
   $$('.panel-signout').on('click', function () {

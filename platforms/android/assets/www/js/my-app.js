@@ -208,6 +208,7 @@ $$(document).on('deviceready', function() {
       console.log(user);
       loggedUser = user;
       welcomescreen.close();
+      attachProfileStatsToPanel(user);
       goToTabs();
     } else {
       goToIndex();
@@ -246,6 +247,15 @@ $$(document).on('deviceready', function() {
 
   console.log("Device is ready!");
 });
+
+function attachProfileStatsToPanel(user) {
+  $$("#profileFullName").text(user.displayName);
+  $$("#profileEmail").text(user.email);
+  $$("#profileImage").css({
+    "background-image": "url("+ user.photoURL +")",
+    "display": "block"
+  });
+}
 
 function initiateApp() {
   myApp = new Framework7({
@@ -802,6 +812,7 @@ function buildSortedItemList(xhr, listElementToAppendTo, link) {
   $$(listElementToAppendTo).html('');
 
   apiObject = JSON.parse(xhr.response).results;
+  console.log(link);
   apiObject = normalizeApiObj(apiObject);
   if(apiObject && apiObject.length === 0) {
     myApp.addNotification({

@@ -1,4 +1,3 @@
-var genreString = "&with_genres=";
 var minVotes = 1000;
 
 myApp.onPageBeforeInit('wizard-result', function () {
@@ -40,9 +39,11 @@ myApp.onPageInit('wizard-result', function (page) {
     genreSeparator = '|'
   }
 
-  if(selectedGenres.genre_ids.length === 0) {
-    genreString = "";
-  } else {
+    var genreString = "&with_genres=";
+    if (selectedGenres.genre_ids.length === 0) {
+      genreString = "";
+    }
+    
     for (var i = 0; i < selectedGenres.genre_ids.length; i++) {
       if(selectedGenres.genre_ids[i] == 99) {
         minVotes = 100;
@@ -53,7 +54,6 @@ myApp.onPageInit('wizard-result', function (page) {
         genreString += genreSeparator;
       }
     }
-  }
 
   if(tvOrMovie === 'tv') {
     minVotes = 100;
