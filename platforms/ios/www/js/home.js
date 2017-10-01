@@ -1,3 +1,6 @@
+var newsFeed = null;
+var reviewsFeed = null;
+
 myApp.onPageBeforeInit('home', function () {
   replaceEventListener(exitPrompt);
 });
@@ -83,8 +86,8 @@ myApp.onPageInit('home', function () {
 });
 
 function initiateNewsFeed() {
-  var myFeed = myApp.feeds('.news-feed', {
-    url: 'https://feeds.feedburner.com/cinemablendallthing?format=xml',
+  newsFeed = myApp.feeds('.news-feed', {
+    url: newsFeedRssProviderLink,
     openIn: 'none',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {
@@ -158,8 +161,8 @@ function shareNews(link) {
 }
 
 function initiateReviewsFeed() {
-  var myFeed3 = myApp.feeds('.reviews-feed', {
-    url: 'http://www.cinemablend.com/rss_review.php',
+  reviewsFeed = myApp.feeds('.reviews-feed', {
+    url: reviewsRssProviderLink,
     openIn: 'popup',
     customItemFields: ["enclosure||url"],
     onAjaxStart: function () {

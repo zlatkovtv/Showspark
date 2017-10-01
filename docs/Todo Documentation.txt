@@ -73,3 +73,4 @@ Add timestamp to saved and orderby that
 
 For next week add backbutton for saved
 if search and save are empty, add cards
+BUG steps to reproduce wizard-search-movie-detail-backb-backb (pops exit prompt on wizard)

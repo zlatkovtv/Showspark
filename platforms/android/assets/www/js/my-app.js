@@ -1,4 +1,6 @@
 var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
+var newsFeedRssProviderLink = "https://feeds.feedburner.com/cinemablendallthing?format=xml";
+var reviewsRssProviderLink = "http://www.cinemablend.com/rss_review.php";
 
 var myApp;
 var $$;
@@ -651,6 +653,41 @@ function popToBeImplementedNotification() {
     message: 'Feature not yet implemented...',
     hold: 2500
   });
+}
+
+function popChangeNewsProviderActionSheet() {
+  myApp.closePanel('left');
+  var actionOptions = [
+        {
+            text: 'Select newsfeed and reviews provider',
+            label: true
+        },
+        {
+            text: 'Cinemablend',
+            bold: true,
+            onClick: function () {
+                newsFeedRssProviderLink = "https://feeds.feedburner.com/cinemablendallthing?format=xml";
+                reviewsRssProviderLink = "http://www.cinemablend.com/rss_review.php";
+                initiateNewsFeed();
+                initiateReviewsFeed();
+            }
+        },
+        {
+            text: 'MovieWeb',
+            bold: true,
+            onClick: function () {
+                newsFeedRssProviderLink = "http://movieweb.com/rss/all-news/";
+                reviewsRssProviderLink = "http://movieweb.com/rss/movie-reviews/";
+                initiateNewsFeed();
+                initiateReviewsFeed();
+            }
+        },
+        {
+          text: 'Cancel',
+          color: 'red'
+        }
+    ];
+    myApp.actions(actionOptions);
 }
 
 function popSavedList() {

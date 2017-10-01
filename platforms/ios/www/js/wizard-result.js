@@ -1,4 +1,4 @@
-var minVotes = 1000;
+var minVotes = 100;
 
 myApp.onPageBeforeInit('wizard-result', function () {
   replaceEventListener(goToTabs);
@@ -42,8 +42,9 @@ myApp.onPageInit('wizard-result', function (page) {
     var genreString = "&with_genres=";
     if (selectedGenres.genre_ids.length === 0) {
       genreString = "";
+      minVotes = 1000;
     }
-    
+
     for (var i = 0; i < selectedGenres.genre_ids.length; i++) {
       if(selectedGenres.genre_ids[i] == 99) {
         minVotes = 100;
