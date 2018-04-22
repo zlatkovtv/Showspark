@@ -1,7 +1,6 @@
 var minVotes = 100;
 
 myApp.onPageBeforeInit('wizard-result', function () {
-  replaceEventListener(goToTabs);
 });
 
 myApp.onPageInit('wizard-result', function (page) {

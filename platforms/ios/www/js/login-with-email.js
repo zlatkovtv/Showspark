@@ -1,5 +1,4 @@
 myApp.onPageBeforeInit('login-with-email', function () {
-  replaceEventListener(goToIndex);
 });
 
 //Login screen methods inside this
@@ -7,16 +6,8 @@ myApp.onPageInit('login-with-email', function () {
   myApp.params.swipePanel = false;
   myApp.loginScreen();
 
-  //go back button in sign in with email view
-  $$('.close-login-screen').on('click', function () {
-    goToIndex();
-    myApp.closeModal('.login-screen');
-  });
-
   $$('.open-sign-up-popup').on('click', function () {
     myApp.popup('.popup-sign-up');
-    document.removeEventListener("backbutton", goToIndex, false);
-    document.addEventListener("backbutton", closeSignUpPopup, false);
   });
 
   //sign in with email button click method

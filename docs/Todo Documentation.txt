@@ -55,7 +55,7 @@ FIXED lock orientation
 fix tutorial button location
 FIXED fix localstorage checks
 transparent-statusbar not very stable, sometimes it doesnt work until you restart app, maybe search for replacement
-add saved list
+FIXED add saved list
 FIXED email templates for when user forgets password and whatnot
 FIXED firebase - empty email (fix: disabled multiple accounts)
 FIXED merge accounts when logging that are with the same email
@@ -69,8 +69,8 @@ FIXED      Touch close panel
 FIXED      Skip button on tutorial
 
 Spinner think where you should block the ui
-Add timestamp to saved and orderby that
+FIXED Add timestamp to saved and orderby that
 
-For next week add backbutton for saved
+FIXED For next week add backbutton for saved
 if search and save are empty, add cards
-BUG steps to reproduce wizard-search-movie-detail-backb-backb (pops exit prompt on wizard)
+FIXED BUG steps to reproduce wizard-search-movie-detail-backb-backb (pops exit prompt on wizard)

@@ -42,7 +42,7 @@
 		<div class="navbar theme-deeppurple">
 			<div class="navbar-inner">
 				<div class="left">
-					<a href="#" class="link icon-only close-popup">
+					<a href="#" class="link icon-only" onClick="navigate()">
 						<i class="material-icons">arrow_back</i>
 					</a>
 				</div>
@@ -184,7 +184,7 @@
 			<div id="movieDetailNavbar" class="navbar navbar-shadow theme-deeppurple">
 				<div class="navbar-inner">
 					<div class="left">
-						<a href="#" onClick="closeDetailPopupWhenCheckedForSearch()" class="link icon-only">
+						<a href="#" onClick="navigate()" class="link icon-only">
 							<i class="material-icons text-shadow-1">arrow_back
 							</i>
 						</a>
@@ -276,7 +276,7 @@
 		<div class="popup popup-search custom-layout-dark tablet-fullscreen">
 			<div id="searchNavbar" class="navbar custom-grey-background-dark navbar-shadow">
 				<div class="navbar-inner">
-						<a href="#" onClick="closeSearch()" class="link icon-only color-grey">
+						<a href="#" onClick="navigate()" class="link icon-only color-grey">
 							<i class="material-icons">arrow_back</i>
 						</a>
 						<div class="item-input" style="width: calc(100% - 88px);">
@@ -297,7 +297,7 @@
 		<div class="popup popup-saved custom-layout-dark tablet-fullscreen">
 			<div class="navbar theme-deeppurple navbar-shadow" style="position:absolute;">
 				<div class="navbar-inner">
-						<a href="#" onClick="closeSaved()" class="link icon-only">
+						<a href="#" onClick="navigate()" class="link icon-only">
 							<i class="material-icons">arrow_back</i>
 						</a>
 						<label>Saved</label>

@@ -1,5 +1,4 @@
 myApp.onPageBeforeInit('wizard', function () {
-  replaceEventListener(goToTabs);
 });
 
 //wizard page

@@ -1,6 +1,6 @@
 var tmdbApiKey = "17bad8fd5ecafe775377303226579c19";
-var newsFeedRssProviderLink = "https://feeds.feedburner.com/cinemablendallthing?format=xml";
-var reviewsRssProviderLink = "http://www.cinemablend.com/rss_review.php";
+var newsFeedRssProviderLink = "http://movieweb.com/rss/all-news/";
+var reviewsRssProviderLink = "http://movieweb.com/rss/movie-reviews/";
 
 var myApp;
 var $$;
@@ -131,71 +131,71 @@ var movieGenresJson = [
 ]
 
 var tvGenresJson = [
-    {
-      "id": 10759,
-      "title": "Action & Adventure"
-    },
-    {
-      "id": 16,
-      "title": "Animation"
-    },
-    {
-      "id": 35,
-      "title": "Comedy"
-    },
-    {
-      "id": 80,
-      "title": "Crime"
-    },
-    {
-      "id": 99,
-      "title": "Documentary"
-    },
-    {
-      "id": 18,
-      "title": "Drama"
-    },
-    {
-      "id": 10751,
-      "title": "Family"
-    },
-    {
-      "id": 10762,
-      "title": "Kids"
-    },
-    {
-      "id": 9648,
-      "title": "Mystery"
-    },
-    {
-      "id": 10763,
-      "title": "News"
-    },
-    {
-      "id": 10764,
-      "title": "Reality"
-    },
-    {
-      "id": 10765,
-      "title": "Sci-Fi & Fantasy"
-    },
-    {
-      "id": 10766,
-      "title": "Soap"
-    },
-    {
-      "id": 10767,
-      "title": "Talk"
-    },
-    {
-      "id": 10768,
-      "title": "War & Politics"
-    },
-    {
-      "id": 37,
-      "title": "Western"
-    }
-  ]
+  {
+    "id": 10759,
+    "title": "Action & Adventure"
+  },
+  {
+    "id": 16,
+    "title": "Animation"
+  },
+  {
+    "id": 35,
+    "title": "Comedy"
+  },
+  {
+    "id": 80,
+    "title": "Crime"
+  },
+  {
+    "id": 99,
+    "title": "Documentary"
+  },
+  {
+    "id": 18,
+    "title": "Drama"
+  },
+  {
+    "id": 10751,
+    "title": "Family"
+  },
+  {
+    "id": 10762,
+    "title": "Kids"
+  },
+  {
+    "id": 9648,
+    "title": "Mystery"
+  },
+  {
+    "id": 10763,
+    "title": "News"
+  },
+  {
+    "id": 10764,
+    "title": "Reality"
+  },
+  {
+    "id": 10765,
+    "title": "Sci-Fi & Fantasy"
+  },
+  {
+    "id": 10766,
+    "title": "Soap"
+  },
+  {
+    "id": 10767,
+    "title": "Talk"
+  },
+  {
+    "id": 10768,
+    "title": "War & Politics"
+  },
+  {
+    "id": 37,
+    "title": "Western"
+  }
+]
 
 var selectedOrderByCategory;
 var selectedGenres;
@@ -205,7 +205,7 @@ var combineGenres;
 $$(document).on('deviceready', function() {
   statusbarTransparent.enable();
   screen.orientation.lock('portrait');
-  document.addEventListener("backbutton", exitPrompt, false);
+  document.addEventListener("backbutton", navigate, false);
   firebaseDb = firebase.database();
   var provider = new firebase.auth.GoogleAuthProvider();
   var fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -492,8 +492,8 @@ function buildSortedItemList(xhr, listElementToAppendTo, link) {
 }
 
 function handleDetailClick(clickedObjId) {
-    tvOrMovie = wizardMovieRepository.find(x => x.id == clickedObjId).type;
-    getMovieDetailInfo(clickedObjId);
+  tvOrMovie = wizardMovieRepository.find(x => x.id == clickedObjId).type;
+  getMovieDetailInfo(clickedObjId);
 }
 
 function attachLazyLoaderToList(listElementToAppendTo, link) {
@@ -588,64 +588,49 @@ function attachSearchButton() {
     });
     isSearchPoppedUp = true;
     myApp.popup(popupHTML);
-    replaceEventListener(closeSearch);
   });
 }
 
-function replaceEventListener(methodRef) {
-  removeAllEventListeners();
-  document.addEventListener("backbutton", methodRef, false);
-}
-
-function closePopups() {
-  myApp.closeModal();
-  replaceEventListener(goToTabs);
-}
-
-function closeSearch() {
-  isSearchPoppedUp = false;
-  myApp.closeModal('.popup-search');
-  replaceEventListener(exitPrompt);
-}
-
-function closeSaved() {
-  myApp.closeModal('.popup-saved');
-  replaceEventListener(exitPrompt);
-}
-
-function closeSignUpPopup() {
-  myApp.closeModal('.popup-sign-up');
-  replaceEventListener(goToIndex);
-}
-
-function closeDetailPopup() {
-  myApp.closeModal('.popup-movie-detail');
-  replaceEventListener(closePopups);
-}
-
-function closeDetailPopupOnSearch() {
-  myApp.closeModal('.popup-movie-detail');
-  replaceEventListener(closeSearch);
-}
-
-function closeDetailPopupWhenCheckedForSearch() {
-  if(isSearchPoppedUp) {
-    closeDetailPopupOnSearch();
-  } else {
-    closePopups();
+function navigate() {
+  var currentPageName = mainView.activePage.name;
+  var popups = $$(".modal-in");
+  if($$(".welcomescreen-container").length > 0) {
+    welcomescreen.close();
+    return;
   }
-}
 
-function removeAllEventListeners() {
-  document.removeEventListener("backbutton", goToWizard, false);
-  document.removeEventListener("backbutton", exitPrompt, false);
-  document.removeEventListener("backbutton", goToIndex, false);
-  document.removeEventListener("backbutton", closeSearch, false);
-  document.removeEventListener("backbutton", goToTabs, false);
-  document.removeEventListener("backbutton", closeDetailPopupOnSearch, false);
-  document.removeEventListener("backbutton", closeDetailPopup, false);
-  document.removeEventListener("backbutton", closePopups, false);
-  document.removeEventListener("backbutton", closeSignUpPopup, false);
+  if($$(".actions-modal.modal-in").length > 0) {
+    myApp.closeModal('.actions-modal');
+    return;
+  }
+
+  if($$(".popup-movie-detail.modal-in").length > 0) {
+    myApp.closeModal('.popup-movie-detail');
+    return;
+  }
+
+  if($$(".popup-search.modal-in").length > 0) {
+    myApp.closeModal('.popup-search');
+    return;
+  }
+
+  if($$(".popup-saved.modal-in").length > 0) {
+    myApp.closeModal('.popup-saved');
+    return;
+  }
+
+  if($$(".popup-sign-up.modal-in").length > 0) {
+    myApp.closeModal('.popup-sign-up');
+    return;
+  }
+
+  if(currentPageName === "login" || currentPageName === "home") {
+    exitPrompt();
+    return;
+  } else if(currentPageName === "login-with-email" || currentPageName === "wizard" || currentPageName === "wizard-result"){
+    goBack();
+    return;
+  }
 }
 
 function popToBeImplementedNotification() {
@@ -658,36 +643,36 @@ function popToBeImplementedNotification() {
 function popChangeNewsProviderActionSheet() {
   myApp.closePanel('left');
   var actionOptions = [
-        {
-            text: 'Select newsfeed and reviews provider',
-            label: true
-        },
-        {
-            text: 'Cinemablend',
-            bold: true,
-            onClick: function () {
-                newsFeedRssProviderLink = "https://feeds.feedburner.com/cinemablendallthing?format=xml";
-                reviewsRssProviderLink = "http://www.cinemablend.com/rss_review.php";
-                initiateNewsFeed();
-                initiateReviewsFeed();
-            }
-        },
-        {
-            text: 'MovieWeb',
-            bold: true,
-            onClick: function () {
-                newsFeedRssProviderLink = "http://movieweb.com/rss/all-news/";
-                reviewsRssProviderLink = "http://movieweb.com/rss/movie-reviews/";
-                initiateNewsFeed();
-                initiateReviewsFeed();
-            }
-        },
-        {
-          text: 'Cancel',
-          color: 'red'
-        }
-    ];
-    myApp.actions(actionOptions);
+    {
+      text: 'Select newsfeed and reviews provider',
+      label: true
+    },
+    {
+      text: 'Cinemablend',
+      bold: true,
+      onClick: function () {
+        newsFeedRssProviderLink = "https://feeds.feedburner.com/cinemablendallthing?format=xml";
+        reviewsRssProviderLink = "http://www.cinemablend.com/rss_review.php";
+        initiateNewsFeed();
+        initiateReviewsFeed();
+      }
+    },
+    {
+      text: 'MovieWeb',
+      bold: true,
+      onClick: function () {
+        newsFeedRssProviderLink = "http://movieweb.com/rss/all-news/";
+        reviewsRssProviderLink = "http://movieweb.com/rss/movie-reviews/";
+        initiateNewsFeed();
+        initiateReviewsFeed();
+      }
+    },
+    {
+      text: 'Cancel',
+      color: 'red'
+    }
+  ];
+  myApp.actions(actionOptions);
 }
 
 function popSavedList() {
@@ -695,24 +680,25 @@ function popSavedList() {
   var popupHTML = Template7.templates.savedTemplate({
   });
   myApp.popup(popupHTML);
-  replaceEventListener(closeSaved);
 
   firebaseDb.ref('/users/' + loggedUser.uid).once('value', function(movieSnapshot) {
-    var result = movieSnapshot.val()
+    var result = movieSnapshot.val();
+    result = Object.keys(result).map(function(k) { return result[k] });
+    result.sort(function(a,b) {return (a.timestamp < b.timestamp) ? 1 : ((b.timestamp < a.timestamp) ? -1 : 0);} );
     var listHtml = '<ul>';
     wizardMovieRepository = [];
-    for (var id in result) {
-      wizardMovieRepository.push(result[id]);
+    for (var index in result) {
+      wizardMovieRepository.push(result[index]);
       listHtml += '<li>' +
-      '<a href="#" class="item-link item-content" id="'+ id + '" onClick="handleDetailClick(this.id)">' +
-      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + result[id].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
+      '<a href="#" class="item-link item-content" id="'+ result[index].id + '" onClick="handleDetailClick(this.id)">' +
+      '<div class="item-media" style="padding: 0px;"><img class="card" src="' + result[index].poster_path + '" alt="Image not found" onerror="this.onerror=null;this.src=\'img/default-movie-poster.jpg\';" width="100" height="148"></div>' +
       '<div class="item-inner">' +
       '<div class="item-title-row">' +
-      '<div class="item-title">' + result[id].title + '</div>' +
-      '<div class="item-after">' + result[id].vote_average + '</div>' +
+      '<div class="item-title">' + result[index].title + '</div>' +
+      '<div class="item-after">' + result[index].vote_average + '</div>' +
       '</div>' +
-      '<div class="item-subtitle">' + result[id].release_year + '</div>' +
-      '<div class="item-text item-text-5-rows">' + result[id].overview + '</div>' +
+      '<div class="item-subtitle">' + result[index].release_year + '</div>' +
+      '<div class="item-text item-text-5-rows">' + result[index].overview + '</div>' +
       '</div>' +
       '</a>' +
       '</li>'

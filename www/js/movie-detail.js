@@ -121,12 +121,6 @@ function popUpMovieDetail(movieObj) {
       saveMovieToFbDb(movieObj);
     }
   });
-
-  if(isSearchPoppedUp) {
-    replaceEventListener(closeDetailPopupOnSearch);
-  } else {
-    replaceEventListener(closePopups);
-  }
 }
 
 function changeNavbarColor(obj) {
@@ -391,8 +385,16 @@ function compareGenres(a,b) {
 }
 
 function saveMovieToFbDb(movie) {
+  var timeStampInMs = window.performance && window.performance.now
+  && window.performance.timing
+  && window.performance.timing.navigationStart
+  ? window.performance.now()
+  + window.performance.timing.navigationStart
+  : Date.now();
+
   var movieToAdd = {};
   movieToAdd[movie.id] = movie;
+  movieToAdd[movie.id].timestamp = timeStampInMs;
 
   firebaseDb.ref('users/' + loggedUser.uid).update(movieToAdd).then(function(){
     console.log("Successfully posted");

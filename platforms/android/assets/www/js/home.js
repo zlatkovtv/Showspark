@@ -2,7 +2,6 @@ var newsFeed = null;
 var reviewsFeed = null;
 
 myApp.onPageBeforeInit('home', function () {
-  replaceEventListener(exitPrompt);
 });
 
 myApp.onPageInit('home', function () {
@@ -106,7 +105,7 @@ function initiateNewsFeed() {
     '<a href="#" class="link icon-only share-news" onclick="shareNews(\'{{link}}\')">' +
     '<i class="material-icons link">share</i>' +
     '</a>' +
-    '<label>{{pubDate.slice(0,-5)}}</label>' +
+    // '<label>{{pubDate.slice(0,-5)}}</label>' +
     '<a href="#" class="link icon-only">' +
     '<i class="material-icons link">bookmark_border</i>' +
     '</a>' +
